@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.foot-2 {
+			background: url(images/allbgs.png) no-repeat 0px -39px;
+			height: 110px;
+			border: 1px solid #0373C8;
+			width: 120px
+		}
+		
+		input {
+			height: 500px;
+			width: 200px;
+			display: block;
+		}
+	</style>
+
+	<body>
+
+		<div>
+			<input type="text" name="sss" id="sss" value="" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+			<input type="text" name="pa" id="pa" value="" />
+			<input type="button" name="ccs" id="ccs" value="ssc" />
+		</div>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script>
+			$("input").click(function() {
+				var ss = $(this).offset().top;
+				
+				scrollTopss(document.body, ss)
+
+				function scrollTopss(obj, len) {
+					if(typeof len === 'undefined') {
+						return obj.scrollTop;
+					} else {
+						obj.scrollTop = len;
+					}
+				}
+			})
+
+			$("#ccs").click(function() {
+				name();
+			})
+
+			function name() {
+				$.ajax({
+					type: "get",
+					dataType: "json",
+					url: "/sw.json",
+					async: true,
+					success: function(date) {
+						$.each(date.user, function(ind, vals) {
+							var fmane = vals.firstName
+							alert(fmane)
+								// 						 var pass=vals.pass;
+								// 						 if($("#sss").val()==fmane && $("#pa").val()==pass){
+								// 						 	alert(fmane);
+								// 						 	window.location.href="sww.html";
+								// 						 }else{
+								// 						 	
+								// 						 }
+						});
+
+					},
+					error: function(err) {
+						alert("chuwu ")
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

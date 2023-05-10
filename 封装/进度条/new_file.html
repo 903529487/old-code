@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.sww {
+			width: 100px;
+			height: 20px;
+			border: 1px solid #000000;
+			position: relative;
+		}
+		
+		.minbox {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: red;
+			width: 0;
+			height: 20px;
+		}
+	</style>
+
+	<body>
+
+		<div class="sww">
+			<div class="minbox">
+
+			</div>
+		</div>
+		<div class="d">加载中....</div>
+		<div class="nn" id="ss" style="display: none;">
+			内容内容内容
+		</div>
+
+	
+		<script>
+			var d = document.querySelector(".d");
+			var nn = document.querySelector(".nn");
+			var sww = document.querySelector(".sww");
+			var minbox = document.querySelector(".minbox");
+			var time = 0;
+			var maxtime = 0;
+			var img = document.querySelectorAll(".img");
+
+		
+					var ints = setInterval(function() {
+						console.log(maxtime)
+						if(time == 90) {
+							clearInterval(ints);
+							show();
+
+						} else {
+							time++;
+							minbox.style.width = time + "%";
+						}
+
+					}, 50)
+			
+	
+
+			function show() {
+
+window.onload=function(){
+	nn.style.display = "block";
+				sww.style.display = "none";
+				d.style.display = "none";
+}
+				
+
+			}
+		</script>
+	</body>
+
+</html>

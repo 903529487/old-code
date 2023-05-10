@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.main {
+			width: 500px;
+			margin: 0 auto;
+			padding-top: 50px;
+		}
+		
+		.imgBox {
+			height: 102px;
+			overflow: hidden;
+			_position: relative;
+		}
+		
+		.imgContent {
+			width: 90000px;
+			_position: absolute
+		}
+		
+		.imgBox ul {
+			float: left;
+		}
+		
+		.imgBox li {
+			float: left;
+			width: 100px;
+			height: 100px;
+			background: #CCC;
+			border: 1px solid #000;
+			margin-right: 20px;
+			overflow: hidden;
+			_display: inline;
+		}
+	</style>
+
+	<body>
+
+		<div class="main">
+			<div class="imgBox" id="imgRun"> 滚动层
+				<div class="imgContent" id="imgCon"> 内容层,为了JS写的方便而多写的层
+					<ul>
+						<li style="background:#000"><img src="" width="100" height="100" /></li>
+						<li style="background:#F00"><img src="" width="100" height="100" /></li>
+						<li style="background:#00F"><img src="" width="100" height="100" /></li>
+						<li style="background:#F0F"><img src="" width="100" height="100" /></li>
+						<li style="background:#FF0"><img src="" width="100" height="100" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		function ss(){
+			var a=0;
+			return function(){
+				a++
+				return a;
+			}
+		}
+		var b=ss();
+		alert(b())
+		alert(b())
+		var ww=b();
+		alert(ww)
+	</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.min.js" ></script>
+	</head>
+	<body>
+		<div ng-controller="myCtrl" >
+			<input type="text" name="" ng-model="name2" id="" value="{{ss}}"  ng-click="ssw()"/>
+			<div ng-repeat='x in obj' style="line-height: 50px;border: 1px solid #000000;">
+				{{x.name}} 年龄为：<span style="float: right;">{{x.age}}</span>
+			</div>
+		</div>
+	
+		<script>
+			var app=angular.module("myapp",[]);
+			app.controller("myCtrl",function($scope){
+				$scope.name2=0;
+				$scope.s=0;
+				$scope.obj=[{"name":"小米",
+				"age":12,
+				"banji":"国际一般"
+				
+				},{"name":"小红",
+				"age":22,
+				"banji":"国际升水"
+				
+				}];
+				$scope.ssw=function(){
+					this.name2++;
+				}
+				
+			})
+		</script>
+	</body>
+</html>

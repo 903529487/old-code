@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="animate.min.css" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.banner {
+				height: 550px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.banner2 {
+				height: 550px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.banner-img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.banner-img li {
+				list-style: none;
+				height: 550px;
+				float: left;
+			}
+			
+			.banner-img li a {
+				display: block;
+				height: 550px;
+			}
+			
+			.banner-minImg {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				position: absolute;
+				width: 100%;
+				bottom: 20px;
+				text-align: center;
+			}
+			
+			.banner-minImg li {
+				display: inline;
+				padding: 0 15px;
+			}
+			
+			.banner-minImg li img {
+				width: 130px;
+				height: 70px;
+				cursor: pointer;
+			}
+			
+			.banner-minImg .minbanner-on img {
+				border: 3px solid #ddb612;
+			}
+			
+			.banner .jt-left {
+				display: block;
+				width: 20px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 20px;
+				top: 250px;
+				cursor: pointer;
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+			.banner .jt-right {
+				display: block;
+				width: 20px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				right: 20px;
+				top: 250px;
+				cursor: pointer;
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="banner" >
+			<ul class="banner-img">
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated ">
+					<a href=""></a>
+				</li>
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated">
+					<a href=""></a>
+				</li>
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated">
+					<a href=""></a>
+				</li>
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated">
+					<a href=""></a>
+				</li>
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated">
+					<a href=""></a>
+				</li>
+				<li style="background: url(img/banner.jpg) no-repeat center;" class="animated">
+					<a href=""></a>
+				</li>
+			</ul>
+			<ol class="banner-minImg">
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+				<li>
+					<img src="img/banner.jpg" alt="" />
+				</li>
+			</ol>
+			<i class="jt-left"></i>
+			<i class="jt-right"></i>
+		</div>
+		<form action="" id="ss">
+			<input type="text" name="" id="" value="" />
+		</form>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../sss/js/banner.js" ></script>
+		<script>
+			new banner({
+				id: $(".banner"),
+				times: 3000, //切换时间间隔
+				animateTime: 500, //切换动画时间
+				controlSwitch:true  //是否开启左右切换
+			});
+			$(".banner-minImg li").click(function(){
+				$(".banner-img li").removeClass("flipInX")
+				$(".banner-img li").eq($(this).index()).addClass("flipInX")
+			});
+			$("#ss").submit(function(){
+				alert("s")
+			})
+		</script>
+	</body>
+
+</html>

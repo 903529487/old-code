@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	.maxbox{
+		position: relative;
+		width: 500px;height: 500px;border:1px solid #000000;
+	}
+		.box{
+			width: 200px;height: 200px;border-bottom: 10px solid darkred;
+			border-radius: 50%;
+			clip: rect(0px,50px,50px,0px);
+			position: absolute;
+			animation: ssj 2s ease-in-out infinite alternate;
+			transform:rotate(0deg);
+		}
+		.box:after{
+			content: "";
+			display: block;
+			width: 140px;height: 140px;border: 10px solid chartreuse;
+			border-radius: 50%;
+			clip: rect(0px,50px,50px,0px);
+			position: absolute;
+			animation: www 2s ease-in-out infinite ;
+			transform:rotate(0deg);
+			left: 50%;top: 50%;margin: -70px;
+		}
+		@keyframes ssj{
+			0%{
+				clip: rect(0px,50px,50px,0px);
+				transform:rotate(0deg);
+				
+			}
+			30%{
+				clip: rect(0px,250px,250px,0px);
+				border-bottom: 50px solid darkred;
+			}
+			100%{
+				clip: rect(0px,50px,50px,0px);
+				transform:rotate(360deg);
+				border-bottom: 20px solid darkred;
+			}
+		}
+		@keyframes www{
+			0%{
+				clip: rect(0px,50px,50px,0px);
+				transform:rotate(0deg);
+			}
+			30%{
+				clip: rect(0px,50px,50px,0px);
+			}
+			100%{
+				clip: rect(0px,50px,50px,0px);
+				transform:rotate(-360deg);
+			}
+		}
+	</style>
+	<body>
+		<div class="maxbox">
+			<div class="box"></div>
+		</div>
+		
+		
+	</body>
+</html>

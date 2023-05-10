@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		.banner {
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000000;
+			position: relative;
+			left: 500px;
+			overflow: hidden;
+		}
+		
+		.banner ul li {
+			width: 500px;
+			height: 300px;
+			position: absolute;
+			left: 500px;
+			top: 0;
+			z-index: 1;
+		}
+		
+		.banner ul li img {
+			width: 100%;
+		}
+		
+		.banner .check li {
+			width: 30px;
+			height: 30px;
+			list-style: none;
+			background: #008000;
+			text-align: center;
+			line-height: 30px;
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			text-align: center;
+			position: relative;
+			z-index: 2;
+			cursor: pointer;
+		}
+		
+		.banner .check .check-on {
+			background: red;
+		}
+	</style>
+
+	<body>
+		<div class="banner">
+			<ul class="banner-img">
+				<li><img src="s1.jpg" /></li>
+				<li><img src="s2.jpg" /></li>
+				<li><img src="s3.jpg" /></li>
+				<li><img src="s4.jpg" /></li>
+				<li><img src="sc1.jpg" /></li>
+				<li><img src="sc2.jpg" /></li>
+
+			</ul>
+			<ol class="check">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ol>
+		</div>
+	</body>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script>
+		(function() {
+			var n = 0;
+
+			function banner(obj) {
+				this.id = obj.id;
+				this.img = this.id.find(".banner-img").find("li"); //图片
+				this.checkLi = this.id.find(".check").find("li"); //控制器
+
+				this.num = 0;
+
+				this.init();
+				this.ckanmiate();
+				this.dintmie();
+			}
+
+			banner.prototype.init = function() {
+
+				this.img.eq(0).css({
+					left: "0px"
+				});
+
+				this.checkLi.eq(0).addClass("check-on");
+				this.num = $(".check-on").index();
+			}
+			banner.prototype.ckanmiate = function() {
+
+				var img = this.img;
+				var checkli = this.checkLi;
+
+				var houin = 0;
+				this.checkLi.click(function() {
+
+					checkli.removeClass("check-on")
+					$(this).addClass("check-on");
+					n = $(".check-on").index();
+
+					if(n != houin) {
+						img.animate({
+							left: "500px",
+							opacity: 0
+						});
+						img.eq(n).animate({
+							left: "0px",
+							opacity: 1
+						});
+						img.eq(n-1).animate({
+							left: "-500px",
+							opacity: 0
+						});
+						img.eq(n+1).animate({
+							left: "500px",
+							opacity: 0
+						});
+						houin = n;
+					}
+
+				})
+
+			}
+			banner.prototype.dintmie = function() {
+				var img = this.img;
+				var checkli = this.checkLi;
+
+				setInterval(function() {
+
+					if(n > checkli.length - 2) {
+						n = 0;
+						checkli.removeClass("check-on");
+						checkli.eq(n).addClass("check-on");
+						img.animate({
+							left: "500px",
+							opacity: 0
+						});
+						img.eq(n).animate({
+							left: "0px",
+							opacity: 1
+						});
+				
+
+					} else {
+						n++;
+						checkli.removeClass("check-on");
+						checkli.eq(n).addClass("check-on");
+
+						img.animate({
+							left: "500px",
+							opacity: 0
+						});
+						img.eq(n).animate({
+							left: "0px",
+							opacity: 1
+						});
+						
+
+					}
+
+				}, 2000)
+
+			}
+
+			window.banner = banner;
+		})();
+		new banner({
+			id: $(".banner")
+
+		})
+	</script>
+
+</html>

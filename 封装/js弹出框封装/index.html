@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#con{
+			background:#000;background:red;width:100px;height: 100px;position: relative;color: #fff;
+		}
+		#con2{
+			background:#000;background:red;width:100px;height: 100px;position: relative;color: #fff;
+		}
+	</style>
+	<body>
+		<button id="tanch">弹出</button>
+		<div id="con">
+			ssss
+		</div>
+		<button id="tanch2">弹出</button>
+		<div id="con2">
+			con2
+		</div>
+	</body>
+	<script type="text/javascript" src="pop.js" ></script>
+	<script>
+		pop({
+			butID:document.getElementById("tanch"),
+			winID:document.getElementById("con")
+		});
+		pop({
+			butID:document.getElementById("tanch2"),
+			winID:document.getElementById("con2")
+		});
+	</script>
+</html>

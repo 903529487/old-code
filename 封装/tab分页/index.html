@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<ul class="nav">
+				<li>a</li>
+				<li>b</li>
+			</ul>
+			<div>
+				<div class="con">
+					con
+				</div>
+				<div class="con">
+					con2
+				</div>
+			</div>
+		</div>
+		<div>
+			<ul class="nav2">
+				<li>a</li>
+				<li>b</li>
+			</ul>
+			<div>
+				<div class="con">
+					con
+				</div>
+				<div class="con">
+					con2
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			
+			(function(){
+				
+				var js=0
+				function tabPaging(obj){
+					
+					var jj=this;
+					jj.nav=obj.nav;
+					jj.id=[];
+					this.init();
+					this.jj();
+					var li=this.nav.getElementsByTagName("li");
+					var ids=this.id;
+					
+				
+					
+					
+					
+				}
+tabPaging.prototype.ss=0;
+
+				tabPaging.prototype.init=function(){					
+					var li=this.nav.getElementsByTagName("li");
+					for(var i=0;i<li.length;i++){
+						li[i].style.display="none";
+					}
+					li[0].style.display="block";
+					var jj=this;
+					
+					li[0].onclick=function(){
+						
+						jj.id.push(2);
+						alert(jj[0]);
+						
+					}
+					
+						
+				
+					
+					
+				}
+				
+				
+					
+				
+				tabPaging.prototype.jj=function(){
+					var kk=document.querySelectorAll(".con");
+				var jj=this;
+					kk[0].onclick=function(){
+						alert(jj.id);
+					}
+					
+				}
+				
+				window.tabPaging=tabPaging;
+			})();
+			new tabPaging({
+				nav:document.querySelector(".nav")
+				
+			})
+			new tabPaging({
+				nav:document.querySelector(".nav2")
+				
+			})
+		</script>
+	</body>
+</html>

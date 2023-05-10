@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		.nav{
+			background: green;
+			line-height: 40px;
+		}
+		.nav ul li{
+			list-style: none;
+			float:left;
+			background: green;
+			text-align: center;
+		}
+			.nav ul li a{
+				text-decoration:none;color: #fff;
+				display: block;
+				width: 100px;
+			}
+			.nav ul li a:hover{
+				background: #0099FF;
+			}
+			
+	</style>
+	<script type="text/javascript" src="../js/angular.min.js" ></script>
+	<body>
+		<nav ng-controller="nav" class="nav">
+			<ul>
+				<li ng-repeat="d in wws" ng-mouseover="cl()" ng-mouseleave="cl2()">
+					<a href="{{d.urls}}" >{{d.name}}</a>
+					<div ng-repeat="d2 in d.zimeta" ng-show="gongz">
+						<a href="{{d2.ziurls}}">{{d2.ziname}}</a>	
+					</div>
+				</li>
+			</ul>			
+		</nav>
+		<script>
+			var ang=angular.module("myapp",[]);
+			ang.controller("nav",function($scope){
+				$scope.wws=[
+					{
+						name:"首页",
+						urls:"#",
+						zimeta:[
+							{
+								"ziname":"子菜单",
+								"ziurls":"iisjsj"
+								
+							},
+							{
+								"ziname":"子菜单",
+								"ziurls":"iisjsj"
+								
+							},
+							{
+								"ziname":"子菜单",
+								"ziurls":"iisjsj"
+								
+							},
+							{
+								"ziname":"子菜单",
+								"ziurls":"iisjsj"
+								
+							},
+							{
+								"ziname":"子菜单2",
+								"ziurls":"iisjsj"
+								
+							}
+						]
+						
+					},
+					{
+						name:"公司简介",
+						urls:"#",
+						zimeta:[
+							{
+								"ziname":"子菜单",
+								"ziurls":"iisjsj"
+								
+							},
+							{
+								"ziname":"子菜单2",
+								"ziurls":"iisjsj"
+								
+							}
+						]
+					},
+					{
+						name:"是是是",
+						urls:"index.html"
+					},
+					{
+						name:"擦擦擦",
+						urls:"index.html"
+					}
+				]
+				$scope.gongz=false;
+				$scope.cl=function(){					
+//					this.gongz= !this.gongz;
+					this.gongz= true;
+					
+				}
+				$scope.cl2=function(){					
+					this.gongz= false;
+				}
+			})
+		</script>
+	</body>
+</html>
