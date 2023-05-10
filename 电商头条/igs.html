@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>电商头条</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+	</head>
+
+	<body>
+		<div id="header-select">
+			<div class="header-select-con">
+				<a href="index.html"><img src="img/logo.png" alt="" id="logo" /></a>
+				<div class="select">
+					<input type="text" name="" id="select-text" value="" />
+					<input type="submit" name="" id="select-sub" value="" />
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<ul class="clearfix">
+				<li><a href="">公司介绍</a></li>
+				<li><a href="">合作声明</a></li>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">用户协议</a></li>
+				<li><a href="">投诉指引</a></li>
+				<li style="float: right;"><a href="">登录</a></li>
+			</ul>
+		</div>
+		<div id="main" class="clearfix" style="margin-top: 30px;">
+			<div id="main-left">
+				<ul>
+					<li><a href=""><img src="img/ty-1.png" alt="" />主页</a></li>
+					<li><a href=""><img src="img/ty-2.png" alt="" />发布产品</a></li>
+					<li class="navzi"><a href="#"><img src="img/ty-3.png" alt="" />数据统计</a>
+						<ol>
+							<li><a href="">产品分析</a></li>
+							<li><a href="">用户分析</a></li>
+						</ol>
+					</li>
+					<li class="navzi"><a href="#"><img src="img/ty-4.png" alt="" />设置</a>
+						<ol>
+							<li><a href="">账号信息</a></li>
+							<li><a href="">账号状态</a></li>
+							<li><a href="">账号设置</a></li>
+						</ol>
+					</li>
+					<li><a href=""><img src="img/ty-5.png" alt="" />消息</a></li>
+					<li class="mass-on"><a href=""><img src="img/ty-6.png" alt="" />打赏充值</a></li>
+				</ul>
+			</div>
+			<div id="main-right">
+				<div class="main-right-title">
+					<span>查看余额 </span>&nbsp;&nbsp;&nbsp;|   &nbsp;&nbsp; 
+					<span class="main-right-title-on">我要充值</span>
+				</div>
+				<div class="main-right-con">
+					<div class="main-right-con-box">
+						<div>充值金额：<input type="text" class="context" value="0"/>&nbsp;&nbsp; 人民币</div>
+						<div>
+							充值方式：<input type="radio" name="zf" id="zf-1"/><label for="zf-1">微信支付</label>
+							&nbsp;&nbsp; <input type="radio" name="zf" id="zf-2"/><label for="zf-2">支付宝支付</label>
+						</div>
+						<div style="text-align: center;">
+							<button class="con-sub">确定，去付款</button>
+						</div>
+					</div>
+					<div class="main-right-con-box" style="margin-top: 50px;">
+						<h3>对公账户</h3>
+						<p>收款人姓名： 深圳市电商头条网络有限公司</p>
+						<p>收款账户：755929854510801</p>
+						<p>开户银行：招商银行振华支行</p>
+					
+						<div>上传水单图：<input type="file" class="context" onchange='PreviewImage(this)'/></div>
+						<div id="imgPreview" style='width:120px; height:100px;margin-left: 110px;'>  
+    						<img id="img1" src="" width="120" height="100" />  
+						</div>  
+						<div style="text-align: center;">
+							<button class="con-sub">确定</button>
+						</div>
+						<h5>提示： 转完款后请在上面填写相应金额，金额以实际对公到账为准</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div>客服邮箱：agewnet@163.com</div>
+			<ul class="clearfix">
+				<li><a href="/Home/Index/navigation/id/1.html">公司介绍</a></li>
+				<li><a href="/Home/Index/navigation/id/2.html">合作声明</a></li>
+				<li><a href="/Home/Index/navigation/id/3.html">联系我们</a></li>
+				<li><a href="/Home/Index/navigation/id/4.html">用户协议</a></li>
+				<li><a href="/Home/Index/navigation/id/5.html">投诉指引</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script>
+			$(".navzi").click(function(){
+				if($(this).find("ol").css("display")=="none"){
+					$(this).find("ol").show(100);
+				}else{
+					$(this).find("ol").hide(100);
+				}
+			})
+			
+			
+function PreviewImage(imgFile)  
+{  
+    var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);  
+    filextension=filextension.toLowerCase();  
+    if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))  
+    {  
+        alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");  
+        imgFile.focus();  
+    }  
+    else  
+    {  
+        var path;  
+        if(document.all)//IE  
+        {  
+            imgFile.select();  
+            path = document.selection.createRange().text;  
+            document.getElementById("imgPreview").innerHTML="";  
+            document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果        
+        }  
+        else//FF  
+        {  
+            path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上  
+            //path = imgFile.files[0].getAsDataURL();// FF 3.0  
+            document.getElementById("imgPreview").innerHTML = "<img id='img1' width='120px' height='100px' src='"+path+"'/>";  
+            //document.getElementById("img1").src = path;  
+        }  
+    }  
+}  
+
+		</script>
+	</body>
+
+</html>
