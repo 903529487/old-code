@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta name="title" content="国通">
+		<title>国通</title>
+		<link rel="SHORTCUT ICON" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			欢迎你，ssss!
+			<div class="header-con">
+				<ul class="clearfix">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="user.html">用户中心 <span style="font-size: 14px;">▼</span></a>
+						<div class="headr-menu">
+							<a href="">安全中心</a>
+							<a href="##" class="derive-but">导出为</a>
+						</div>
+					</li>
+					<li>
+						<a href="out_to.html">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<span>CHTF</span>
+			<b>高交会-预计登记平台系统</b>
+		</div>
+		<div class="clearfix">
+			<div class="silder">
+				<a href="index.html" style="padding: 20px 0;">欢迎进入预登记系统</a>
+				<a href="audience_list.html">观众信息管理 <span class="jt">＞</span></a>
+				<a href="check_in.html">登记进度管理 <span class="jt">＞</span></a>
+				<a href="collect.html" class="menu-on">汇总统计 <span class="jt">＞</span></a>
+				<a href="javascript:history.go(-1);" class="get-back">返回</a>
+
+			</div>
+			<div class="main">
+
+				<div class="main-box">
+					<span>
+						<div class="det-con">
+							<div class="coll-nav">
+								<ul class="clearfix">
+									<li><a href="collect.html">部门分布表   ∨</a></li>
+									<li class="coll-nav-on"><a href="collect_zw.html">职务分布表  ∨</a></li>
+									<li><a href="collect_map.html">省份分布表  ∨</a></li>
+									<li><a href="collect_wj.html">问卷回答分布表  ∨</a></li>
+								</ul>
+							</div>
+							<div style="padding: 10px;background: #fff;">
+								<div id="container" style="min-width:400px;height:400px"></div>
+							</div>
+						</div>
+					</span>
+				</div>
+
+			</div>
+		</div>
+		<!--导出弹窗-->
+		<div class="derive-pop">
+			<img src="images/daochu.png" />
+		</div>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/highcharts.js"></script>
+		<script type="text/javascript" src="js/seth.js"></script>
+		<script>
+			$(function() {
+				//数据
+				var datas=[
+							['高层管理者', 23.7],
+							['中层管理者', 16.1],
+							['中层以下', 14.2],
+							['专业技术人员', 14.0],
+							['其他', 12.5],
+						];
+				$('#container').highcharts({
+					chart: {
+						type: 'column'
+					},
+					title: {
+						text: '观众所在职务'
+					},
+
+					xAxis: {
+						type: 'category',
+						labels: {
+							rotation: -45,
+							style: {
+								fontSize: '13px',
+								fontFamily: 'Verdana, sans-serif'
+							}
+						}
+					},
+					yAxis: {
+						min: 0,
+						title: {
+							text: '当前等级总人数/职务'
+						}
+					},
+					legend: {
+						enabled: false
+					},
+					tooltip: {
+						pointFormat: '当前等级总人数/职务'
+					},
+					series: [{
+						name: 'Population',
+						data: datas,
+						dataLabels: {
+							enabled: true,
+							rotation: -90,
+							color: '#FFFFFF',
+							align: 'right',
+							format: '{point.y:.1f}', // one decimal
+							y: 10, // 10 pixels down from the top
+							style: {
+								fontSize: '13px',
+								fontFamily: 'Verdana, sans-serif'
+							}
+						}
+					}]
+				});
+			});
+		</script>
+	</body>
+
+</html>

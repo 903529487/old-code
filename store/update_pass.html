@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="adt/LArea.css" />
+	</head>
+
+	<body>
+		<header id="goods-header">
+			<a href="javascript:history.go(-1);" class="ht"><img src="img/ht.png" /></a>
+			修改密码
+			<a href="javascript:viod(0);" class="gd"><img src="img/slv.png" alt="" /></a>
+			<div class="zi-meta">
+				<a href="index.html">主页</a>
+				<a href="user.html">个人中心</a>
+				<a href="goods_list.html">特卖专区</a>
+				<a href="goods_list.html">精品区</a>
+			</div>
+		</header>
+		<section class="site-main">
+			<div class="site-box">
+				<p>原密码<span>*</span></p>
+				<p>
+					<input type="password" name="" id="" class="site-text" value="" placeholder="请输入原密码" />
+				</p>
+				<p>新密码<span>*</span></p>
+				<p><input type="password" name="" id="pass" class="site-text" value="" placeholder="请设置复杂的密码" /></p>
+				<p id="passts" style="color: red;"></p>
+				<p>确认新密码<span>*</span></p>
+				<p><input type="password" name="" id="pass2" class="site-text" value="" placeholder="请再输入新密码" /></p>
+				<p id="passts2" style="color: red;"></p>
+				<br>
+				<p><button class="crat-sub4">确认修改</button></p>
+			</div>
+		</section>
+		<div class="bgd"></div>
+		<script src="adt/LAreaData1.js"></script>
+		<script src="adt/LAreaData2.js"></script>
+		<script src="adt/LArea.js"></script>
+		<script type="text/javascript" src="js/pult.js"></script>
+		<!--密码强度检测-->
+		<script type="text/javascript" src="js/PasswordStrength.js"></script>	
+		<script>
+			new PasswordStrength('pass', 'passts'); //密码强度检测
+			new PasswordStrength('pass2', 'passts2'); //密码强度检测
+
+			var area2 = new LArea();
+			area2.init({
+				'trigger': '#demo2',
+				'valueTo': '#value2',
+				'keys': {
+					id: 'value',
+					name: 'text'
+				},
+				'type': 2,
+				'data': [provs_data, citys_data, dists_data]
+			});
+		</script>
+	</body>
+
+</html>

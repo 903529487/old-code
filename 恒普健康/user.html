@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+	</head>
+	<body>
+		<section>
+			<div class="user-head">
+				<a href="topheadimg.html">
+					<div class="user-head-img">
+						<img src="images/touxiang.png" />
+					</div>
+				</a>
+				<h3>王晓妮</h3>
+			</div>
+			<div class="user-meta">
+				<ul>
+					<li>
+						<a href="sex.html"><img src="images/user-1.png" class="user-bt" />性别
+							<span>女<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li>
+						<a href="date.html">
+							<img src="images/user-2.png" class="user-bt" />出生日期
+							<span>1993-12-01<img src="images/right-jt.png" alt="" class="user-right-jt" /></span>
+						</a>
+					</li>
+					<li>
+						<a href="phone.html"><img src="images/user-3.png" class="user-bt" />手机号码
+							<span>13924599619<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li>
+						<a href="id_card.html"><img src="images/user-4.png" class="user-bt" />身份证号
+							<span>342603******89<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li>
+						<a href="email.html"><img src="images/user-5.png" class="user-bt" />电子邮箱
+							<span>23456612@qq.com<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li>
+						<a href="city.html"><img src="images/user-6.png" class="user-bt" />所在城市
+							<span>广东 深圳<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li>
+						<a href="update_pass.html"><img src="images/user-7.png" class="user-bt" />修改密码
+							<span><img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<br>
+					<li>
+						<a href="result_list.html"><img src="images/user-8.png" class="user-bt" />报告列表
+							<span>查看<img src="images/right-jt.png" alt="" class="user-right-jt" /></span></a>
+					</li>
+					<li class="exit">
+						<a href="javascript:viod(0);"><img src="images/user-9.png" class="user-bt" />退出登录
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div style="height: 1.8rem;"></div>
+		<footer id="user-foot">
+			<ul>
+				<li style="border-right: 1px solid #DCDCDC;">
+					<a href="report.html" class="bangd"><img src="images/w-t-1.png" /><br>报告查询</a>
+				</li>
+				<li class="user-foot-on">
+					<a href="user.html"><img src="images/y-t-2.png" /><br>个人中心</a>
+				</li>
+			</ul>
+		</footer>
+		
+		<!--弹窗stra-->
+		<div class="capacity2">
+			
+			<h3 >
+				确定退出登录？
+			</h3>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<button class="idea-capacity-sub phone-check">退 出</button>
+				<button class="idea-capacity-sub2 user-close" >取消</button>
+			</div>
+		</div>
+		<div class="bas"></div>
+		<!--弹窗end-->
+		<script>
+			processControl();  //流程控制
+			function processControl(){
+				var prCon={
+					bas:$(".bas"),						//背景
+					capacity2:$(".capacity2"),			//弹窗1	
+					userClose:$(".user-close"),					//X关闭按钮
+					exit:$(".exit")
+				}
+				prCon.exit.click(function(){
+					prCon.bas.show();
+					prCon.capacity2.addClass("animation").show();
+				
+				});
+				
+			
+				prCon.userClose.click(function(){
+					prCon.bas.hide();
+					prCon.capacity2.removeClass("animation").hide();
+			
+				});
+			
+			}
+		</script>
+	</body>
+
+</html>

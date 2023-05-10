@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #595757;
+}
+ul {
+  list-style: none;
+}
+img {
+  border-style: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+#header {
+  height: 110px;
+  background: url("../img/top-ba.jpg");
+}
+#header-con {
+  width: 1000px;
+  margin: auto;
+  height: 110px;
+  position: relative;
+}
+#logo {
+  width: 283px;
+  height: auto;
+  margin-top: 20px;
+}
+.head-right {
+  position: absolute;
+  width: 220px;
+  right: 0;
+  top: 20px;
+  color: #fff;
+  text-align: right;
+}
+.head-right img {
+  vertical-align: middle;
+}
+.head-right a {
+  color: #fff;
+}
+.head-right-box {
+  width: 220px;
+  height: 30px;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#header-text {
+  height: 30px;
+  width: 130px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  line-height: 30px;
+}
+#header-sub {
+  height: 30px;
+  width: 58px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background: #dc3522;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#main {
+  width: 1000px;
+  margin: auto;
+}
+#nav {
+  height: 50px;
+  background: url("../img/nav.png") no-repeat;
+  position: relative;
+  top: -20px;
+}
+#nav ul li {
+  float: left;
+  width: 125px;
+  position: relative;
+}
+#nav ul li a {
+  display: block;
+  width: 90px;
+  margin: 11px auto;
+  line-height: 28px;
+  text-align: center;
+}
+.nav-on {
+  background: url("../img/nav-on.png") no-repeat;
+  color: #fff;
+}
+.hidd {
+  position: absolute;
+  border: 5px solid #2171ae;
+  border-radius: 10px;
+  width: 125px;
+  display: none;
+  z-index: 3;
+  background: #fff;
+}
+.hidd .hi-nav {
+  border-bottom: 1px solid #2171ae;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+.hidd p {
+  border-bottom: 1px solid #2171ae;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+.hidd a {
+  width: 125px;
+}
+.hidd a:hover {
+  background: #DC3522;
+  color: #fff;
+  border-radius: 5px;
+}
+.hidd-z {
+  position: absolute;
+  border: 5px solid #2171ae;
+  border-radius: 10px;
+  width: 125px;
+  right: -135px;
+  background: #fff;
+  top: -15px;
+  display: none;
+}
+#baer {
+  height: 355px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.mainnav {
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.mainnav li {
+  float: left;
+  overflow: hidden;
+  height: 300px;
+  width: 998px;
+}
+.mainnav li img {
+  width: 100%;
+}
+.mainnav-title {
+  list-style: none;
+  background: url(../img/title.jpg);
+  position: relative;
+  top: 300px;
+}
+.mainnav-title li {
+  width: 16.4%;
+  float: left;
+  height: 55px;
+  cursor: pointer;
+  border-right: 1px solid #d8d8d8;
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+}
+.mainnav-title li h5 {
+  color: #0364ae;
+  margin-top: 10px;
+}
+.mainnav-title .mainnav-title-on {
+  background: url(../img/title-on.jpg);
+}
+.mainnav-title .mainnav-title-on h5 {
+  color: #DC3522;
+}
+.asides {
+  float: left;
+  height: 219px;
+  width: 305px;
+  padding: 10px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  border-bottom: 5px solid #dcdcdc;
+}
+.asides h3 {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #dfdfdf;
+  color: #0364ae;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.asides .p-text {
+  height: 110px;
+  line-height: 25px;
+  text-indent: 2em;
+  padding: 10px 0;
+}
+.asides .gd {
+  display: block;
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #cbcbcb;
+  background: url(../img/asu.jpg);
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  color: #666666;
+}
+.asides table {
+  width: 90%;
+  margin: auto;
+  height: 130px;
+  padding: 10px 0;
+}
+.asides table td {
+  vertical-align: top;
+}
+.asides table td a {
+  color: #4c4c4c;
+}
+.asides + .asides {
+  margin-left: 8px;
+}
+.yx-box {
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.yx-box li {
+  float: left;
+  width: 33%;
+  height: 46px;
+}
+.yx-box li div {
+  display: table;
+  width: 85px;
+  height: 30px;
+  margin: auto;
+  border: 1px solid #eeeeee;
+}
+.yx-box li span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.yx-box li span img {
+  max-height: 30px;
+  max-width: 85px;
+}
+#footer {
+  height: 45px;
+  line-height: 45px;
+  background: url(../img/foot-ba.jpg);
+  border: 1px solid #ededed;
+  border-bottom: 5px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: #666666;
+  font-size: 13px;
+  margin-top: 15px;
+}
+#footer a {
+  color: #666666;
+}
+.footer-left {
+  float: left;
+}
+.footer-right {
+  float: right;
+}
+.com-left {
+  float: left;
+  width: 200px;
+  height: 335px;
+  background: url(../img/left-con.jpg) no-repeat;
+}
+.com-left h3 {
+  color: #DC3522;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.com-left ul {
+  width: 145px;
+  margin: auto;
+}
+.com-left ul li {
+  width: 145px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-top: 10px;
+}
+.com-left ul .com-on {
+  background: #DC3522;
+  border-radius: 10px;
+}
+.com-left ul .com-on a {
+  color: #fff;
+}
+.com-right {
+  float: right;
+  width: 750px;
+}
+.com-right h3 {
+  color: #DC3522;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.com-right ul li {
+  padding: 10px;
+}
+.com-right ul li h5 {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.com-right ul li h5 a {
+  color: #DC3522;
+}
+.com-right ul li p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.com-right ul li time {
+  font-size: 12px;
+}
+.com-main {
+  position: relative;
+  padding-bottom: 20px;
+}
+.sec-foot {
+  height: 70px;
+  background: url(../img/com-bvas.jpg);
+  border-bottom: 5px solid #dcdcdc;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1000px;
+  z-index: -1;
+}
+.com-det-text p {
+  margin-top: 10px;
+  line-height: 25px;
+}
+/*# sourceMappingURL=css.css.map */

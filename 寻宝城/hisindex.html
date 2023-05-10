@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+		
+		<section class="hi-topimg">
+			<div class="hi-topimg-box">
+				<span class="clearfix">
+					<div class="hi-topimg-box-row">
+						<img src="img/useryoyx.png"/>
+					</div>
+					<div class="hi-topimg-box-row">
+						<h3>林小七</h3>
+						<p>2关注/123粉丝</p>
+					</div>
+					<div style="float: right;">
+						<button class="guanzu">+关注</button>
+						<button class="cloes-guanzu" style="display: none;">取消关注</button>
+					</div>
+				</span>
+			</div>
+			<div class="hi-topimg-bottom">
+				这个家伙很懒，什么都没有留下...
+			</div>
+		</section>
+		<section>
+			<nav class="hi-nav">
+				<ul class="clearfix">
+					<li class="hi-nav-on"><a>TA的藏品(6)</a></li>
+					<li><a>TA的斗宝(3)</a></li>
+				</ul>
+			</nav>
+			<div class="hi-goods">
+				<ul class="clearfix">
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hi-goods" style="display: none;">
+				<ul class="clearfix">
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html" >
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html" >
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script>	
+			//关注
+			$(".guanzu").click(function(){
+				$(".cloes-guanzu").show();
+				$(this).hide();
+			});
+			$(".cloes-guanzu").click(function(){
+				$(".guanzu").show();
+				$(this).hide();
+			});
+			
+			//藏品tab切换
+			$(".hi-nav li").click(function(){
+				$(".hi-nav li").removeClass("hi-nav-on");
+				$(this).addClass("hi-nav-on");
+				$(".hi-goods").hide();
+				$(".hi-goods").eq($(this).index()).show();
+			});
+		</script>
+	</body>
+
+</html>

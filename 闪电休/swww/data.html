@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="../js/sethtml.js"></script>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<img src="../img/logo.png" alt="" id="logo" />
+			<div class="header-right">
+				<div class="select-top">
+					<div class="select-box">
+						<input type="text" name="" id="select-text" value="" placeholder="search" />
+						<input type="button" name="select-sub" id="select-sub" value="" />
+					</div>
+				</div>
+				<img src="../img/shouc.png" alt="" id="sel" />
+				<img src="../img/user.png" alt="" id="nav-tit" />
+				<div class="nav-zi">
+					<a href="DS">用户中心<img src="../img/nav-zi-1.png" alt="" /></a>
+					<a href="">购物车<img src="../img/nav-zi-2.png" alt="" /></a>
+					<a href="">消息<img src="../img/nav-zi-3.png" alt="" /></a>
+					<a href="">收藏夹<img src="../img/nav-zi-4.png" alt="" /></a>
+					<a href="">设置<img src="../img/nav-zi-5.png" alt="" /></a>
+				</div>
+			</div>
+
+		</header>
+
+		<div>
+
+			<hr style="width: 90%;border-color: #F9F6F6;margin: auto;">
+			<br>
+			<style>
+				.user-nav2 ul li {
+					width: 50%;
+					font-size: 0.4rem;
+				}
+				/*kais*/
+				
+				.date-main {
+					padding: 20px 0;
+				}
+				
+				.date-main h2 {
+					font-size: 25px;
+					line-height: 50px;
+					padding: 0 20px;
+				}
+				
+				.date-main .date-tab {
+					border-bottom: 1px solid #ccc;
+				}
+				
+				.date-main .date-tab li {
+					display: inline-block;
+					padding: 20px 5px;
+					vertical-align: top;
+					font-size: 16px;
+				}
+				
+				.date-main .date-tab .date-tab-li-1 {
+					width: 150px;
+					text-align: right;
+				}
+				
+				.date-main .date-tab .date-tab-li-2 {
+					width: 100px;
+					text-align: center;
+				}
+				
+				.date-main .date-tab .date-tab-li-3 {
+					width: 500px;
+					line-height: 30px;
+				}
+				
+				.date-main .date-tab .date-tab-li-3 p {
+					text-indent: 2em;
+				}
+				
+				.date-main .date-tab .date-tab-li-4 {
+					width: 100px;
+					text-align: center;
+				}
+				
+				.date-main .date-tab .date-tab-li-4 a {
+					color: #00c8e0;
+				}
+				
+				.data-table {
+					width: 90%;
+					margin: 0.5rem auto;
+				}
+				
+				.data-table td {
+					font-size: 16px;
+					padding: 10px 0;
+				}
+				
+				.data-table td .table-text {
+					height: 30px;
+					padding: 0 10px;
+					font-size: 16px;
+					width: 150px;
+					outline: none;
+				}
+				
+				.data-table .data-table-td-1 {
+					width: 3rem;
+					text-align: center;
+					font-weight: 800;
+					font-size: 0.4rem;
+				}
+				
+				.data-table .data-table-td-2 {
+					width: 6rem;
+					font-size: 0.4rem;
+				}
+				
+				.data-table .data-table-td-2 span {
+					font-size: 12px;
+				}
+				
+				.data-table .data-table-td-2 .dan {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background: #ccc;
+					border-radius: 50%;
+					cursor: pointer;
+					position: relative;
+					top: 5px;
+					margin-right: 5px;
+				}
+				
+				.data-table .data-table-td-2 .dan-on {
+					background: #00c8e0;
+				}
+				
+				.data-table .bjImg {
+					border-radius: 100px;
+					width: 100px;
+					height: 100px;
+					position: relative;
+					cursor: pointer;
+				}
+				
+				.data-table .bjImg-box {
+					position: relative;
+					cursor: pointer;
+					width: 100px;
+					height: 100px;
+					border-radius: 100px;overflow: hidden;
+				}
+				
+				.data-table .bjImg-font {
+					position: absolute;
+					bottom: 0px;
+					font-size: 12px;
+					width: 100px;
+					text-align: center;
+					line-height: 50px;
+					height: 50px;
+					border-radius: 0 0 100px 100px;
+					background: #999;
+					opacity: 0;
+					color: #fff;
+				}
+				
+				.data-table .bjImg-box:hover .bjImg-font {
+					opacity: 1;
+				}
+				
+				.bc-butt {
+					width: 2rem;
+					height: 40px;
+					background: #00c8e0;
+					color: #fff;
+					border-radius: 5px;
+					border: none;
+					outline: none;
+					cursor: pointer;
+					font-size: 16px;
+					position: relative;
+					left: 0.3rem;
+				}
+				
+			
+			</style>
+			<div class="user-nav2 ">
+				<ul class="clearfix">
+					<li>
+						<a href="">安全设置</a>
+
+					</li>
+					<li>
+						<a href="">个人资料</a>
+						<i></i>
+					</li>
+				</ul>
+			</div>
+
+			<div class="date-main">
+				<table border="0" cellspacing="0" cellpadding="0" class="data-table">
+
+					<tr>
+						<td class="data-table-td-1">用户名：</td>
+						<td class="data-table-td-2">
+							<input type="text" name="" id="" class="table-text" value="小米" />
+						</td>
+					</tr>
+					<tr>
+						<td class="data-table-td-1">真实姓名：</td>
+						<td class="data-table-td-2">
+							<input type="text" name="" id="" class="table-text" value="小米" />
+						</td>
+					</tr>
+					<tr>
+						<td class="data-table-td-1">性别：</td>
+						<td class="data-table-td-2">
+							<i class="dan dan-on"></i>男&nbsp;&nbsp;&nbsp;&nbsp;
+							<i class="dan"></i>女
+						</td>
+					</tr>
+					<tr>
+						<td class="data-table-td-1">生日：</td>
+						<td class="data-table-td-2">
+							<input  id="beginTime" class="kbtn table-text" />
+							<span>（出生年份为保密）</span>
+							<div id="datePlugin"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="data-table-td-1">当前头像：</td>
+						<td class="data-table-td-2">
+							<div class="bjImg-box">
+								<img src="../img/user.png" alt="" class="bjImg" />
+								<div class="bjImg-font">编辑头像</div>
+							</div>
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="data-table-td-1"></td>
+						<td class="data-table-td-2"><button class="bc-butt">保存</button></td>
+					</tr>
+				</table>
+
+			</div>
+
+		</div>
+
+		<footer id="footer">
+			<ul class="clearfix">
+				<a href="">
+					<li>
+
+						<img src="../img/foot1.png" alt="" />
+						<p>关于我们</p>
+
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot2.png" alt="" />
+						<p>联系我们</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot3.gif" alt="" />
+						<p>服务流程</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot4.png" alt="" />
+						<p>疑问解答</p>
+					</li>
+				</a>
+			</ul>
+			<div class="footer-box">
+				<div></div>
+				<p>官方微信</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/head.js"></script>
+		<script type="text/javascript" src="../js/date.js" ></script>
+		<script type="text/javascript" src="../js/iscroll.js" ></script>
+		<script>
+		
+		$('#beginTime').date();
+		
+			sex();
+
+			function sex() { //性别选择
+				$(".dan").click(function() {
+					$(".dan").removeClass("dan-on");
+					$(this).addClass("dan-on");
+				})
+			}
+		</script>
+	</body>
+
+</html>

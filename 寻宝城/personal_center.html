@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+		
+		<section class="per-topimg">
+			<div class="per-topimg-box">
+				<span class="clearfix">
+					<div class="per-topimg-box-row">
+						<img src="img/banner.jpg"/>
+					</div>
+					<div class="per-topimg-box-row">
+						<h3>林小七</h3>
+						
+					</div>
+					<div style="float: right;">
+						<button class="guanzu">签到</button>
+						<button class="cloes-guanzu" style="display: none;">已签到</button>
+					</div>
+				</span>
+				
+				<div class="per-topimg-bottom">
+					金币：<b>300</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绿币：<b>600</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a href=""><button class="top-up">充值</button></a>
+				</div>
+			</div>			
+		</section>
+		<section class="per-menu">
+			<a href="account_set.html">
+				<img src="img/per-1.png" class="per-menu-img"/>账户设置
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="user.html">
+				<img src="img/per-2.png" class="per-menu-img"/>我的金币
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="my_collection.html">
+				<img src="img/per-3.png" class="per-menu-img"/>我的藏品 <span class="per-num">4</span>
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="my_message.html">
+				<img src="img/per-4.png" class="per-menu-img"/>我的消息
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="attention.html">
+				<img src="img/per-5.png" class="per-menu-img"/>关注/粉丝
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="my_dou_bao.html">
+				<img src="img/per-6.png" class="per-menu-img"/>我的斗宝
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="">
+				<img src="img/per-7.png" class="per-menu-img"/>我要埋宝
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+			<a href="">
+				<img src="img/per-8.png" class="per-menu-img"/>邀请好友注册<span class="per-menu-text">邀请成功获赠500绿币</span>
+				<img src="img/leftjt.png" class="per-menu-jt"/>
+			</a>
+		</section>
+		
+		
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html" >
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html" >
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script>	
+			//签到
+			$(".guanzu").click(function(){
+				$(".cloes-guanzu").show();
+				$(this).hide();
+			});	
+		</script>
+	</body>
+
+</html>

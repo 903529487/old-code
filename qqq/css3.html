@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="ssss"/>
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+	</head>
+	<script>$(function(){
+						var ss= $(document).width()/$(document).height();
+						alert(ss)
+	})
+
+	</script>
+	<style>
+		#ss{
+			width: 300px;height: 200px;background: red;
+			transition:transform 1s;
+			
+		}
+	</style>
+	<body>
+	<button id="bu">sss</button>
+		<div id="ss">
+			
+		</div>
+		<video width="900" height="400" controls="controls" autoplay="autoplay">
+			<source src="movie.ogg" type="video/ogg"></source>
+		</video>
+	</body>
+	<script>
+	var bu=document.getElementById("bu");
+	var ss=document.getElementById("ss");
+	bu.onclick=function(){
+
+		ss.style.webkitTransform="translateX(200px)";
+			
+	}
+	</script>
+</html>

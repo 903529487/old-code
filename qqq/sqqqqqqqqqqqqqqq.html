@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.box {
+			margin: 100px;
+		}
+		
+		.text {
+			width: 200px;
+		}
+		
+		.text-box {
+			list-style: none;
+			width: 200px;
+			border: 1px solid #000;
+			display: none;
+		}
+		
+		.text-box li {
+			height: 30px;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		#box{
+			margin-top: 900px;
+		}
+		.ss{
+			width: 300px;height: 300px;display: block;
+			clip: rect(30px 200px 200px 20px);
+		}
+		.sw{
+			width: 200px;
+			 height: 40px;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+         -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+		}
+		#ssss{
+			height: 800px;background: red;
+		}
+		#ssss2{
+			height: 800px;background: olive;
+			
+		}
+	</style>
+
+	<body>
+		<a href="#ssss">sss</a><a href="#ssss2">sss22</a>
+		<div class="sw">
+			顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶
+		</div>
+
+		<div class="box">
+			<input type="text" name="" class="text" id="" value="" />
+			<ul class="text-box">
+				<li>sssss</li>
+				<li>成交价及</li>
+				<li>万网</li>
+			</ul>
+		</div>
+		<div class="box" id="box">
+			<input type="text" name="" class="text" id="" value="" />
+			<ul class="text-box">
+				<li>sssss</li>
+				<li>成交价及</li>
+				<li>万网</li>
+			</ul>
+		</div>
+		
+		<div id="ssss">ssssww</div>
+		<div id="ssss2">ssssww</div>
+		<script>
+			$(function() {
+				boxShow();
+			})
+
+
+$(function(){    
+    //锚点跳转滑动效果 
+    $('a[href*=#],area[href*=#]').click(function() { 
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) { 
+            var $target = $(this.hash); 
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']'); 
+            if ($target.length) { 
+                var targetOffset = $target.offset().top; 
+                $('html,body').animate({ 
+                            scrollTop: targetOffset 
+                        }, 
+                        1000); 
+                return false; 
+            } 
+        } 
+    }); 
+}) 
+
+			function boxShow() {
+				$(".text").click(function() {
+					if ($(this).next(".text-box").css("display") == "none") {
+						$(this).next(".text-box").show();
+					}
+				});
+				$(document).bind("click", function(e) { //点击空白隐藏
+					var target = $(e.target);
+					if (target.closest(".text-box,.text").length == 0) {
+						$(".text-box").hide();
+					};
+					e.stopPropagation();
+				});
+				$(".text-box li").click(function() {
+					var te = $(this).text();
+					$(this).parent().siblings(".text").val(te);
+					$(".text-box").hide();
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+	</head>
+
+	<link rel="stylesheet" href="../css/shopping.css" />
+
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<img src="../img/logo.png" alt="" id="logo" />
+				<div class="header-right">
+					<a href="index.html">闪电修首页</a>
+					<a href="">服务流程</a>
+					<img src="../img/user.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div id="in-main">
+			<div class="pay-main">
+				<div class="pay-title">
+					首页 &nbsp;&nbsp;＞&nbsp;&nbsp;售＞&nbsp;&nbsp; MARVEL&nbsp;&nbsp;＞ &nbsp;&nbsp; MARVEL 手机壳
+				</div>
+				<div class="pay-goods clearfix">
+					<div class="pay-goods-left">
+						<div>
+							<span><img src="../img/goods.png" alt="" /></span>
+						</div>
+					</div>
+					<div class="pay-goods-right">
+						<h2>MARVEL 手机壳<br>
+						for iphone6s</h2>
+						<div class="pay-text">
+							￥300.00
+							<button class="pay-fq">分期付款</button>
+						</div>
+						<div class="pay-color">
+							<i style="background: #000000;"></i>
+							<i style="background: goldenrod;"></i>
+						</div>
+						<div style="margin-top: 20px;">
+							<button class="pay-minus">-</button>
+							<input type="text" name="" id="" value="0" class="pay-num-text" />
+							<button class="pay-add">+</button>
+						</div>
+						<div style="margin-top: 20px;">
+							<button class="pay-fq pay-gm">立即购买</button>&nbsp;&nbsp;&nbsp;&nbsp;
+							<button class="pay-fq pay-gm">加入购物车</button>
+						</div>
+						<div class="pay-color2">
+							<i></i>1个月保险
+							<span><i></i>7天无条件</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="pay-nav">
+					<ul>
+						<li class="pay-nav-on">商品详情</li>
+						<li>规格参数</li>
+						<li style="border-right: none;">售后服务</li>
+					</ul>
+					
+				</div>
+				<div>
+						<div class="pay-con">
+							页面一
+						</div>
+						<div class="pay-con">
+							页面2
+						</div>
+						<div class="pay-con">
+							页面3
+						</div>
+					</div>
+			</div>
+
+			<footer id="footer" style="position: relative;top: 100px;">
+				<ul class="clearfix">
+					<a href="">
+						<li>
+
+							<img src="../img/foot1.png" alt="" />
+							<p>关于我们</p>
+
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot2.png" alt="" />
+							<p>联系我们</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot3.gif" alt="" />
+							<p>服务流程</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot4.png" alt="" />
+							<p>疑问解答</p>
+						</li>
+					</a>
+				</ul>
+				<div class="footer-box">
+					<div><img src="../img/wem.png" alt="" /></div>
+					<p>官方微信</p>
+				</div>
+			</footer>
+
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script>
+			$(function() {
+				$(".pay-minus").click(function() {
+					var num = $(".pay-num-text").val();
+					if (num <= 0) {
+						num = 0;
+					} else {
+						$(".pay-num-text").val(parseInt(--num));
+					}
+				});
+				$(".pay-add").click(function() {
+					var num = $(".pay-num-text").val();
+					$(".pay-num-text").val(parseInt(++num));
+				});
+			})
+			qutab();
+			function qutab(){
+				$(".pay-con").eq(0).show()
+				$(".pay-nav li").click(function(){
+					$(".pay-nav li").removeClass("pay-nav-on");
+					$(this).addClass("pay-nav-on");
+					$(".pay-con").hide()
+					$(".pay-con").eq($(this).index()).show()
+				})
+			}
+		</script>
+	</body>
+
+</html>

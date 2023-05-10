@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>收款</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<section>
+			
+			<div class="jiebox">
+				<table border="0" cellspacing="0" cellpadding="0" class="jies">
+					<tr>
+						<td style="text-align: left;">票数：</td>
+						<td>
+							<span class="pay-minus">-</span>
+							<input type="text" name="" id="" value="1" class="pay-num-text" />
+							<span class="pay-add">+</span>
+						</td>
+						<td style="text-align:right;" class="zongjia">0￥ </td>
+					</tr>
+				</table>
+			
+				<!--单价-->
+			</div>
+			<div class="jiebox">
+				<table border="0" cellspacing="0" cellpadding="0" class="jies">
+					<tr>
+						<td style="text-align: left;">按时计费：</td>
+						<td>
+							
+							<input type="text" name="" id="" value="1" class="pay-num-text2" readonly="readonly"/>
+							
+						</td>
+						<td style="text-align:right;" class="danjia2">40￥ </td>
+					</tr>
+				</table>
+				<input type="hidden" name="" id="" class="zendanjia" value="40" />
+				<!--单价-->
+			</div>
+			
+			
+			<br><br><br><br>
+			<div class="lo-sub" style="width: 9rem;margin: auto;">
+				<input type="submit" name="" id="" value="确 认 结 束" style="height: 1.2rem;line-height: 1.2rem;" />
+			</div>
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script>
+			$(".pay-minus").on('touchstart', function(e) { //计数---
+				e.preventDefault();
+				var num = $(this).siblings(".pay-num-text").val();
+				if(num <= 0) {
+					num = 0;
+				} else {
+					$(this).siblings(".pay-num-text").val(parseInt(--num));
+
+					zong();
+				}
+
+			});
+
+			$(".pay-add").on('touchstart', function(e) { //+++
+				e.preventDefault();
+				var num = $(this).siblings(".pay-num-text").val();
+				$(this).siblings(".pay-num-text").val(parseInt(++num));
+				zong();
+			});
+			$(".pay-num-text").keyup(function() {
+				zong();
+			});
+			
+			zong();
+			function zong() { //算价格	
+				var zon=0;			
+				var danmun = parseInt($(".pay-num-text").val() * $(".zendanjia").val());
+				zon=parseInt(danmun);			
+				$(".zongjia").text(zon)
+			}
+		</script>
+	</body>
+
+</html>

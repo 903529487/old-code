@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png" /></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+
+		<section>
+			<div class="add-db-row">
+				宝物名称：<input type="text" class="add-db-row-text" placeholder="请输入宝物标题" />
+			</div>
+			<div class="add-db-row">
+				宝物类别：<span class="add-xz"><b id="addyaz">请选择</b><img src="img/leftjt.png" alt="" /></span>
+			</div>
+			<div class="add-db-row" style="height: 2.5rem;">
+				宝物简介：<textarea class="add-db-row-text" style="height: 1.5rem;resize: none;" placeholder="请简单介绍一下您的宝物，字数40个以内"></textarea>
+			</div>
+
+			<div class="uploading-img">
+				<div class="addfile-img">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,0)' />
+					<div class="imgPreview"></div>
+				</div>
+				<div class="addfile-img">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,1)' />
+					<div class="imgPreview"></div>
+				</div>
+				<div class="addfile-img">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,2)' />
+					<div class="imgPreview"></div>
+				</div>
+				<div class="addfile-img">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,3)' />
+					<div class="imgPreview"></div>
+				</div>
+				<div class="addfile-img">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,4)' />
+					<div class="imgPreview"></div>
+				</div>
+			</div>
+		</section>
+		<div style="padding: 0 0.3rem;margin-top: 0.5rem;">
+			<a href=""><button type="submit" class="login-sub">发布</button></a>
+		</div>
+		<!--弹出类别-->
+		<div class="class-pop">
+			<p>游戏类别</p>
+			<p>商品类别</p>
+			<p>搜索类别</p>
+			<p>游戏类别</p>
+		</div>
+		<div class="bas2"></div>
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html">
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/uploadPictures.js" ></script>
+		<script>
+			
+			var clickEvent = {
+				addPop: function() {
+					$(".add-xz").click(function() {
+						$(".class-pop").show();
+						$(".bas2").show();
+					});
+					$(".bas2").click(function() {
+						$(".class-pop").hide();
+						$(".bas2").hide();
+					});
+					$(".class-pop p").click(function() {
+						var vals = $(this).text();
+						$("#addyaz").text(vals);
+						$(".class-pop").hide();
+						$(".bas2").hide();
+					});
+				}
+			}
+			clickEvent.addPop();
+		</script>
+	</body>
+
+</html>

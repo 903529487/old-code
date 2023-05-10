@@ -1,0 +1,163 @@
+<include file='Public/header' />
+<!--轮播图start-->
+<div id="focus" class="focus2">
+    <div class="hd">
+        <ul></ul>
+    </div>
+    <div class="bd">
+        <ul>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图end-->
+<section class="obj-det-con" style=" border-bottom: 1px solid #DCDCDC;">
+    <div class="obj-det-tit clearfix">
+        <h3>清乾隆珐琅彩明黄地云龙纹梅瓶</h3>
+        <span><img src="__PUBLIC__/Home/img/fenxiang.png" class="fxs"/></span>
+    </div>
+    <p class="obj-det-tit-p">通高38.5公分，端庄秀丽，华贵大方，唇口、短颈、溜肩腹部渐下微收，底足外撇。</p>
+</section>
+<section>
+    <table border="0" cellspacing="0" cellpadding="0" class="ran-tab2">
+        <tr>
+            <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/useryoyx.png" style="border-radius: 50%;" /></td>
+            <td class="ran-tab-td-2">
+                <h3>天生无用</h3>
+                <p class="fz">两个小时前发布</p>
+            </td>
+            <td class="ran-tab-td-3">
+                <button class="addgz"><img src="__PUBLIC__/Home/img/jia.png" />加关注</button>
+            </td>
+        </tr>
+    </table>
+    <div class="bd-cos clearfix">
+        <p class="bd-cos-p"><img src="__PUBLIC__/Home/img/shan.png" />当前票数：<span>122555</span></p>
+        <button class="bd-vote">我要投票</button>
+        <button class="bd-vote2" style="display: none;">已投票</button>
+    </div>
+    <h3 class="obj-det-ins" style="margin: 0;">藏品评论<span>共<b>5</b>条</span></h3>
+    <table border="0" cellspacing="0" cellpadding="0" class="ran-tab3">
+        <tr>
+            <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/useryoyx.png" style="border-radius: 50%;" /></td>
+            <td class="ran-tab-td-2">
+                <h3>天生无用</h3>
+                <p class="fz">3分钟前</p>
+                <div>
+                    <p>这个东西好，肯定很值钱肯定很值钱肯定很值钱肯定很值钱</p>
+                </div>
+                <div class="huifu">
+                    <p><span>草外敷：</span>大大大滴滴答答</p>
+                </div>
+            </td>
+            <td class="ran-tab-td-3">
+                <span class="reply">回复</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/useryoyx.png" style="border-radius: 50%;" /></td>
+            <td class="ran-tab-td-2">
+                <h3>天生无用</h3>
+                <p class="fz">3分钟前</p>
+                <div>
+                    <p>这个东西好，肯定很值钱肯定很值钱肯定很值钱肯定很值钱</p>
+                </div>
+                <div class="huifu">
+                </div>
+            </td>
+            <td class="ran-tab-td-3">
+                <span class="reply">回复</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/useryoyx.png" style="border-radius: 50%;" /></td>
+            <td class="ran-tab-td-2">
+                <h3>天生无用</h3>
+                <p class="fz">3分钟前</p>
+                <div>
+                    <p>这个东西好，肯定很值钱肯定很值钱肯定很值钱肯定很值钱</p>
+                </div>
+                <div class="huifu">
+                </div>
+            </td>
+            <td class="ran-tab-td-3">
+                <span class="reply">回复</span>
+            </td>
+        </tr>
+    </table>
+</section>
+<!--弹出pop-->
+<section class="reply-pop">
+    <div>
+        <input type="text" name="" id="reply-text" value="" />
+        <input type="button" name="" id="reply-sub" value="评论" />
+    </div>
+</section>
+<section class="fs-pop">
+    <img src="__PUBLIC__/Home/img/xuanzhong.png" />
+    <h2>您已经成功投票</h2>
+    <div class="fs-pop-last">
+        <button class="fs-pop-cloe">关闭</button>
+    </div>
+</section>
+<div class="bas2"></div>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script type="text/javascript" src="/Public/Home/js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+TouchSlide({
+    slideCell: "#focus",
+    titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+    mainCell: ".bd ul",
+    effect: "left",
+    autoPlay: false, //自动播放
+    autoPage: true, //自动分页
+    switchLoad: "_src" //切换加载，真实图片路径为"_src"
+});
+
+var clicksPop = {
+    reply: function() {
+        //弹出回复输入框
+        $(".reply").click(function() {
+            $(".reply-pop").addClass("reply-pop-on");
+            $(".bas2").show();
+            $("body").css("overflow", "hidden");
+        });
+        $(".bas2").click(function() {
+            $(".reply-pop").removeClass("reply-pop-on");
+            $(".bas2").hide();
+            $("body").css("overflow", "auto");
+        });
+    },
+    bdPop: function() {
+        //			投票
+        $(".bd-vote").click(function() {
+            $(".bd-vote2").show();
+            $(this).hide();
+            $(".bas2").show();
+            $(".fs-pop").show();
+            $("body").css("overflow", "hidden");
+        });
+        $(".fs-pop-cloe").click(function() {
+
+            $(".bas2").hide();
+            $(".fs-pop").hide();
+            $("body").css("overflow", "auto");
+
+        });
+    }
+}
+clicksPop.reply();
+clicksPop.bdPop();
+</script>
+</body>
+
+</html>

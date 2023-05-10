@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="goods-header">
+			<a href="javascript:history.go(-1);" class="ht"><img src="img/ht.png" /></a>
+			评价
+			<a href="javascript:viod(0);" class="gd"><img src="img/slv.png" alt="" /></a>
+			<div class="zi-meta">
+				<a href="index.html">主页</a>
+				<a href="user.html">个人中心</a>
+				<a href="goods_list.html">特卖专区</a>
+				<a href="goods_list.html">精品区</a>
+			</div>
+		</header>
+		<section class="dz-con">
+			<table border="0" cellspacing="0" cellpadding="0" class="dz-tab">
+
+				<tr>
+					<td class="dz-tab-td-1"><img src="img/dingdan.png" /></td>
+					<td class="dz-tab-td-2">
+
+						<h3>用户名用户名用户名用户名
+								<span>
+									<samp><img src="img/dz.png"/>111</samp>
+									<samp class="pinlun"><img src="img/pl.png"/>111</samp>
+								</span></h3>
+						<p>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="dz-tab-td-1"></td>
+					<td class="dz-tab-td-2 huifu">
+						<p>
+							<a href="">计算机或</a> 回复
+							<a href="">计算机33订单：</a>论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" class="dz-tab">
+
+				<tr>
+					<td class="dz-tab-td-1"><img src="img/dingdan.png" /></td>
+					<td class="dz-tab-td-2">
+
+						<h3>用户名用户名用户名用户名
+								<span>
+									<samp><img src="img/dz.png"/>111</samp>
+									<samp class="pinlun"><img src="img/pl.png"/>111</samp>
+								</span></h3>
+						<p>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="dz-tab-td-1"></td>
+					<td class="dz-tab-td-2 huifu">
+						<p>
+							<a href="">计算机或</a> 回复
+							<a href="">计算机33订单：</a>论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" class="dz-tab">
+
+				<tr>
+					<td class="dz-tab-td-1"><img src="img/dingdan.png" /></td>
+					<td class="dz-tab-td-2">
+
+						<h3>用户名用户名用户名用户名
+								<span>
+									<samp><img src="img/dz.png"/>111</samp>
+									<samp class="pinlun"><img src="img/pl.png"/>111</samp>
+								</span></h3>
+						<p>评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="dz-tab-td-1"></td>
+					<td class="dz-tab-td-2 huifu">
+						<p>
+							<a href="">计算机或</a> 回复
+							<a href="">计算机33订单：</a>论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评论评论评论评论评论</p>
+						<p>
+							<a href="">计算机或：</a>论评论评论评评论评论评论评论评论评论评论评论</p>
+					</td>
+				</tr>
+			</table>
+		</section>
+
+		<div class="pinlunbox">
+			<textarea class="inptext" placeholder="输入评论内容"></textarea>
+			<button class="crat-sub sws">评论</button>
+		</div>
+		<div class="bgd"></div>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/pult.js"></script>
+		<script>
+		pinLuns();
+			function pinLuns() {
+				var ins = 0;
+				$(".pinlun").on('touchstart',function(e){   
+				e.preventDefault();
+					ins = parseInt($(this).parent().parent().parent().parent().parent().parent().index());
+					$(".pinlunbox").css({
+						 webkitTransform: "translateY(0rem)",
+    						transform:"translateY(0rem)"
+					})	
+					$(".bgd").show()
+				})
+				$(".sws").on('touchstart',function(e){   
+				e.preventDefault();				
+					var con = $(".inptext").val();
+					if(con==null || con==""){
+						alert("你没输入内容")
+					}else{
+						$(".dz-tab").eq(ins).find(".huifu").append('<p><a href="">计算机或：</a>' + con + '</p>');
+						$(".inptext").val("");
+						$(".pinlunbox").css({
+							 webkitTransform: "translateY(6rem)",
+	    						transform:"translateY(6rem)"
+						})	;
+						$(".bgd").hide()
+					}
+					
+				});
+				$(".bgd").on('touchstart',function(e){   
+				e.preventDefault();
+					$(".pinlunbox").css({
+							 webkitTransform: "translateY(6rem)",
+	    						transform:"translateY(6rem)"
+						});	
+				})
+			}
+		</script>
+	</body>
+
+</html>

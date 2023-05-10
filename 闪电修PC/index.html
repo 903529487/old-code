@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+	</head>
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+<style>
+	.user-nav-con{
+     position: absolute;
+z-index: 8;
+
+display:none;
+top: 70px;right:0;
+text-align: center;
+border-radius: 10px;
+
+}
+
+ #insd-top:hover .user-nav-con{
+    display:block;
+ }
+
+.user-top-nav li {
+ height: 50px;
+line-height: 50px;
+width: 150px;
+background-color: #F7F8F8
+;
+text-align: right;
+  border: 1px solid #fff;
+border-radius: 55px;
+margin-top: 10px;
+}
+.user-top-nav li:hover{
+border: 1px solid #00c8e0;
+border-radius: 55px;
+}
+.user-top-nav a {
+color: #9FA0A0;
+}
+.user-top-nav span {
+position: relative;
+left: -20px;
+}
+.header .header-main .header-right  .ssimg{
+position: relative;
+top: -57px;
+vertical-align: middle;
+width: auto;
+height: auto;
+border-radius:none;
+position: relative;
+right: 0;
+top: 0;
+}
+</style>
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<img src="img/logo.png" alt="" id="logo" />
+				<div class="header-right">
+					<a href="index.html">闪电修首页</a>
+					<a href="">服务流程</a>
+				      <div id="insd-top" style="position:relative;float:right">
+				<a href="{:U('User/index')}" ><img src="{$user['pic']}" alt="" />
+                   
+                </a>
+                 <div class="user-nav-con" >
+                        <ul class="user-top-nav">
+    <li><a href="__MODULE__/User/index" style="color:#999"><span>用户中心</span><img src="__RES__/img/min1.png" alt="" class="ssimg" /></a></li>
+    <li><a href="__MODULE__/Shop/cart" style="color:#999"><span>购物车</span><img src="__RES__/img/min2.png" alt=""  class="ssimg"/></a></li>
+    <li><a href="__MODULE__/User/message1" style="color:#999"><span>消息</span><img src="__RES__/img/min3.png" alt=""  class="ssimg"/></a></li>
+    <li><a href="__MODULE__/User/collections" style="color:#999"><span>收藏夹</span><img src="__RES__/img/min4.png" alt=""  class="ssimg"/></a></li>
+    <li><a href="__MODULE__/User/safety" style="color:#999"><span>设置</span><img src="__RES__/img/min5.png" alt=""  class="ssimg"/></a></li>
+    <li><a href="__MODULE__/Login/loginOut" style="color:#999"><span>退出</span><img  src="__RES__/img/min6.png" alt=""  class="ssimg"/></a></li>
+</ul>
+                    </div>
+                </div>
+                
+                
+				</div>
+			</div>
+		</div>
+		<section>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background: url(img/ipsps.png)no-repeat;background-position: center center;background-size: cover;"></div>
+					<div class="swiper-slide" style="background: url(img/ipsps.png)no-repeat;background-position: center center;background-size: cover;"></div>
+					<div class="swiper-slide" style="background: url(img/ipsps.png)no-repeat;background-position: center center;background-size: cover;"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<div id="in-main" style="width: 943px;">
+			<div class="in-nav clearfix">
+				<ul class="clearfix">
+					<li>
+						<a href=""><img src="img/x.png" alt="" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/y.png" alt="" /></a>
+					</li>
+					<li>
+						<a href=""><img src="img/s.png" alt="" /></a>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+			<!--<div class="in-box">
+
+				<div class="in-content">
+					<h2>我 们 是 谁<br>Who are we </h2>
+					<div class="in-content-text">
+						<p>闪电修(Suddenfix)<br>一个基于用户地理位置快速响应提供手机上门维修服务的O2O平台。</p>
+						<p>
+							深圳闪电修科技有限公司投资打造的互联网售后服务品牌，成立于份，总部位于2015年8月份深圳。致力于为用户提供 “专业、便捷、安心”的标准化售后到家服务，立志成为改变手机维修行业乱象的发生地与加速器。
+						</p>
+						<p>
+							闪电修以手机上门维修为切入点，业务范围涵盖上门维修、上门检测、二手回收交易、新机销售等，打造智能终端一站式O2O,闭环服务模式。
+						</p>
+					</div>
+					<img src="img/zs.png" alt="" class="zc" />
+					
+				</div>
+			</div>-->
+			
+			<div class="ing-img" style="text-align: center;border-top: 2px solid #00C8E0;">
+				<img src="img/in1.png" alt="" />
+				<img src="img/wmc.png" alt="" />
+				<img src="img/in3.png" />
+				<img src="img/in4.png" alt="" />
+			</div>
+
+			<footer id="footer">
+				<ul class="clearfix">
+					<a href="">
+						<li>
+
+							<img src="img/foot1.png" alt="" />
+							<p>关于我们</p>
+
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot2.png" alt="" />
+							<p>联系我们</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot3.gif" alt="" />
+							<p>服务流程</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot4.png" alt="" />
+							<p>疑问解答</p>
+						</li>
+					</a>
+				</ul>
+				<div class="footer-box">
+					<div><img src="img/wem.png" alt="" /></div>
+					<p>官方微信</p>
+				</div>
+			</footer>
+
+		</div>
+
+	</body>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			autoplay: 3000,
+			speed: 300
+		});
+	</script>
+
+</html>

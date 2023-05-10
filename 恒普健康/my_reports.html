@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="adt/LArea.css" />
+		<link rel="stylesheet" href="adt/common.css" />
+		<link rel="stylesheet" href="css/css.css" />
+
+	</head>
+
+	<body>
+		<header class="rep-header">
+			<ul class="clearfix">
+				<li>
+					<a href="report.html">条码查询</a>
+				</li>
+				<li class="rep-header-on">
+					<a href="my_reports.html">我的报告</a>
+				</li>
+			</ul>
+		</header>
+		<br>
+		<section class="rep-box">
+			<table border="0" cellspacing="0" cellpadding="0" class="rep-box-tab">
+				<tr>
+					<td class="rep-box-tab-td-1">起始时间：</td>
+					<td class="rep-box-tab-td-2"><input id="beginTime" readonly="" class="rep-kbtn" value="2016-11-11" /></td>
+				</tr>
+				<tr>
+					<td class="rep-box-tab-td-1">结束时间：</td>
+					<td class="rep-box-tab-td-2"><input type="text" name="" class="rep-kbtn" readonly="" id="endTime" value="" /></td>
+				</tr>
+
+				<tr>
+					<td class="rep-box-tab-td-1">地&nbsp;&nbsp;&nbsp;域：</td>
+					<td class="rep-box-tab-td-2"><input type="text" name="" class="rep-kbtn" readonly="" id="demo1" value="" /><img src="images/back-jt.png" class="back-jt" /></td>
+				</tr>
+				<tr>
+					<td class="rep-box-tab-td-1">医&nbsp;&nbsp;&nbsp;院：</td>
+					<td class="rep-box-tab-td-2"><input type="text" name="" class="rep-kbtn" readonly="" id="hospital-kz" value="" /><img src="images/back-jt.png" class="back-jt" /></td>
+				</tr>
+				<tr>
+					<td class="rep-box-tab-td-1">条码号：</td>
+					<td class="rep-box-tab-td-2"><input type="text" name="" class="rep-kbtn" id="txm" value="" /></td>
+				</tr>
+				<tr>
+					<td class="rep-box-tab-td-1">检验医嘱：</td>
+					<td class="rep-box-tab-td-2">
+						<input type="text" name="" class="rep-kbtn" readonly="" id="doctor_advice-kz" value="" /><img src="images/back-jt.png" class="back-jt" />
+					</td>
+				</tr>
+			</table>
+			<div id="datePlugin"></div>
+		</section>
+		<button class="subbmit" style="margin-top: 2rem;">查 询</button>
+		<div style="height: 1.8rem;"></div>
+		<footer id="user-foot">
+			<ul>
+				<li class="user-foot-on" style="border-right: 1px solid #DCDCDC;">
+					<a href="report.html" class="bangd"><img src="images/y-t-1.png" /><br>报告查询</a>
+				</li>
+				<li>
+					<a href="user.html"><img src="images/w-t-2.png" /><br>个人中心</a>
+				</li>
+			</ul>
+		</footer>
+
+		<!--医院stra-->
+		<div class="hospital">
+			<header id="header">
+				<a class="retreat2 dsu-huit"><img src="images/ht.png" /></a>
+				选择医院
+			</header>
+			<ul>
+				<li>深圳市人民医院</li>
+				<li>深圳市第三医院</li>
+				<li>深圳市卫生医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+				<li>深圳市人民医院</li>
+			</ul>
+		</div>
+		<!--医院end-->
+		
+		<!--医院stra-->
+		<div class="doctor_advice">
+			<header id="header">
+				<a class="retreat2 dsu-huit"><img src="images/ht.png" /></a>
+				选择检测项目
+			</header>
+			<div class="doter-select">
+				<input type="text" name="" id="" value="" placeholder="请输入检验项目"/>
+			</div>
+			<div class="doctor_advice_box">
+				<aside class="asb">
+					ABCDEFGHIJKLMNOPQRSTUVWXYZ
+				</aside>
+				<div class="doctor_advice_rowe">A</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">B</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">C</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">C</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">C</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">C</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+				<div class="doctor_advice_rowe">C</div>
+				<ul>
+					<li>血清检测</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+					<li>体检</li>
+				</ul>
+			</div>
+
+		</div>
+		<!--医院end-->
+		
+		<!--验证弹窗弹窗stra-->
+		<div class="capacity">
+			<div class="capacity-text">
+				<span class="boxs-texts">
+				
+				</span>
+			</div>
+		</div>
+
+		<!--去登陆-->
+		<div class="capacity2" >
+			<h3>
+				您还没有登录，请先登录！
+			</h3>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<a href="login.html"><button class="idea-capacity-sub phone-check">去登录</button></a>
+			</div>
+		</div>
+		<div class="bas" ></div>
+		<!--弹窗end-->
+		<script type="text/javascript" src="adt/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="adt/LAreaData1.js"></script>
+		<script type="text/javascript" src="adt/LAreaData2.js"></script>
+		<script type="text/javascript" src="adt/LArea.js"></script>
+		<script type="text/javascript" src="adt/date.js"></script>
+		<script type="text/javascript" src="adt/iscroll.js"></script>
+
+		<script>
+			$(function() {
+				$('#beginTime').date();
+				$('#endTime').date();
+			});
+			var area1 = new LArea();
+			area1.init({
+				'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+				'valueTo': '#value1', //选择完毕后id属性输出到该位置
+				'keys': {
+					id: 'id',
+					name: 'name'
+				}, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+				'type': 1, //数据源类型
+				'data': LAreaData //数据源
+			});
+
+			//弹出医院选择
+		hospital();   
+		function hospital(){
+			$("#hospital-kz").click(function(){
+			if($("#demo1").val()==null || $("#demo1").val()==""){
+				alert("请先选择地域")
+			}else{
+				$(".hospital").css({
+					" webkitTransform": "translateX(-10rem)",
+  					 "transform": "translateX(-10rem)"
+				});
+			
+			}
+			
+			});
+			$(".hospital li").click(function(){
+				var tex=$(this).text();
+				$("#hospital-kz").val(tex);
+				$(".hospital").css({
+					" webkitTransform": "translateX(0)",
+  					 "transform": "translateX(0)"
+				});
+			
+			});
+			$(".dsu-huit").click(function() {
+					$(".hospital").css({
+						" webkitTransform": "translateX(0)",
+						"transform": "translateX(0)"
+					});
+				})
+		}
+		//弹出医嘱选择
+		doctorAdvice();
+		function doctorAdvice(){
+			$("#doctor_advice-kz").click(function(){
+			
+				$(".doctor_advice").css({
+					" webkitTransform": "translateX(-10rem)",
+  					 "transform": "translateX(-10rem)"
+				});
+			
+		
+			
+			});
+			$(".doctor_advice li").click(function(){
+				var tex=$(this).text();
+				$("#doctor_advice-kz").val(tex);
+				$(".doctor_advice").css({
+					" webkitTransform": "translateX(0)",
+  					 "transform": "translateX(0)"
+				});
+			
+			});
+				$(".dsu-huit").click(function() {
+					$(".doctor_advice").css({
+						" webkitTransform": "translateX(0)",
+						"transform": "translateX(0)"
+					});
+				})
+		}
+
+			verify();
+
+			function verify() { //验证
+				var phone = $("#txm"),
+					capacity = $(".capacity"),
+					bas = $(".bas"),
+					boxsTexts = $(".boxs-texts");
+				phone.blur(function() {
+					if($(this).val() == "") { //验证条形码为空
+						bas.show();
+						capacity.addClass("animation").show();
+						boxsTexts.html("条形码不能为空");
+						userInset();
+					}
+				});
+
+				function userInset() { //2秒后自动关闭
+					setTimeout(function() {
+						bas.hide();
+						capacity.removeClass("animation").hide();
+					}, 2000)
+				}
+			}
+		</script>
+	</body>
+
+</html>

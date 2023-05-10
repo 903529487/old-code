@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+	</head>
+
+	<link rel="stylesheet" href="../css/style.css" />
+
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<img src="../img/logo.png" alt="" id="logo" />
+				<div class="header-right">
+					<a href="index.html">闪电修首页</a>
+					<a href="">服务流程</a>
+					<img src="../img/user.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div id="in-main">
+			<div style="width: 943px;margin: auto;">
+
+				<div class="user-top">
+					<span>
+					<img src="../img/shopinguset.png" alt="" /><br>
+					<strong>zheng_cf</strong>
+				</span>
+
+					<div class="user-select">
+						<img src="../img/select.png" alt="" />
+						<input type="text" name="" id="" value="" />
+					</div>
+
+				</div>
+
+				<div class="user-nav3 ">
+					<ul class="clearfix">
+						<li><a href="">安全设置</a>
+							<i></i>
+						</li>
+						<li><a href="">个人资料</a>
+
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="up-title clearfix">
+						<li class="span-on">
+							<span>1</span> 验证身份
+						</li>
+						<li class="span-on">
+							<span>2</span> 修改手机
+						</li>
+						<li>
+							<span>3</span> 完成
+						</li>
+						<i class="xian-1" style="background: #00C8E0;"></i>
+						<i class="xian-2"></i>
+					</ul>
+
+					<div class="up-email-main">
+						<h3><img src="../img/tanhao2.png" alt="" style="position: relative;top: 3px;"/>
+						&nbsp;我们不会泄露您的手机信息</h3>
+						<br>
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="email-table-td-1">手机号码：</td>
+								<td class="email-table-td-2">
+									+186&nbsp;<input type="text" class="table-text">
+								<!--	<span><img src="../img/tanhao2.png" alt="" />登录密码错误</span>-->
+								</td>
+							</tr>
+							<tr>
+								<td class="email-table-td-1">验证码：</td>
+								<td class="email-table-td-2">
+									<input type="text" class="table-text" placeholder="6位数" style="width: 70px;border: 1px solid #999;border-right: none;">
+									<button class="phone-hq">点击获取</button>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="email-table-td-1"></td>
+								<td class="email-table-td-2">
+									<button class="bc-butt" style="position: relative;left: 25px;">确定</button>
+								</td>
+							</tr>
+						</table>
+
+						<div class="email-tishi">
+							<h3>没收到短信验证码</h3>
+							<p>1.网络通讯异常可能会造成短信丢失，请重新获取或稍后再试</p>
+							<p>2.请核实手机是否已欠费停机，或者屏蔽了系统短信</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<footer id="footer" style="position: relative;top: 100px;">
+				<ul class="clearfix">
+					<a href="">
+						<li>
+
+							<img src="../img/foot1.png" alt="" />
+							<p>关于我们</p>
+
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot2.png" alt="" />
+							<p>联系我们</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot3.gif" alt="" />
+							<p>服务流程</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot4.png" alt="" />
+							<p>疑问解答</p>
+						</li>
+					</a>
+				</ul>
+				<div class="footer-box">
+					<div><img src="../img/wem.png" alt="" /></div>
+					<p>官方微信</p>
+				</div>
+			</footer>
+
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script>
+	yanzhangma();
+		function yanzhangma() {   //验证码倒计时
+			var mun;
+			var munset;
+			var zt = true;
+			$(".phone-hq").click(function() {
+				if (zt) {
+					mun = 60;
+					zt = false;
+					$(this).html("（" + mun + "秒后）重新获取验证码");
+					
+					djTime();
+				}
+			});
+
+			function djTime() {
+				munset = setInterval(function() {
+					mun--;
+					$(".phone-hq").html("（" + mun + "秒后）重新获取验证码");
+					if (mun <= 0) {
+						zt = true;
+						$(".phone-hq").html("获取验证码");
+						
+						clearInterval(munset);
+					}
+				}, 1000);
+
+			}
+		}
+</script>
+
+</html>

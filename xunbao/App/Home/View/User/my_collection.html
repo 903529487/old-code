@@ -1,0 +1,86 @@
+<include file='Public/header' />
+<section>
+    <div class="coll-box clearfix">
+        <img src="__PUBLIC__/Home/img/goosd.jpg" />
+        <div class="coll-box-text">
+            <h3>新疆和田籽料一级白双面工艺</h3>
+            <p><span>¥6000.00</span></p>
+            <p>收藏时间：2016-08-25 15:25:48</p>
+            <div>
+                <a href="collection_order.html">
+                    <button class="coll-box-but">换取实物</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="coll-box clearfix">
+        <img src="__PUBLIC__/Home/img/goosd.jpg" />
+        <div class="coll-box-text">
+            <h3>新疆和田籽料一级白双面工艺</h3>
+            <p><span>¥6000.00</span></p>
+            <p>收藏时间：2016-08-25 15:25:48</p>
+            <div>
+                <button class="coll-box-but2">已发货</button>
+                <a href="yes_receiving.html">
+                    <button class="coll-box-but">确认收货</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="coll-box clearfix">
+        <img src="__PUBLIC__/Home/img/goosd.jpg" />
+        <div class="coll-box-text">
+            <h3>新疆和田籽料一级白双面工艺</h3>
+            <p><span>¥6000.00</span></p>
+            <p>收藏时间：2016-08-25 15:25:48</p>
+            <div>
+                <button class="coll-box-but3">已换取实物</button>
+            </div>
+        </div>
+    </div>
+    <div class="coll-box clearfix">
+        <img src="__PUBLIC__/Home/img/goosd.jpg" />
+        <div class="coll-box-text">
+            <h3>新疆和田籽料一级白双面工艺</h3>
+            <p><span>¥6000.00</span></p>
+            <p>收藏时间：2016-08-25 15:25:48</p>
+            <div>
+                <button class="coll-box-but2">未付款</button>
+                <a href="">
+                    <button class="coll-box-but">去付款</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+var clickEvent = {
+    atter: function() {
+        //关注
+        $(".vote").click(function() {
+            $(this).hide();
+            $(this).parent().find(".vote2").show();
+        });
+        $(".vote2").click(function() {
+            $(this).hide();
+            $(this).parent().find(".vote").show();
+        });
+    },
+    tabCut: function() {
+        //tab切换
+        $(".hi-nav li").click(function() {
+            $(".hi-nav li").removeClass("hi-nav-on");
+            $(this).addClass("hi-nav-on");
+            $(".atter-box").hide();
+            $(".atter-box").eq($(this).index()).show();
+        });
+    }
+}
+clickEvent.atter();
+clickEvent.tabCut();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png"/></a>
+			修改密码
+		</header>
+		<div class="data-box" >
+			输入原密码：<input type="password" class="date-kbtn" value="" />
+		</div>
+		<br>
+		<div class="data-box" >
+			输入新密码：<input type="password" class="date-kbtn" value="" placeholder="请输入数字或字母的6-20位字符" />
+		</div>
+		<br>
+		<div class="data-box" >
+			确 认 密 码 ：<input type="password" class="date-kbtn" value="" placeholder="请再次填写确认" />
+		</div>
+		<div class="update-box">
+			<input type="checkbox" name="" id="padds" value="" />
+			<label for="padds">显示字符</label>
+		</div>
+		
+		<button class="subbmit" style="margin-top: 2rem;">完 成</button>
+		
+		<script>
+			$("#padds").click(function(){				
+				if($(this).attr("checked")){
+					$(".date-kbtn").attr("type","text");
+				}else{
+					$(".date-kbtn").attr("type","password");
+				}			
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {}
+		
+		.box {
+			height: 100%;
+			background: red;
+			width: 100%;
+		}
+	</style>
+
+	<body>
+
+	</body>
+	<script>
+		
+		function getArrayItems(arr, num) {
+			var temp_array = new Array();
+			for (var index in arr) {
+				temp_array.push(arr[index]);
+			}
+			var return_array = new Array();
+			for (var i = 0; i < num; i++) {
+				if (temp_array.length > 0) {
+					var arrIndex = Math.floor(Math.random() * temp_array.length);
+					return_array[i] = temp_array[arrIndex];
+					temp_array.splice(arrIndex, 1);
+				} else {
+					break;
+				}
+			}
+			return return_array;
+		}
+		var ArrList = [1, 2, 3];
+		alert(getArrayItems(ArrList,2));
+	</script>
+
+</html>

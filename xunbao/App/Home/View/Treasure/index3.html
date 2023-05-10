@@ -1,0 +1,290 @@
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<include file="Public/header" />
+<section class="tre-box" style="background: url(__PUBLIC__/Home/img/xunbao-ba3.jpg) no-repeat;background-position: bottom;background-size: 100% auto;">
+    <div class="tre-tit" id="gund">
+        <div>
+            <img src="__PUBLIC__/Home/img/fuzu.png" />恭喜<span>林小七</span>在寻宝游戏中获得<b>唐鹿纹鎏金盘</b>
+        </div>
+        <div>
+            <img src="__PUBLIC__/Home/img/fuzu.png" />恭喜<span>林小七</span>在寻宝游戏中获得<b>唐鹿纹鎏金盘ddd</b>
+        </div>
+    </div>
+    <div class="pitch_on" style="background: url(__PUBLIC__/Home/img/ssw.png);background-size: 100% 100%;  position: absolute;  right: 0.2rem;bottom: 0.2rem;width: 2rem;height: 2rem;display: none;z-index: 999;">
+        <img src="__PUBLIC__/Home/img/gongju.jpg" style="width: 1.6rem;height: 1.6rem;border-radius: 50%;position: absolute;top: 0.2rem;left: 0.2rem;" />
+    </div>
+    <div class="tre-goods">
+        <div class="tre-goods-le">
+            <img src="__PUBLIC__/Home/img/leftit.png" />
+        </div>
+        <div class="tre-goods-ri">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <div class="goods">
+                            <span>
+                                    <img src="__PUBLIC__/Home/img/goos.jpg"/>
+                                </span>
+                            <i class="wc"><img src="__PUBLIC__/Home/img/wachu.png"/></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="goods">
+                            <span>
+                                    <img src="__PUBLIC__/Home/img/goos.jpg"/>
+                                </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="goods">
+                            <span>
+                                    <img src="__PUBLIC__/Home/img/goos.jpg"/>
+                                </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img src="__PUBLIC__/Home/img/righti.png" class="cis" />
+    </div>
+    <!--点击物品-->
+    <img src="__PUBLIC__/Home/img/hu-1.png" qh="__PUBLIC__/Home/img/hu-f-1.png" class="wp wp-1" onclick="clicksound(0)" style="right: 0rem;bottom: 7.2rem;width: 4rem;"/>
+    <img src="__PUBLIC__/Home/img/hu-2.png" qh="__PUBLIC__/Home/img/hu-f-2.png" class="wp wp-2" onclick="clicksound(1)" style="bottom: 4.5rem;width: 2.5rem;"/>
+    <img src="__PUBLIC__/Home/img/hu-3.png" qh="__PUBLIC__/Home/img/hu-f-3.png" class="wp wp-3" onclick="clicksound(2)" style="bottom: 3rem;width: 2.5rem;"/>
+    <img src="__PUBLIC__/Home/img/hu-4.png" qh="__PUBLIC__/Home/img/hu-f-4.png" class="wp wp-4" onclick="clicksound(3)" style="left: 0.5rem;bottom: 0.5rem;width: 3.5rem;"/>
+    <!--预加载隐藏图片-->
+    <img src="__PUBLIC__/Home/img/hu-1.png" style="display: none;" />
+    <img src="__PUBLIC__/Home/img/hu-2.png" style="display: none;" />
+    <img src="__PUBLIC__/Home/img/hu-3.png" style="display: none;" />
+    <img src="__PUBLIC__/Home/img/hu-4.png" style="display: none;" />
+    <!--音效-->
+    <audio src="__PUBLIC__/Home/MP3/diaoxiang.wav" class="audio"></audio>
+    <audio src="__PUBLIC__/Home/MP3/baoxiang.wav" class="audio"></audio>
+    <audio src="__PUBLIC__/Home/MP3/chitang.mp3" class="audio"></audio>
+    <audio src="__PUBLIC__/Home/MP3/huaping.wav" class="audio"></audio>
+    <!--抽奖弹窗-->
+    <section class="pop">
+        <!--中奖提示-->
+        <div class="Winning">
+            <h3 class="pop-tit">恭喜中奖</h3>
+            <div class="pop-goods">
+                <span>
+                        <img src="__PUBLIC__/Home/img/goos.jpg"/>
+                    </span>
+            </div>
+            <div class="pop-text">
+                <h3>宋代吉州窑黑釉执壶</h3>
+                <p>价格：¥3000.00</p>
+            </div>
+            <div class="pop-but">
+                <button class="pop-sub collect">收藏</button>
+                <button class="pop-sub sell">出售</button>
+            </div>
+        </div>
+        <!--收藏提示-->
+        <div class="Winning2">
+            <h3 class="pop-tit">恭喜中奖</h3>
+            <div class="pop-cs">
+                <img src="__PUBLIC__/Home/img/chsn.png" />
+            </div>
+            <div class="pop-text">
+                <h3 style="color: #D82A23;">温馨提示</h3>
+                <div>
+                    收藏宝物需要支付宝物价值的20%
+                    <br> 共
+                    <span style="color: #D82A23;">600.00</span>元，快去支付吧！
+                </div>
+            </div>
+            <div class="pop-but">
+                <a href="">
+                    <button class="pop-sub">去付款</button>
+                </a>
+                <button class="pop-sub close">返回</button>
+            </div>
+        </div>
+        <!--收藏成功-->
+        <div class="Winning2-1">
+            <h3 class="pop-tit">恭喜中奖</h3>
+            <div class="pop-cs">
+                <img src="__PUBLIC__/Home/img/chansc.png" />
+            </div>
+            <div class="pop-text">
+                <h3 style="color: #D82A23;">收藏成功</h3>
+                <div>
+                    宝物已成功收藏，您可以打开个人
+                    <br>中心查看宝物的情况
+                </div>
+            </div>
+            <div class="pop-but">
+                <a href="">
+                    <button class="pop-sub">去付款</button>
+                </a>
+                <button class="pop-sub close">返回</button>
+            </div>
+        </div>
+        <!--出售-->
+        <div class="Winning3">
+            <h3 class="pop-tit">恭喜中奖</h3>
+            <div class="pop-cs">
+                <img src="__PUBLIC__/Home/img/duis.png" />
+            </div>
+            <div class="pop-text">
+                <h3 style="color: #D82A23;">出售成功</h3>
+                <div>
+                    此宝物已被平台回购，你共获得
+                    <br>
+                    <span style="color: #D82A23;">1500.00</span>金币(宝物价值50%)
+                </div>
+            </div>
+            <div class="pop-but">
+                <a href="">
+                    <button class="pop-sub">查看余额</button>
+                </a>
+                <button class="pop-sub close">返回</button>
+            </div>
+        </div>
+        <!--未中奖-->
+        <div class="Winning4">
+            <h3 class="pop-tit">很遗憾</h3>
+            <div class="pop-cs">
+                <img src="__PUBLIC__/Home/img/houzi.png" />
+            </div>
+            <div class="pop-text">
+                <h3 style="color: #D82A23;">差一点就挖到了</h3>
+                <div>
+                    宝物就快挖到了，据说使用装备
+                    <br>更容易挖出宝物哦！
+                </div>
+            </div>
+            <div class="pop-but">
+                <button class="pop-sub close">继续</button>
+            </div>
+        </div>
+        <!--金币不足-->
+        <div class="Winning5">
+            <h3 class="pop-tit">提 示</h3>
+            <div class="pop-cs">
+                <img src="__PUBLIC__/Home/img/tans.png" />
+            </div>
+            <div class="pop-text">
+                <h3 style="color: #D82A23;">银币不足</h3>
+                <div>
+                    您的银币不足，请马上充值。
+                </div>
+            </div>
+            <div class="pop-but">
+                <a href="">
+                    <button class="pop-sub">去充值</button>
+                </a>
+                <button class="pop-sub close">返回</button>
+            </div>
+        </div>
+        <!--装备列表-->
+        <div class="Winning6">
+            <img src="__PUBLIC__/Home/img/xx.png" class="xx close" />
+            <h3 class="pop-tit">装备列表</h3>
+            <div class="equip-list">
+                <ul>
+                    <volist name="xzzb" id="val">
+                        <li class="clearfix">
+                            <div class="equip-a">
+                                <span>
+                                        <img src="{$val['e_img']}"/>
+                                    </span>
+                            </div>
+                            <div class="cols">
+                                <span>
+                                        <h3>{$val['e_name']}</h3>
+                                        <p class="yinbi">{$val['e_price']}<em>银币</em></p>
+                                    </span>
+                            </div>
+                            <div class="cols" style="text-align: right;">
+                                <span>
+                                        <button class="done"></button>
+                                        <button class="Purchased"></button>
+                                    </span>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--金额-->
+    <div class="gold">
+        <samp>
+            <img src="__PUBLIC__/Home/img/jusn.png" />
+            <span>{$udata.gold}</span>
+        </samp>&nbsp;&nbsp;&nbsp;
+        <samp>
+            <img src="__PUBLIC__/Home/img/yingbi.png" />
+            <span>{$udata.silver}</span>
+        </samp>
+    </div>
+    <!--选择装备-->
+    <img src="__PUBLIC__/Home/img/xuanz.png" alt="选择装备" class="equip" />
+    <div class="equip-box">
+        <div class="buy">
+            <img src="__PUBLIC__/Home/img/buy.png" id="buy" />
+        </div>
+        <div class="equip-box-li">
+            <div class="qwequip-conw">
+                <ul class="equip-box-uls clearfix">
+                    <volist name="xzzb" id="val">
+                        <li>
+                            <a>
+                                <span>
+                                        <img src="{$val['e_img']}"/>
+                                    </span>
+                            </a>
+                            <p>{$val['e_name']}</p>
+                            <input type="hidden" name="eqhide" id="eq-price-hide" value="10" />
+                            <!--使用装备的价格-->
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--遮罩-->
+<div class="bas"></div>
+<script type="text/javascript" src="__PUBLIC__/Home/js/zepto.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/gund.js"></script>
+<script>
+// $(document).ready(alert('ddddd'));
+var w = document.documentElement.clientWidth / 10;
+new Marquee(
+    "gund", //容器ID
+    0, //向上滚动（0为向上、1为向下、2为向左、3为向右)
+    2, //滚动的步长
+    200, //容器可视宽度
+    30, //容器可视高度
+    50, //定时器 数值越小，滚动的速度越快（1000=1秒，建议不小于20）
+    2000, //间歇停顿时间（0为不停顿，1000=1秒）
+    1000, //开始时的等待时间（0为不等待，1000=1秒）
+    w //间歇滚动间距（可选）
+);
+var urls = "{:U('Treasure/updateBi')}";
+
+
+//进入全屏
+requestFullScreen();
+  function requestFullScreen() {
+     var de = document.documentElement;
+      if (de.requestFullscreen) {
+          de.requestFullscreen();
+    } else if (de.mozRequestFullScreen) {
+          de.mozRequestFullScreen();
+     } else if (de.webkitRequestFullScreen) {
+          de.webkitRequestFullScreen();
+    }
+ }
+</script>
+<script type="text/javascript" src="__PUBLIC__/Home/js/setH.js"></script>
+</body>
+
+</html>

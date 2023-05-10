@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href=""><img src="images/logo.png" id="logo" /></a>
+				<a href="" class="gps"><img src="images/gps.png"/> <span>深圳市</span></a>
+			</header>
+			<div style="height: 1.4rem;"></div>
+			<!--轮播图start-->
+			<div id="focus" class="focus">
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>
+							<a href="#"><img _src="images/banner.jpg" src="images/banner.jpg" /></a>
+						</li>
+						<li>
+							<a href="#"><img _src="images/banner.jpg" src="images/banner.jpg" /></a>
+						</li>
+						<li>
+							<a href="#"><img _src="images/banner.jpg" src="images/banner.jpg" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--轮播图end-->
+		                  
+			<nav class="in-nav">
+					<ul class="clearfix">
+						<li>
+							<a href="index.html">
+								<img src="images/in-1.png" />
+								<p>微信下单</p>
+							</a>
+						</li>
+						<li>
+							<a href="news_list.html">
+								<img src="images/in-2.png" />
+								<p>热门活动</p>
+							</a>
+						</li>
+						<li>
+							<a href="marketing.html">
+								<img src="images/in-3.png" />
+								<p>炫彩换壳</p>
+							</a>
+						</li>
+						<li>
+							<a href="case.html">
+								<img src="images/in-4.png" />
+								<p>获取优惠</p>
+							</a>
+						</li>					
+					</ul>
+					<dl class="binav">
+						<dd>
+							<a href="">
+							<img src="images/xs1.png"/>
+							<p>我要维修</p>
+							</a>
+						</dd>
+						<dd>
+							<a href="service.html">
+							<img src="images/xs2.png"/>
+							<p>呼叫客服</p>
+							</a>
+						</dd>
+					</dl>
+				</nav>
+				
+			<div class="xiu">
+				<ul class="clearfix">
+					<li>
+						<img src="images/xiu-1.png"/>
+						<p>上门维修</p>
+					</li>
+					<li>
+						<img src="images/xiu-2.png"/>
+						<p>原厂正品</p>
+					</li>
+					<li>
+						<img src="images/xiu-3.png"/>
+						<p>180天质保</p>
+					</li>
+					<li>
+						<img src="images/xiu-4.png"/>
+						<p>维修录像</p>
+					</li>
+				</ul>
+			</div>
+			<footer id="footer">
+				<div>
+					<a href="">预约维修</a> |
+					<a href="query_order.html">查询支付</a> |
+					<a href="service.html">联系客服</a> |
+					<a href="sever.html">服务流程</a> |
+					<a href="join_us.html">我要加盟</a>
+				</div>
+				<div>
+					<a href=""><span>备案ICP：粤ICP备10040994号</span></a>
+				</div>
+			</footer>
+			
+			
+		</section>
+		
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script type="text/javascript">
+			TouchSlide({
+				slideCell: "#focus",
+				titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell: ".bd ul",
+				effect: "left",
+				autoPlay: true, //自动播放
+				autoPage: true, //自动分页
+				switchLoad: "_src" //切换加载，真实图片路径为"_src" 
+			});
+		</script>
+	</body>
+
+</html>

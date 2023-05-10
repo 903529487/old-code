@@ -1,0 +1,78 @@
+<include file='Public/header' />
+<section class="per-topimg">
+    <div class="per-topimg-box">
+        <span class="clearfix">
+					<div class="per-topimg-box-row">
+						<if condition="$user.headimg eq 0">
+							<img src="__PUBLIC__/Home/img/banner.jpg"/>
+						<else />
+							<img src="{$user['headimg']}"/>
+						</if>
+					</div>
+					<div class="per-topimg-box-row">
+						<h3><if condition="empty($user['uname'])">
+                            未设置
+                            <else />
+							{$user['uname']}
+							</if>
+						</h3>
+
+					</div>
+					<div style="float: right;">
+						<button class="guanzu">签到</button>
+						<button class="cloes-guanzu" style="display: none;">已签到</button>
+					</div>
+				</span>
+        <div class="per-topimg-bottom">
+            金币：<b>{$user['gold']}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绿币：<b>{$user['silver']}</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="{:U('User/recharge')}">
+                <button class="top-up">充值</button>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="per-menu">
+    <a href="{:U('account_set')}">
+        <img src="__PUBLIC__/Home/img/per-1.png" class="per-menu-img" />账户设置
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('myJinBi')}">
+        <img src="__PUBLIC__/Home/img/per-2.png" class="per-menu-img" />我的金币
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('my_collection')}">
+        <img src="__PUBLIC__/Home/img/per-3.png" class="per-menu-img" />我的藏品 <span class="per-num">4</span>
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('my_message')}">
+        <img src="__PUBLIC__/Home/img/per-4.png" class="per-menu-img" />我的消息
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('attention')}">
+        <img src="__PUBLIC__/Home/img/per-5.png" class="per-menu-img" />关注/粉丝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('my_dou_bao')}">
+        <img src="__PUBLIC__/Home/img/per-6.png" class="per-menu-img" />我的斗宝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('i_has_bury')}">
+        <img src="__PUBLIC__/Home/img/per-7.png" class="per-menu-img" />我要埋宝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="{:U('register')}"        <img src="__PUBLIC__/Home/img/per-8.png" class="per-menu-img" />邀请好友注册<span class="per-menu-text">邀请成功获赠500绿币</span>
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+//签到
+$(".guanzu").click(function() {
+    $(".cloes-guanzu").show();
+    $(this).hide();
+});
+</script>
+</body>
+
+</html>

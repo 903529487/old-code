@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+	</head>
+
+	<body>
+		
+	<!--	绑定页面-->
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png" /></a>
+			检验结果
+		</header>
+		<section>
+			<div class="resilt-box">		
+				<div class="resilt-box-top clearfix">
+					<div class="resilt-box-top-col">
+						<span>姓名：</span>王晓妮    
+					</div>			            
+					<div class="resilt-box-top-col">
+						<span>性别： </span>女          
+					</div>
+					<div class="resilt-box-top-col">
+						<span>年龄：</span>35
+					</div>
+				</div>
+				<div class="resilt-box-cneter clearfix">
+					<div class="resilt-box-cneter-col">
+						<span>条  码  号：</span>王晓妮    
+					</div>			            
+					<div class="resilt-box-cneter-col">
+						<span>样本类型： </span>血清
+					</div>
+				</div>
+				<div class="resilt-box-cneter clearfix">
+					<div class="resilt-box-cneter-col">
+						<span>检测日期：</span>2016-1-1
+					</div>			            
+					<div class="resilt-box-cneter-col">
+						<span>检测医院： </span>广安医院  
+					</div>
+				</div>
+				<p><span>检验医嘱：</span>
+					血清检测 、检验医嘱2
+				</p>
+			</div>
+			
+			<section class="res-det-con">
+				<div class="res-det-con-list">
+					<a href="history_data.html">
+						<table border="0" cellspacing="0" cellpadding="0">
+						
+							<tr>
+								<th>维生素A（VA）</th>
+								<th>标志：<b>正常</b></th>
+								<th><img src="images/tim.png"/><span>历史数据</span></th>
+							</tr>
+							<tr>
+								<td><span>检测结果：</span>0.576</td>
+								<td><span>参考范围：</span>0.30-0.70</td>
+								<td><img src=""/><span>单位：</span>mg/L</td>
+							</tr>
+						</table>
+					</a>
+				</div>
+				<div class="res-det-con-list">
+					<a href="history_data.html">
+						<table border="0" cellspacing="0" cellpadding="0">
+						
+							<tr>
+								<th>维生素A（VA）</th>
+								<th>标志：<samp>正常</samp></th>
+								<th><img src="images/tim.png"/><span>历史数据</span></th>
+							</tr>
+							<tr>
+								<td><span>检测结果：</span>0.576</td>
+								<td><span>参考范围：</span>0.30-0.70</td>
+								<td><img src=""/><span>单位：</span>mg/L</td>
+							</tr>
+						</table>
+					</a>
+				</div>
+				<div class="res-det-con-list">
+					<a href="history_data.html">
+						<table border="0" cellspacing="0" cellpadding="0">
+						
+							<tr>
+								<th>维生素A（VA）</th>
+								<th>标志：<strong>偏低</strong></th>
+								<th><img src="images/tim.png"/><span>历史数据</span></th>
+							</tr>
+							<tr>
+								<td><span>检测结果：</span>0.576</td>
+								<td><span>参考范围：</span>0.30-0.70</td>
+								<td><img src=""/><span>单位：</span>mg/L</td>
+							</tr>
+						</table>
+					</a>
+				</div>
+			</section>
+			
+			
+		</section>
+		<div style="height: 1.5rem;"></div>
+		<footer id="res-det-foot">
+			<ul>
+				<li style="border-right: 1px solid #DCDCDC;"><a href="#" class="bangd"><img src="images/bd.png"/>绑定</a></li>
+				<li><a href="#"><img src="images/yan.png"/>预览</a></li>
+			</ul>
+		</footer>
+		
+		<!--弹窗stra-->
+		<div class="bas" ></div>
+		
+		<!--1-->
+		<div class="capacity2" >
+			
+			<h3 >
+				绑定后, 此报告的信息将和您的个人信息
+联系起来啦，并参与历史检验结果对比。
+请问您是否要继续？
+			</h3>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<button class="idea-capacity-sub result-check">是</button>
+				<button class="idea-capacity-sub2 tancdele">否</button>
+			</div>
+		</div>
+		<!--弹窗end-->
+		
+		<script>
+			processControl();  //流程控制
+			function processControl(){
+				var prCon={
+					bangd:$(".bangd"),  //绑定
+					bas:$(".bas"),						//背景
+					capacity2:$(".capacity2"),			//弹窗1
+				
+					
+					tancdele:$(".tancdele"),			//弹窗1的删除按钮
+				
+					close:$(".close"),					//X关闭按钮
+					
+				}
+				prCon.bangd.click(function(){
+					prCon.bas.show();
+					prCon.capacity2.show();
+					
+				});
+			
+				prCon.tancdele.click(function(){
+					prCon.bas.hide();
+					prCon.capacity2.hide();
+					
+				});
+				
+
+			}
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	</head>
+	<style>
+		.strmo-box{
+			width: 300px;border: 1px solid #dcdcdc;
+			height:40px;position: relative;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 5px;
+		}
+		.min-strmo-box{
+			position: absolute;
+			left: 0;top: 0;
+			height:40px;
+			background: #696969;
+			width: 0px;
+		border-radius: 5px;
+			overflow: hidden;
+			color: #fff;
+		}
+		#str-slider{
+			position: absolute;
+			left: 0;top: 0;
+			height:40px;
+			width: 50px;
+			background: #2dc9fb;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 40px;font-size: 30px;
+			color: #fff;
+		}
+	</style>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<body>
+		<div class="strmo-box">
+			请拖动滑块到指定位置完成验证
+			<div class="min-strmo-box">完成验证</div>
+			<span id="str-slider">»</span>
+		</div>
+		<script>
+			var strmobox=document.querySelector(".strmo-box");		
+			new slider({
+				dom:document.getElementById("str-slider"),
+				strmobox:strmobox,
+				minbox:document.querySelector(".min-strmo-box")
+				
+			})
+			function slider(opts) {
+				var an = false;
+				var box = opts.dom;
+				var minbox=minbox;
+				
+				var last = {//按下时的位置
+					x: 0,
+					y: 0
+				}
+				var next = {//移动时的位置
+					x: 0,
+					y: 0
+				}
+				var  poor;
+				var boxWIDTH=$(".strmo-box").width();
+				
+				//手指按下的处理事件
+				var startHandler = function(e) {
+					//			e.preventDefault();
+					an = true;
+					last = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+					poor=0;
+				};
+				//手指移动的处理事件
+				var moveHandler = function(e) {
+					e.preventDefault();
+					box.style.webkitTransition = "none";
+					$(".min-strmo-box").css({
+							webkitTransform:"none"
+						})
+					if (an) {
+						next = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+						poor = next.x - 25;
+						if(poor>=250){
+							box.style.webkitTransform = "translate(250px,0)";
+							
+							
+						
+							$(".min-strmo-box").width(boxWIDTH);
+						}else{
+							box.style.webkitTransform = "translate(" + poor + "px,0)";
+							$(".min-strmo-box").width(next.x+25);
+						}
+						
+						
+					}
+				};
+				//手指抬起的处理事件
+				var endHandler = function(e) {
+					//		e.preventDefault();
+					if(poor<=boxWIDTH-60){
+						an = false;
+						box.style.webkitTransition = "all 0.2s";			
+						box.style.webkitTransform = "translate(0px,0)";
+						minbox.style.webkitTransition = "all 0.2s";
+						minbox.style.width="0px"
+//						$(".min-strmo-box").width(0);
+					}else{
+						box.style.webkitTransform = "translate(250px,0)";	
+						$(".min-strmo-box").width(boxWIDTH);
+					}
+														
+				};
+				//绑定事件
+				box.addEventListener('touchstart', startHandler);
+				box.addEventListener('touchmove', moveHandler);
+				box.addEventListener('touchend', endHandler);
+			}
+
+			function windowTOcanvas(x, y) {
+				var bbox = strmobox.getBoundingClientRect();
+				return {
+					x: Math.round(x - bbox.left),
+					y: Math.round(y - bbox.top)
+				}
+			}
+	
+		</script>
+	</body>
+</html>

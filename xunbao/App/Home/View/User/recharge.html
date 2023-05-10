@@ -1,0 +1,73 @@
+<include file="Public/header" />
+<form action="" id="rech-form" method="post">
+	<section>
+		<ul class="rec-num clearfix">
+			<li>
+				<button type="button" class="rec-num-on" data-jp="20">20元</button>
+			</li>
+			<li>
+				<button type="button" data-jp="50">50元</button>
+			</li>
+			<li>
+				<button type="button" data-jp="100">100元</button>
+			</li>
+			<li>
+				<button type="button" data-jp="200">200元</button>
+			</li>
+			<li>
+				<button type="button" data-jp="300">300元</button>
+			</li>
+			<li>
+				<button type="button" data-jp="500">500元</button>
+			</li>
+		</ul>
+		<div class="rec-money-box">
+			充值金额：<span id="numer">20</span>元
+		</div>
+
+	</section>
+	<section class="mode-of-payment">
+		<div class="mode-of-payment-tit">
+			选择网银
+		</div>
+	    <div class="mode-of-payment-row" data-url="http:wenxin">
+       		<img src="__PUBLIC__/Home/img/wudu.png" />微信钱包
+        	<i></i>
+   		 </div> 
+		<div class="mode-of-payment-row" data-url="http:skskskks">
+			<img src="__PUBLIC__/Home/img/zizi.png" />支付宝
+			<i class="pitch-on"></i>
+		</div>
+		<br>
+		<button type="submit" class="login-sub" style="width: 90%;">充 值</button>
+	</section>
+</form>
+<include file="Public/footer" />
+<script type="text/javascript" src="__PUBLIC__/Home/js/zepto.min.js"></script>
+<script>
+	$(".rec-num button").click(function() {
+		$(".rec-num button").removeClass("rec-num-on");
+		$(this).addClass("rec-num-on")
+		var jp = $(this).attr("data-jp");
+		$("#numer").text(jp)
+	});
+
+	$(".mode-of-payment-row").click(function() {
+		$(".mode-of-payment-row").find("i").removeClass("pitch-on")
+		$(this).find("i").addClass("pitch-on");
+			
+		formUrl();
+		
+	});
+	formUrl();
+	function formUrl(){
+		var us=$(".pitch-on").parent().attr("data-url");
+		$("#rech-form").attr("action",us);
+		
+		 var nu=parseInt($("#numer").text()); //nu为金额
+		 alert(nu)
+	}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png" /></a>
+				<img src="images/nav-but.png" class="nav-but" /> 选择支付
+			</header>
+			<div style="height: 1.4rem;"></div>
+
+			<section>
+				<div class="pay-box">
+					<p>此次维修需支付：1500元</p>
+					<div class="pay-way">
+						<img src="images/zhifub.png" class="pay-way-on" />
+						<img src="images/weixin.png" />
+					</div>
+					<br>
+					<p>可使用的优惠劵</p>
+
+				</div>
+				<a href=""><button class="eva-sub">确认付款</button></a>
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script>
+			//选择支付方式
+			$(".pay-way img").click(function() {
+				$(".pay-way img").removeClass("pay-way-on");
+				$(this).addClass("pay-way-on");
+			})
+		</script>
+	</body>
+
+</html>

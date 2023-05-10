@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<body>
+		<canvas  id="canvas" style="box-shadow: 0 0 2px #000">
+			不支持
+		</canvas>
+		<button id="qc">清除</button>
+	</body>
+	<script>
+		var can = document.getElementById("canvas");
+		var con = can.getContext("2d");
+		var last = {
+			x: 0,
+			y: 0
+		}
+		var lastTime=0;
+		var lastW=-1;
+		var an = false;
+		var winw=window.screen.width;
+	
+		can.width=winw;
+		can.height=winw;
+		
+		ba();
+		function ba(){
+			var ba={
+				mox:[0,winw,0,winw/2],
+				moy:[0,0,winw/2,0],
+				linx:[winw,0,winw,winw/2],
+				liny:[winw,winw,winw/2,winw]
+			}
+			for(var i=0;i<ba.linx.length;i++){
+				con.beginPath();				
+				con.moveTo(ba.mox[i], ba.moy[i]);
+				con.lineTo(ba.linx[i], ba.liny[i]);
+				con.lineWidth=2;
+				con.strokeStyle="#000";	
+				con.stroke();
+			}
+		}
+		
+		var qc=document.getElementById("qc");
+		qc.onclick=function(){
+				con.clearRect(0,0,800,800);
+				ba();		
+		}
+		
+		
+		
+		function stea(ipon){
+			an = true;
+			last=windowTOcanvas(ipon.x,ipon.y);
+			lastTime=new Date().getTime();
+		}
+		
+		function steaUp(){
+			an = false;
+		}
+		
+		function steamove(iphme){
+			var next=windowTOcanvas(iphme.x,iphme.y);
+				var s=getS(last,next);
+				var nextTime=new Date().getTime();
+				var t=nextTime-lastTime;
+				
+				var ws=setW(t,s);
+				
+				con.beginPath();
+				con.lineCap = "round";
+				
+				con.moveTo(last.x, last.y);
+				con.lineTo(next.x, next.y);
+				con.lineWidth=ws;
+				con.strokeStyle="red";
+				
+				con.lineJoin="round";
+				con.stroke();
+				last=next;
+				lastTime=nextTime;
+				lastW=ws;
+				
+		}
+		can.onmousedown = function(e) {
+			e.preventDefault();
+			stea({x:e.clientX,y:e.clientY})
+		}
+		can.onmouseup = function(e) {
+			e.preventDefault();
+			steaUp();
+		}
+		can.onmouseout = function(e) {
+			e.preventDefault();
+			steaUp();
+		}
+		can.onmousemove = function(e) {
+			e.preventDefault();
+			if (an) {
+				steamove({x:e.clientX,y:e.clientY})
+			}
+		}
+		
+		can.addEventListener("touchstart",function(e){
+			e.preventDefault();
+			touch=e.touches[0];
+			stea({x:touch.pageX,y:touch.pageY})
+		})
+	can.addEventListener("touchmove",function(e){
+			e.preventDefault();
+			if (an) {
+			touch=e.touches[0];
+			steamove({x:touch.pageX,y:touch.pageY});
+			}
+		})
+	can.addEventListener("touchend",function(e){
+			e.preventDefault();
+			steaUp()
+		})
+	
+	
+	
+	
+		function windowTOcanvas(x,y){
+			var bbox=can.getBoundingClientRect();
+			return {x:Math.round(x-bbox.left),y:Math.round(y-bbox.top)}
+		}
+		function getS(last,next){
+			return Math.sqrt((last.x-next.x)*(last.x-next.x)+(last.y-next.y)*(last.y-next.y))
+		}
+		function setW(t,s){
+			var v=s/t;
+		
+			var www;
+			if(v<=0.1){
+				www=30;
+			}else if(v >= 10){
+				www=1;
+			}else{
+				www=30-(v-0.1)/(10-0.1)*(30-1);
+			}
+			if(lastW== -1){
+				return www;
+			}
+
+			return (www* 1/3)  + (lastW* 2/3);
+			
+		}
+	</script>
+
+</html>

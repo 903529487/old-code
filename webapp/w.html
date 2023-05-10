@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.box{
+			width: 200px;height: 200px;background: teal;position: relative;left: 200px;top: 200px;
+			overflow: hidden;
+		}
+		.bod-left,.bod-bottom,.bod-right,.bod-top{
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-ms-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+		}
+		.bod-left{
+			width: 2px;
+			height: 200px;
+			background: #000;
+			position: absolute;
+			left: 0;top: -200px;
+		}
+		.bod-top{
+			width: 200px;height: 2px;background: #000;
+			position: absolute;
+			left: -200px;top: 0px;
+		}
+		.bod-right{
+			width: 2px;
+			height: 200px;
+			background: #000;
+			position: absolute;
+			right: 0px;top: 200px;
+		}
+		.bod-bottom{
+			width: 200px;height: 2px;background: #000;
+			position: absolute;
+			right: -200px;bottom: 0px;
+		}
+		.box:hover .bod-left{
+			top: 0;
+		}
+		.box:hover .bod-top{
+			left: 0;
+		}
+		.box:hover .bod-right{
+			top: 0;
+		}
+		.box:hover .bod-bottom{
+			right: 0;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="bod-left"></div>
+			<div class="bod-top"></div>
+			<div class="bod-right"></div>
+			<div class="bod-bottom"></div>
+		</div>
+	</body>
+</html>

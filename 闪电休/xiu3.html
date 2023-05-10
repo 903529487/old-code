@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<img src="img/logo.png" alt="" id="logo" />
+			<div class="header-right">
+			
+				<img src="img/user.png" alt="" />
+			</div>
+		</header>
+		<section >
+			<img src="img/leftjt.png" class="left-jt" alt="" onclick="history.go(-1)" />
+			<div class="nav">
+				<img src="img/nav2.png" alt="" /><br>
+				<h5>机型：苹果iphone5s 白色</h5>
+				<button class="blue-but3">屏幕问题</button><br />
+				<button class="blue-but">一级故障</button>
+			</div>
+
+			<div class="main">
+				<div class="swiper-container" style="height: 3.8rem;;">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">屏幕完整</div>
+						<div class="swiper-slide">屏幕破碎</div>
+						<div class="swiper-slide">屏幕破碎</div>
+					
+					
+					</div>
+				</div>
+				<div class="swiper-container" style="height: 3.8rem;margin-top: 0.4rem;">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">屏幕完整</div>
+						<div class="swiper-slide">屏幕破碎</div>
+						<div class="swiper-slide">屏幕破碎</div>
+					
+					</div>
+				</div>
+				
+				<div style="text-align: center;">
+					<button class="blue-but2" id="in-one-but">确  认</button>
+				</div>
+			</div>
+		</section>
+
+
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script src="js/swiper.min.js"></script>
+		<script>
+		seip();
+		function seip(){
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: false,
+				direction: 'vertical',
+				slidesPerView: 3,
+				centeredSlides: true
+			});
+		}
+
+		</script>
+
+	</body>
+
+</html>

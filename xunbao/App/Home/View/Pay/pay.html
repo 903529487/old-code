@@ -1,0 +1,33 @@
+<include file="Public/header" />
+<section class="mode-of-payment">
+    <div class="mode-of-payment-tit">
+        需支付金额<span>
+					¥600
+				</span>
+    </div>
+    <div class="mode-of-payment-tit">
+        选择网银
+    </div>
+    <div class="mode-of-payment-row">
+        <img src="__PUBLIC__/Home/img/wudu.png" />微信钱包
+        <i class="pitch-on"></i>
+    </div>
+    <div class="mode-of-payment-row">
+        <img src="__PUBLIC__/Home/img/zizi.png" />支付宝
+        <i></i>
+    </div>
+    <br>
+    <button type="submit" class="login-sub" style="width: 90%;">支 付</button>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="__PUBLIC__/Home/js/zepto.min.js"></script>
+<script>
+$(".mode-of-payment-row").click(function() {
+    $(".mode-of-payment-row").find("i").removeClass("pitch-on")
+    $(this).find("i").addClass("pitch-on")
+
+})
+</script>
+</body>
+
+</html>

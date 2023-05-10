@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png" /></a>
+				<img src="images/nav-but.png" class="nav-but" /> 选择故障类型
+			</header>
+			<div style="height: 1.4rem;"></div>
+			<section>
+				<div class="mode-row mode-row-pp">
+					选择故障 <span>请选择＞</span>
+				</div>
+				<div class="modata">
+					<!--故障-->
+					<ul class="brand ser-sub-min clearfix">
+
+					</ul>
+				</div>
+
+				<div>
+					<!--小故障-->
+					<ul class="fault  ser-sub-min-color clearfix">
+
+					</ul>
+				</div>
+				<div class="mode-row" >
+					已选故障
+				</div>
+				<div>
+					<ul class=" xuanzhibox clearfix">
+						<dd class="bid"><span>问题：</span><span>解决方案：</span></dd>
+					</ul>
+				</div>
+				<div style="text-align: center;line-height: 1.2rem;">
+					维修价格：<span id="jiage" >0</span>
+				</div>
+				<a href="contact_way.html"><button id="searchs-sub2">确认故障</button></a>
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script>
+			var d = [{
+				"name": "按键问题",
+				"type": [{
+						"id": "11",
+						"gzName": "按键失灵",
+						"price": 100.21,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "12",
+						"gzName": "按键3",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "13",
+						"gzName": "按键4",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, {
+				"name": "声音问题",
+				"type": [{
+						"id": "21",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "22",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "23",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, {
+				"name": "声音问题",
+				"type": [{
+						"id": "31",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "32",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "33",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, {
+				"name": "声音问题",
+				"type": [{
+						"id": "41",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "42",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "43",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, {
+				"name": "声音问题",
+				"type": [{
+						"id": "51",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "52",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "53",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}];
+
+			controlSurface();
+
+			function controlSurface() {
+				var subMin = $(".ser-sub-min"),
+					subMinColor = $(".ser-sub-min-color");
+
+				var xuanzhibox = $(".xuanzhibox");
+				var mCount = 0;
+				var cCount = 0;
+				var unb = []; //已选择添加的数组
+				var toPrice = 0.00;
+				init();
+
+				function init() {
+					for(var j = 0; j < d.length; j++) {
+						subMin.append('<li><button>' + d[j].name + '</button></li>');
+					}
+
+				}
+				subMinClick();
+
+				function subMinClick() { //大问题	
+					subMin.find("button").click(function() {
+						mCount = $(this).parent().index();
+						cut2();
+						subMin.find("button").removeClass("ser-sub-min-on");
+						$(this).addClass("ser-sub-min-on");
+	$(".fault").show()
+					});
+
+				}
+				subMinColorClick();
+
+				function subMinColorClick() { //小问题	
+					subMinColor.find("button").click(function() {
+						cCount = $(this).parent().index();
+
+						if($(this).hasClass("ser-sub-min-color-on")) {
+
+						} else {
+							$(this).addClass("ser-sub-min-color-on");
+
+							addWent();
+						}
+
+					});
+				}
+
+				function addWent() { //添加选择
+					faultLi();
+					xuanzhibox.append('<li class="clearfix fault-li" data-price="' + d[mCount].type[cCount].price + '" id="' + d[mCount].type[cCount].id + '">' +
+						'<span>' + d[mCount].type[cCount].gzName + '</span><span>' + d[mCount].type[cCount].maintain + '</span><div class="lideles"><img src="images/dele.png"/></div>' +
+						'</li>');
+					showNum();
+					totalPrice()
+					faultLi();
+					close();
+
+				}
+
+				function faultLi() {
+
+					$(".fault-li").click(function() {
+						if($(this).find(".lideles").hasClass("lid-on")) {
+							$(this).find(".lideles").css({
+								transform: "translateX(0rem)",
+								webkitTransform: "translateX(0rem)",
+							}).removeClass("lid-on");
+						} else {
+							$(this).find(".lideles").css({
+								transform: "translateX(-2rem)",
+								webkitTransform: "translateX(-2rem)",
+							}).addClass("lid-on");
+						}
+
+					})
+				}
+
+				function close() { //删除
+
+					$(".lideles img").click(function() {
+						var ids = $(this).parent().parent().attr("id");
+						$(this).parent().parent().remove();
+						$("#" + ids).removeClass("ser-sub-min-color-on");
+						showNum();
+
+						totalPrice();			
+
+					});
+
+				}
+
+				var ds = 0.00;
+
+				function totalPrice() { //价格
+					var price = 0.00;
+					toPrice = [];
+					toPrice = 0;
+					for(var i = 0; i < $(".xuanzhibox li").length; i++) {
+						price = parseFloat($(".xuanzhibox li").eq(i).attr("data-price"));
+						toPrice = price + toPrice;
+						
+					}
+					$("#jiage").text("￥" + toPrice.toFixed(2));
+
+				}
+
+				function showNum() { //显示选择的条数
+					$(".elect-num").text($(".xuanzhibox li").length)
+				}
+
+				function cut2() { //小问题切换	
+
+					subMinColor.html("");
+					unb = [];
+					for(var u = 0; u < $(".xuanzhibox li").length; u++) {
+						var xid = $(".xuanzhibox li").eq(u).attr("id");
+						if($.inArray(xid, unb) != -1) {
+
+						} else {
+							unb.push(xid)
+						}
+					}
+
+					for(var k = 0; k < d[mCount].type.length; k++) {
+						if($.inArray(d[mCount].type[k].id, unb) != -1) {
+							subMinColor.append('<li><button class="ser-sub-min-color-on" id="' + d[mCount].type[k].id + '" >' + d[mCount].type[k].gzName + '</button></li>');
+						} else {
+							subMinColor.append('<li><button id="' + d[mCount].type[k].id + '">' + d[mCount].type[k].gzName + '</button></li>');
+						}
+
+					}
+					subMinColorClick();
+				}
+				
+				
+				$(".mode-row").click(function(){
+					$(this).next(".modata").show();
+				})
+			}
+		</script>
+	</body>
+
+</html>

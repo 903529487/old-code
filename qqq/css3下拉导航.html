@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		#nav{
+			height: 40px;line-height: 40px;
+		}
+		#nav > li{
+			float: left;
+			list-style: none;
+			width: 100px;
+			text-align: center;
+			position: relative;
+			background: orangered;
+		}
+		#nav > li:hover{
+			
+			background: #DA430B;
+		}
+		#nav a{
+			display: block;
+			color: #fff;
+			text-decoration: none;
+		}
+		#nav > li >ul{
+			position: absolute;
+			
+			transform: scale(1,0);
+			-webkit-transform: scale(1,0);
+			-ms-transform: scale(1,0);
+			-moz-transform: scale(1,0);
+			-o-transform: scale(1,0);
+			
+			transition: transform 0.5s;
+			-webkit-transition: transform 0.5s;
+			-moz-transition: transform 0.5s;
+			-o-transition: transform 0.5s;
+			-ms-transition: transform 0.5s;
+			
+			-webkit-transform-origin: top;
+			-moz-transform-origin: top;
+			-ms-transform-origin: top;
+			-o-transform-origin: top;
+			transform-origin: top;
+		}
+		#nav >li >ul >li{
+			height: 40px;line-height: 40px;background: #DA430B;width: 100px;list-style: none;
+		}
+		#nav >li >ul >li:hover{
+			background: orangered;
+		}
+		#nav > li:hover >ul{
+			transform: scale(1,1);
+			-webkit-transform: scale(1,1);
+			-ms-transform: scale(1,1);
+			-moz-transform: scale(1,1);
+			-o-transform: scale(1,1);
+		}
+	</style>
+	<body>
+		<nav>
+			<ul id="nav" class="animated  bounceIn">
+				<li><a href="#" >首页
+					<ul>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>                          
+						<li><a href="">sssss</a></li>
+					</ul>
+				</a></li>
+				<li><a href="#">首页
+				<ul>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+					</ul>
+				</a></li>
+				<li><a href="#">首页
+				<ul>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+						<li><a href="">sssss</a></li>
+					</ul>
+				</a></li>
+				<li><a href="">首页</a></li>
+				<li><a href="">首页</a></li>
+			</ul>
+		</nav>
+		ss
+	</body>
+</html>

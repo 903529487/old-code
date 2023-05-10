@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="adt/LArea.css" />
+	</head>
+
+	<body>
+		<header id="goods-header">
+			<a href="javascript:history.go(-1);" class="ht"><img src="img/ht.png" /></a>
+			评价
+			<a href="javascript:viod(0);" class="gd"><img src="img/slv.png" alt="" /></a>
+			<div class="zi-meta">
+				<a href="index.html">主页</a>
+				<a href="user.html">个人中心</a>
+				<a href="goods_list.html">特卖专区</a>
+				<a href="goods_list.html">精品区</a>
+			</div>
+		</header>
+		<div>
+			<style>
+				
+			</style>
+			<div class="user-det">
+				<textarea class="user-dets-textarea" placeholder="尊敬的客户，请写下您宝贵的评价，让我们服务做的更好！"></textarea>
+			</div>
+			<div class="fengexian"></div>
+			<div class="evaluate">
+
+				<div class="mu-eval-main clearfix">
+					<table border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+							<td>上门速度</td>
+							<td class="xx-click">
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+							</td>
+						</tr>
+						<tr>
+							<td>服务态度</td>
+							<td class="xx-click2">
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+								<img src="img/xx2.png" alt="" />
+							</td>
+						</tr>
+					</table>
+
+				</div>
+				<br>
+				<div style="text-align: center;">
+					<button class="crat-sub4">发表评论</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="bgd"></div>
+<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/pult.js" ></script>
+		<script>
+			xxClik(".xx-click");
+			xxClik(".xx-click2");
+
+			function xxClik(id) {
+				$(id + " img").on('touchstart',function(e){ 
+					e.preventDefault();
+					var num = $(this).index() + 1;
+					$(id + " img").attr("src", "img/xx2.png");
+					for(var i = 0; i < num; i++) {
+						$(id + " img").eq(i).attr("src", "img/xx1.png");
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body style="background: #f4f4f4;">
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png" /></a>
+				<img src="images/nav-but.png" class="nav-but" /> 评价
+			</header>
+			<div style="height: 1.4rem;"></div>
+
+			<section class="vasw">
+				<table border="0" cellspacing="0" cellpadding="0" class="evaluate_tab">
+					<tr>
+						<td class="evaluate_td-1"><img src="images/banner.jpg" /></td>
+						<td class="evaluate_td-2">
+							张**<br> 136****0023
+						</td>
+						<td class="evaluate_td-3">
+							<div class="eva-img">
+								<img src="images/xx2.png" />
+								<img src="images/xx2.png" />
+								<img src="images/xx2.png" />
+								<img src="images/xx2.png" />
+								<img src="images/xx2.png" />
+							</div>
+
+						</td>
+						<td class="evaluate_td-4">
+							刘然<br> 维修工程师
+						</td>
+					</tr>
+				</table>
+				<textarea class="eva-textarea" placeholder="请输入对维修师傅的评价...."></textarea>
+				<a href=""><button class="eva-sub">确认评价</button></a>
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script>
+			//选择星评
+			$(".eva-img img").click(function() {
+				$(".eva-img img").attr("src", "images/xx2.png")
+				for(var i = 0; i < $(".eva-img img").length; i++) {
+					if(i <= $(this).index()) {
+						$(".eva-img img").eq(i).attr("src", "images/xx.png")
+					}
+
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

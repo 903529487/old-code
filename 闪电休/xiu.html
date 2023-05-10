@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+<style>
+	.swiper-slide-active{
+		font-size: 14px;
+		color: #ccc;
+	}
+</style>
+	<body>
+		<header id="header">
+			<img src="img/logo.png" alt="" id="logo" />
+			<div class="header-right">
+				<img src="img/user.png" alt="" />
+			</div>
+		</header>
+		<!--	1-->
+
+		<div class="nav">
+
+			<img src="img/nav.png" alt="" /><br>
+			<button class="blue-but">品  牌</button>
+		</div>
+
+		<div class="main">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/xm.png" alt="" /><span>小米</span></div>
+					<div class="swiper-slide"><img src="img/hw.png" alt="" /><span>华为</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+					<div class="swiper-slide"><img src="img/iphone.png" alt="" /><span>苹果</span></div>
+				</div>
+
+			</div>
+			<div style="text-align: center;">
+				<button class="blue-but2" id="in-one-but">确  认</button>
+			</div>
+		</div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<img src="img/foot1.png" alt="" />
+					<p>关于我们</p>
+				</li>
+				<li>
+					<img src="img/foot2.png" alt="" />
+					<p>联系我们</p>
+				</li>
+				<li>
+					<img src="img/foot3.gif" alt="" />
+					<p>服务流程</p>
+				</li>
+				<li>
+					<img src="img/foot4.png" alt="" />
+					<p>疑问解答</p>
+				</li>
+			</ul>
+			<div class="footer-box">
+				<div></div>
+				<p>官方微信</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script>
+			seip();
+
+			function seip() {
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.swiper-pagination',
+					paginationClickable: false,
+					direction: 'vertical',
+					slidesPerView: 5,
+					centeredSlides: true
+				});
+			}
+
+			$(".swiper-slide").click(function() {
+				if ($(this).hasClass("hao")) {
+					$(this).removeClass("hao");
+					$(this).css({
+						fontSize: "14px",
+						color: "#ccc"
+					});
+				} else {
+					$(this).addClass("hao");
+					$(this).css({
+						fontSize: "0.6rem",
+						color: "#000"
+					});
+				}
+
+			})
+		</script>
+
+	</body>
+
+</html>

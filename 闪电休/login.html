@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>闪电修</title>
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<style>
+			:-moz-placeholder {
+				color: #00C8E0;
+			}
+			
+			::-moz-placeholder {
+				color: #00C8E0;
+			}
+			
+			input:-ms-input-placeholder,
+			textarea:-ms-input-placeholder {
+				color: #00C8E0;
+			}
+			
+			input::-webkit-input-placeholder,
+			textarea::-webkit-input-placeholder {
+				color: #00C8E0;
+			}
+		</style>
+	</head>
+
+	<body style="background: #00C8E0;">
+		<section class="lo-box">
+			<div class="lo-top"><img src="img/loign.png" class="login-logo"></div>
+			<nav id="nav">
+				<ul class="clearfix">
+					<li>
+						登录<br /> Log in
+					</li>
+					<li>
+						注册<br /> Sign in
+					</li>
+				</ul>
+			</nav>
+			<section class="lo-min-box">
+				<input type="text" name="" class="lo-text" id="" value="" placeholder="手机/邮箱" /><br>
+				<input type="text" name="" class="lo-text" id="" value="" placeholder="密码" /><br>
+				<input type="submit" name="" id="" value="登录" class="lo-sub" />
+				<div class="lo-foot">
+					<ul class="clearfix">
+						<li><a href=""><img src="img/wx.png" alt="" /></a></li>
+						<li><a href=""><img src="img/qq.png" alt="" /></a></li>
+						<li><a href=""><img src="img/xl.png" alt="" /></a></li>
+					</ul>
+				</div>
+			</section>
+			<section class="lo-min-box" style="display: none;">
+				<input type="text" name="" class="lo-text" id="" value="" placeholder="手机号" /><br>
+				<input type="password" name="" class="lo-text" id="" value="" placeholder="设置密码" /><br>
+				<input type="password" name="" class="lo-text" id="" value="" placeholder="重复密码" /><br>
+				<input type="text" name="" class="lo-text" id="" value="" placeholder="验证码" style="width: 3rem;"/><img src="img/ssw.jpg" class="ewm" alt="" /><br>
+				<input type="submit" name="" id="" value="注 册" class="lo-sub" />
+
+			</section>
+		</section>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script>
+		$("#nav li").eq(0).css({
+			color: "#BF38AE"
+		});
+		$("#nav li").click(function() {
+			$("#nav li").css({
+				color: "#fff"
+			});
+			$(this).css({
+				color: "#BF38AE"
+			});
+			$(".lo-min-box").hide();
+			$(".lo-min-box").eq($(this).index()).show();
+		})
+	</script>
+
+</html>

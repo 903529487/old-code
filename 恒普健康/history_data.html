@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="adt/common.css" />
+		<link rel="stylesheet" href="css/css.css" />
+
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png" /></a>
+			历史检验数据
+		</header>
+		<section>
+			<div class="rep-top">
+				<ul class="rep-top-ul clearfix">
+					<li><b>姓  名：</b>王小妮</li>
+					<li><b>项目名称：</b>VE 维生素E</li>
+				</ul>
+				<div class="rep-row">
+					<div>
+						<b>开始时间：</b><input id="beginTime" readonly="" class="rep-kbtn" value="2016-11-11" />
+						<div id="datePlugin"></div>
+					</div>
+					<div>
+						<b>结束时间：</b><input id="endTime" readonly="" class="rep-kbtn" value="2016-11-11" />
+						<input type="button" name="" id="query" value="查 询" />
+					</div>
+				</div>
+			</div>
+			<nav class="subnav">
+				<ul class="clearfix">
+					<li><button class="subnav-but subnav-but-on"><img src="images/xian.png"/>折线图</button></li>
+					<li><button class="subnav-but"><img src="images/tab.png"/>列表</button></li>
+				</ul>
+			</nav>
+			<section class="rep-con">
+				<section class="rep-con-page" style="display: block;">
+					<div id="container" style="min-width:320px;height:300px"></div>
+				</section>
+				<section class="rep-con-page">
+					<table border="0" cellspacing="0" cellpadding="0" class="rep-con-page-table">
+						<tr>
+							<th>时间</th>
+							<th>检测结果（mg/L）</th>
+							<th>参考范围（mg/L）</th>
+						</tr>
+						<tr>
+							<td>2019-52-11</td>
+							<td>0.1</td>
+							<td>0.3-0.7</td>
+						</tr>
+						<tr>
+							<td>2019-52-11</td>
+							<td><b>0.1</b></td>
+							<td>0.3-0.7</td>
+						</tr>
+						<tr>
+							<td>2019-52-11</td>
+							<td><span>0.1</span></td>
+							<td>0.3-0.7</td>
+						</tr>
+						<tr>
+							<td>2019-52-11</td>
+							<td>0.1</td>
+							<td>0.3-0.7</td>
+						</tr>
+						<tr>
+							<td>2019-52-11</td>
+							<td>0.1</td>
+							<td>0.3-0.7</td>
+						</tr>
+					</table>
+				</section>
+			</section>
+		</section>
+
+		<script type="text/javascript" src="adt/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="adt/highcharts.js"></script><!--折线图-->
+		<script type="text/javascript" src="adt/date.js"></script>
+		<script type="text/javascript" src="adt/iscroll.js"></script>
+		<script type="text/javascript">
+		//日期
+			$(function() {
+				$('#beginTime').date();
+				$('#endTime').date();
+			});
+			
+			//tab分页切换
+			subnav();
+
+			function subnav() {
+				var subnavBut = $(".subnav-but");
+				var repconpage = $(".rep-con-page");
+				subnavBut.click(function() {
+					repconpage.hide();
+					repconpage.eq($(this).parent().index()).show();
+					subnavBut.removeClass("subnav-but-on");
+					$(this).addClass("subnav-but-on");
+				})
+			}
+			
+			//表格间隔条纹
+			pageTable();
+
+			function pageTable() {
+				var tr = $(".rep-con-page-table tr");
+				for(var i = 0; i < tr.length; i++) {
+					if(i % 2 == 1) {
+						tr.eq(i).css("background", "#fff");
+					}
+				}
+			}
+			
+			//折线图
+			$(function() {
+				$('#container').highcharts({
+					title: {
+						text: '检测结果（mg/L）',
+						x: -20 //center
+					},
+					subtitle: {
+						text: '检测结果（mg/L）',
+						x: -20
+					},
+					xAxis: {
+						categories: ['8', '9', '11', '21', '50']
+					},
+					yAxis: {
+						title: {
+							text: '（mg/L）'
+						},
+						plotLines: [{
+							value: 0,
+							width: 1,
+							color: '#808080'
+						}]
+					},
+					tooltip: {
+						valueSuffix: 'mg/L'
+					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'middle',
+						borderWidth: 0
+					},
+					series: [{
+						name: '结果',
+						data: [3.9, 4.2, 5.7, 8.5, 11.9]
+					}]
+				});
+			});
+		</script>
+	</body>
+
+</html>

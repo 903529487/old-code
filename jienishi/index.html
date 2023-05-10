@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>杰尼思（香港）国际酒店管理集团</title>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script src="laydate/laydate.js"></script>
+		<script src="site/Popt.js"></script>
+		<script src="site/cityJson.js"></script>
+		<script src="site/citySet.js"></script>
+	</head>
+	<style>
+		.flexslider {
+			position: relative;
+			height: 240px;
+			margin-top: 20px;
+			overflow: hidden;
+			background: url(images/loading.gif) 50% no-repeat;
+		}
+		
+		.slides {
+			position: relative;
+			z-index: -1;
+		}
+		
+		.slides li {
+			height: 240px;
+		}
+		
+		.slides li img {
+			height: 260px;
+			width: 100%;
+		}
+		
+		.flex-control-nav {
+			position: absolute;
+			bottom: 10px;
+			z-index: 2;
+			width: 100%;
+			text-align: center;
+		}
+		
+		.flex-control-nav li {
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin: 0 5px;
+			*display: inline;
+			zoom: 1;
+		}
+		
+		.flex-control-nav a {
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			line-height: 40px;
+			overflow: hidden;
+			background: url(images/dot.png) right 0 no-repeat;
+			cursor: pointer;
+		}
+		
+		.flex-control-nav .flex-active {
+			background-position: 0 0;
+		}
+	</style>
+
+	<body>
+		<div id="top">
+			<a href=""><img src="img/logo.jpg" /></a>
+			<img src="img/topimg.jpg" style="margin-left: 140px;" />
+		</div>
+
+		<div id="navbox">
+			<ul id="nav">
+				<li class="nav-on"><a href="index.html">首页</a></li>
+				<li><a href="grogshop.html">预定酒店
+			</a>
+				</li>
+				<li>
+					<a href="#">优惠活动<img src="img/jtbooton.png" alt="" class="jt"/>
+					<ul>
+						<li><a href="activity.html">精选活动</a></li>
+				<li><a href="">体验房</a></li>
+				<li><a href="integral.html">积分兑换</a></li>
+				<li><a href="">优惠券</a></li>
+
+			</ul>
+			</a>
+			</li>
+			<li>
+				<a href="#">加盟合作<img src="img/jtbooton.png" alt="" class="jt"/>
+					<ul>
+						<li><a href="tojoin.html">加盟条件</a></li>
+
+					</ul>
+				</a>
+			</li>
+			<li><a href="feast.html">会议宴会</a></li>
+			<li><a href="">积分商城</a></li>
+			<li><a href="jfiv.html">杰友会</a></li>
+			<li class="nav-on">
+				<a href="#">我的杰尼思<img src="img/jtbooton.png" alt="" class="jt"/>
+					<ul>
+						<li><a href="meeting_index.html">会员首页</a></li>
+						<li><a href="">我的订单</a></li>
+						<li><a href="goods_order.html">我的商品订单</a></li>
+						<li><a href="discount_coupon.html">我的优惠券</a></li>
+						<li><a href="">我的团购券</a></li>
+						<li><a href="credits.html">我的积分</a></li>
+						<li><a href="evaluate.html">我的评价</a></li>
+						<li><a href="change_password.html">修改密码</a></li>
+						<li><a href="date.html">我的资料</a></li>
+					</ul>
+				</a>
+			</li>
+			<li class="nav-on" style="border-left: 1px solid #0087d5;">
+				<img src="img/user.png" alt="" style="position: relative;top: 5px;" />
+				<a href="login.html" style="display: inline;">登录</a>/
+				<a href="register.html" style="display: inline;">注册</a>
+			</li>
+			</ul>
+		</div>
+	
+		<!--轮播图-->
+		<div id="img">
+			<p style="background: url(img/maxba.jpg);background-position: center center;background-repeat: no-repeat; background-size: cover;"></p>
+			<p style="background: url(img/ersh.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;"></p>
+			<p style="background: url(img/maxba.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;"></p>
+			<p style="background: url(img/maxba.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;"></p>
+			<p style="background: url(img/maxba.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;"></p>
+
+			<div id="in-main">
+				<div class="in-box">
+					<h3>酒店预定</h3>
+					<div class="in-box-min">
+						<div>选择城市：<input type="text" id="city" class="text-btn" value="深圳"></div>
+						<div>入住时间：<input type="text" class="text-btn" onclick="laydate()" value="2016-05-02"></div>
+						<div>退房时间：<input type="text" class="text-btn" onclick="laydate()" value="2016-05-02"></div>
+						<div>选择房型：<select type="text" class="text-btn" style="width: 207px;">
+							<option>--请选择房型--</option>
+							<option>sss</option>
+							<option>ss</option>
+							</select>
+						</div>
+						<div class="in-box-min-last"><button class="but but-ongr">立即预约</button><button class="but but-ff">地图搜索</button></div>
+
+					</div>
+				</div>
+				<ul id="img-nav">
+					<li>提前预定享7折起</li>
+					<li>杰尼思周年庆</li>
+					<li>商务住房住5送1</li>
+					<li>抢福利啦！</li>
+					<li>限时特惠房</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--主体	-->
+		<div id="in-main-box">
+			<!--主体1	-->
+			<div id="jq-box">
+				<div id="in-main-box-one" class="clearfd">
+					<img src="img/ersh.jpg" alt="" class="img-gg" />
+					<div class="in-main-right clearfd">
+						<span style="width:30px;display: block;border-right: 1px solid #d0dbde;margin: 5px 10px;font-size: 16px;color: #027cb9;">
+						旗下品牌
+					</span>
+						<ul class="one-nav">
+							<li>
+								<img src="img/jns.jpg" alt="" />
+								<p><img src="img/fonts.png" class="fonts"></p>
+							</li>
+							<li>
+								<img src="img/jns2.jpg" alt="" />
+								<p><img src="img/fonts.png" class="fonts"></p>
+							</li>
+							<li>
+								<img src="img/jns.jpg" alt="" />
+								<p><img src="img/fonts.png" class="fonts"></p>
+							</li>
+							<li>
+								<img src="img/jns2.jpg" alt="" />
+								<p><img src="img/fonts.png" class="fonts"></p>
+							</li>
+							<li>
+								<img src="img/jns.jpg" alt="" />
+								<p><img src="img/fonts.png" class="fonts"></p>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div style="margin-top: 20px;">
+					<div class="one-text">
+						<div class="one-text-left">
+							<div style="width: 80%;margin: auto;padding: 30px;">
+								<h3>
+								<img src="img/ggs.jpg" alt="" />	
+							</h3>
+								<p>
+									杰尼思国际酒店以专业的助眠文化及服务为核心发展理念， 基于助眠文化主题精品酒店的精准定位，融合杰尼思酒店23 年专业市场运营智
+									<a href="">点击了解更多>></a>
+								</p>
+							</div>
+						</div>
+						<div class="one-text-right">
+							<img src="img/xiugais.jpg" />
+						</div>
+					</div>
+					<div class="one-text">
+						<div class="one-text-left">
+							<div style="width: 80%;margin: auto;padding: 30px;">
+								<h3>
+								<img src="img/ggs.jpg" alt="" />	
+							</h3>
+								<p>
+									杰尼思国际酒店以专业的助眠文化及服务为核心发展理念， 基于助眠文化主题精品酒店的精准定位，融合杰尼思酒店23 年专业市场运营智
+									<a href="">点击了解更多>></a>
+								</p>
+							</div>
+						</div>
+						<div class="one-text-right">
+							<img src="img/xiugais.jpg" />
+						</div>
+					</div>
+					<div class="one-text">
+						<div class="one-text-left">
+							<div style="width: 80%;margin: auto;padding: 30px;">
+								<h3>
+								<img src="img/ggs.jpg" alt="" />	
+							</h3>
+								<p>
+									杰尼思国际酒店以专业的助眠文化及服务为核心发展理念， 基于助眠文化主题精品酒店的精准定位，融合杰尼思酒店23 年专业市场运营智
+									<a href="">点击了解更多>></a>
+								</p>
+							</div>
+						</div>
+						<div class="one-text-right">
+							<img src="img/xiugais.jpg" />
+						</div>
+					</div>
+					<div class="one-text">
+						<div class="one-text-left">
+							<div style="width: 80%;margin: auto;padding: 30px;">
+								<h3>
+								<img src="img/ggs.jpg" alt="" />	
+							</h3>
+								<p>
+									杰尼思国际酒店以专业的助眠文化及服务为核心发展理念， 基于助眠文化主题精品酒店的精准定位，融合杰尼思酒店23 年专业市场运营智
+									<a href="">点击了解更多>></a>
+								</p>
+							</div>
+						</div>
+						<div class="one-text-right">
+							<img src="img/xiugais.jpg" />
+						</div>
+					</div>
+					<div class="one-text">
+						<div class="one-text-left">
+							<div style="width: 80%;margin: auto;padding: 30px;">
+								<h3>
+								<img src="img/ggs.jpg" alt="" />	
+							</h3>
+								<p>
+									杰尼思国际酒店以专业的助眠文化及服务为核心发展理念， 基于助眠文化主题精品酒店的精准定位，融合杰尼思酒店23 年专业市场运营智
+									<a href="">点击了解更多>></a>
+								</p>
+							</div>
+						</div>
+						<div class="one-text-right">
+							<img src="img/xiugais.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--主体2-->
+			<div id="in-main-box-two">
+				<div>
+					<ul class="two-title">
+						<li class="two-title-on">优惠精选</li>
+						<li>特惠房</li>
+						<li>新店折扣</li>
+						<span class="two-title-right"><a href="">更多>></a></span>
+					</ul>
+
+					<div class="two-content clearfd">
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+
+					</div>
+					<div class="two-content clearfd">
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+
+					</div>
+					<div class="two-content clearfd">
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+						<div class="two-content-img">
+							<img src="img/chuang.jpg" alt="" />
+							<div class="two-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+							<h4 class="clearfd">
+								<span class="two-content-img-left">促销价：188元</span>
+								<span class="two-content-img-right">原价：200元</span>
+							</h4>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--主体3-->
+			<div id="in-main-three" class="clearfix">
+				<div class="three-box-1">
+					<h3 class="three-box-1-title"><span>杰尼思动态</span><a href="">更多>></a></h3>
+					<div>
+						<div class="three-sw clearfix">
+							<div class="three-box-1-con-left"><img src="img/chuang.jpg" alt="" /></div>
+							<div class="three-box-1-con-right">
+								<h4><a href="">杰尼思周年庆回馈客户－提前 预订酒店可享7折</a></h4>
+								<div>2016.5.23</div>
+							</div>
+						</div>
+						<div class="three-sw clearfix">
+							<a href="">
+								<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+								<div class="three-box-1-con2-right">2016.5.23</div>
+							</a>
+						</div>
+						<div class="three-sw clearfix">
+							<a href="">
+								<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+								<div class="three-box-1-con2-right">2016.5.23</div>
+							</a>
+						</div>
+						<div class="three-sw clearfix">
+							<a href="">
+								<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+								<div class="three-box-1-con2-right">2016.5.23</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="three-box-1">
+					<h3 class="three-box-1-title"><span>行业资讯</span><a href="">更多>></a></h3>
+					<div style="height: 16px;"></div>
+					<div class="three-sw clearfix">
+						<a href="">
+							<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+							<div class="three-box-1-con2-right">2016.5.23</div>
+						</a>
+					</div>
+					<div class="three-sw clearfix">
+						<a href="">
+							<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+							<div class="three-box-1-con2-right">2016.5.23</div>
+						</a>
+					</div>
+					<div class="three-sw clearfix">
+						<a href="">
+							<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+							<div class="three-box-1-con2-right">2016.5.23</div>
+						</a>
+					</div>
+					<div class="three-sw clearfix">
+						<a href="">
+							<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+							<div class="three-box-1-con2-right">2016.5.23</div>
+						</a>
+					</div>
+					<div class="three-sw clearfix">
+						<a href="">
+							<div class="three-box-1-con2-left"><span>●</span>运用《孙子兵法》做好酒店营销工作 酒店如何做好营销工作 酒店回头客--酒店营销战略定位酒店回...</div>
+							<div class="three-box-1-con2-right">2016.5.23</div>
+						</a>
+					</div>
+				</div>
+				<div class="three-box-1" style="width: 340px;">
+
+					<div class="flexslider">
+						<ul class="slides">
+							<li><img src="img/chuang.jpg" alt="" /></li>
+							<li><img src="img/chuang.jpg" alt="" /></li>
+							<li><img src="img/chuang.jpg" alt="" /></li>
+
+						</ul>
+					</div>
+					<script src="js/jquery.flexslider-min.js"></script>
+					<script>
+						$(window).load(function() {
+							$('.flexslider').flexslider({
+								directionNav: false,
+								pauseOnAction: false
+							});
+						});
+					</script>
+				</div>
+			</div>
+			<!--4-->
+			<div id="in-main-four">
+				<h3 class="four-box-1-title"><span>行业资讯</span><a href="">更多>></a></h3>
+				<div class="four-content clearfix">
+					<div class="four-content-img">
+						<img src="img/swe.jpg" alt="" />
+						<div class="four-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+
+					</div>
+					<div class="four-content-img">
+						<img src="img/swe.jpg" alt="" />
+						<div class="four-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+
+					</div>
+					<div class="four-content-img">
+						<img src="img/swe.jpg" alt="" />
+						<div class="four-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+
+					</div>
+					<div class="four-content-img">
+						<img src="img/chuang.jpg" alt="" />
+						<div class="four-img-title">&nbsp;杰尼思（华强北店）-标准双人房</div>
+
+					</div>
+
+				</div>
+			</div>
+			<div id="in-main-five" class="clearfix">
+				<div class="five-left">合作伙伴</div>
+				<div class="five-right">
+					携程旅游网 去哪儿网 艺龙网 途牛旅游网 同程网 悠哉旅游网 携程旅游网 去哪儿网 艺龙网 途牛旅游网 携程旅游网 去哪儿网 艺龙网 途牛旅游网 同程网 悠哉旅游网 携程旅游网 去哪儿网 艺龙网 途牛旅游网
+				</div>
+			</div>
+
+			<div id="in-main-six" class="clearfix">
+				<div class="six-box clearfix">
+					<div class="six-min-box-left"><img src="img/last1.jpg" alt="" /></div>
+					<div class="six-min-box-right">
+						<h3>入住保障</h3>
+						<p>订单一经确认 <br>预留客房保证您安心入住</p>
+
+					</div>
+				</div>
+				<div class="six-box clearfix">
+					<div class="six-min-box-left"><img src="img/last2.jpg" alt="" /></div>
+					<div class="six-min-box-right">
+						<h3>即时确认</h3>
+						<p>官网预订<br>成功下单立刻确认</p>
+
+					</div>
+				</div>
+				<div class="six-box clearfix">
+					<div class="six-min-box-left"><img src="img/last3.jpg" alt="" /></div>
+					<div class="six-min-box-right">
+						<h3>价格保障</h3>
+						<p>在线预订 <br>会员专享折扣与优惠</p>
+
+					</div>
+				</div>
+				<div class="six-box clearfix">
+					<div class="six-min-box-left"><img src="img/last4.jpg" alt="" /></div>
+					<div class="six-min-box-right">
+						<h3>24小时服务</h3>
+						<p>24小时 <br>我们用心为您服务</p>
+
+					</div>
+				</div>
+			</div>
+			<div id="footer" class="clearfix">
+				<ul class="footer-left clearfix">
+					<li>
+						<h4><a href="">酒店预订</a></h4>
+						<a href="">列表预订</a>
+						<a href="">地图预订</a>
+					</li>
+					<li>
+						<h4><a href="">服务项目</a></h4>
+						<a href="">酒店运营管理      </a>
+						<a href="">合作模式</a>
+						<a href="">质量保障</a>
+						<a href="">管理模式</a>
+					</li>
+					<li>
+						<h4><a href="">合作加盟</a></h4>
+						<a href="">加盟杰尼思 </a>
+						<a href="">商务合作</a>
+						<a href=""></a>
+						<a href=""></a>
+					</li>
+					<li>
+						<h4><a href="">关于杰尼思</a></h4>
+						<a href="">关于杰尼思    </a>
+						<a href="">企业优势</a>
+						<a href="">企业文化</a>
+						<a href="">联系我们</a>
+					</li>
+					<li>
+						<h4><a href="">帮助中心</a></h4>
+						<a href="">联系方式       </a>
+						<a href="">找回密码</a>
+						<a href="">常见问题</a>
+						<a href="">会员手册</a>
+					</li>
+				</ul>
+				<div class="footer-right">
+					<img src="img/footgg.jpg" />
+				</div>
+
+			</div>
+			<div class="footer-title">版权所有 :copyright: 2000-2013 杰尼思（香港）国际酒店管理顾问有限公司</div>
+		</div>
+		<!--	右边客服-->
+		<div id="service">
+			<div class="ser-title"></div>
+			<div class="ser-main" style="border-top: none;">
+				<a href=""><img src="img/minqq.jpg" alt="" />在线客服1</a>
+				<a href=""><img src="img/minqq.jpg" alt="" />在线客服1</a>
+				<a href=""><img src="img/minqq.jpg" alt="" />在线客服1</a>
+				<a href=""><img src="img/minqq.jpg" alt="" />在线客服1</a>
+				<div class="ser-foot">
+					<p><img src="img/qqip.jpg" alt="" />咨询热线</p>
+					<h4>400-882-9028</h4>
+				</div>
+			</div>
+		</div>
+		<!--	底部广告	-->
+		<div class="extra">
+			<div class="extra-box">
+				<img src="img/es.png" alt="" />
+				<div class="extra-but-box">
+					<div><button class="extra-but" style="background: url(img/an.png)no-repeat;"></button></div>
+					<div><button class="extra-but" style="background: url(img/ip.png)no-repeat;"></button></div>
+				</div>
+				<button class="xx"></button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//内容1下拉
+		$(function() {
+			var li = $(".one-nav li");
+			$(".one-text").hide();
+			li.mouseenter(function() {
+				li.animate({
+					top: "0px"
+				}, 100);
+				$(this).animate({
+					top: "-10px"
+				}, 100);
+				$(".one-text").slideUp("slow");
+				$(".one-text").eq($(this).index()).slideDown();
+			});
+			$("#jq-box").mouseleave(function() {
+				$(".one-text").delay(1500).slideUp("slow");
+				li.animate({
+					top: "0px"
+				}, 100)
+			});
+		})
+		$(function() {
+			//内容2下拉
+			$(".two-title li").mouseenter(function() {
+					$(".two-title li").css({
+						background: " #fff",
+						color: "#007CC3"
+					});
+					$(this).css({
+						background: " #007CC3",
+						color: "#fff"
+					});
+					$(".two-content").fadeOut("slow");
+					$(".two-content").eq($(this).index()).fadeIn("slow");
+				})
+				//		低栏广告
+			$(".xx").click(function() {
+				$(".extra").slideUp("slow");
+			})
+		});
+		$("#city").click(function(e) {
+			SelCity(this, e);
+		});
+	</script>
+
+</html>

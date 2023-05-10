@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="adt/LArea.min.css" />
+		<link rel="stylesheet" href="adt/LCalendar.min.css">
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png" /></a>
+				<img src="images/nav-but.png" class="nav-but" /> 填写联系方式
+			</header>
+			<div style="height: 1.4rem;"></div>
+			<section>
+				<div class="con-row">
+					机型：iPhone SE（灰）
+				</div>
+				<div class="con-row">
+					<input type="text" name="" id="" class="con-text" value="" placeholder="请输入手机号" />
+				</div>
+				<div class="con-row">
+					<input type="number" name="" id="" class="con-text" value="" placeholder="请输入联系电话" />
+				</div>
+				<div class="con-row">
+					<input type="text" name="" id="demo2" class="con-text" value="" readonly="readonly" placeholder="选择城市" style="color: #26b3d4;" />
+					<b>›</b>
+				</div>
+				<div class="con-row">
+					<input type="text" name="" id="" class="con-text" value="" placeholder="请填写详细地址" />
+				</div>
+				<div class="con-row con-tabska clearfix">
+					<span class="con-xz">
+						工程师上门
+					</span>
+					<span>
+						邮寄维修
+					</span>
+				</div>
+				<section class="con-tabska-box">
+					<div class="con-row">
+						<input type="text" name="" id="das" class="con-text" value="" placeholder="选择上门时间段" readonly="readonly" style="width: 5rem;" />
+						<input type="text" name="" id="satrtmie" class="con-text" value="" placeholder="开始时间" readonly="readonly" style="width: 2rem;" />
+						<input type="text" name="" id="endtmie" class="con-text" value="" placeholder="结束时间" readonly="readonly" style="width: 2rem;" />
+					</div>
+					
+				</section>
+				<section class="con-tabska-box" style="display: none;">
+					<div class="con-row maintain" style="color: #26b3d4;">
+						选择维修中心
+						<b style="color: #26b3d4;">›</b>
+					</div>
+					<div class="maintain-box clearfix">
+						<div class="con-rowweixiu con-rowweixiu-on">
+							 深圳维修中心
+							<b>›</b>
+						</div>
+						<div class="con-rowweixiu">
+							 深圳维修中心
+							<b>›</b>
+						</div>
+						<div class="con-rowweixiu">
+							 深圳维修中心
+							<b>›</b>
+						</div>
+					</div>
+					
+				</section>
+				<div class="con-row">
+						<input type="text" name="" id="" class="con-text" value="" placeholder="请输入优惠码" />
+				</div>
+				<a href="checkout_success.html"><button id="searchs-sub2">下一步</button></a>
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script src="adt/LAreaData1.js"></script>
+		<script src="adt/LAreaData2.js"></script>
+		<script src="adt/LArea.js"></script>
+		<script src="adt/LCalendar.min.js"></script>
+		<script>
+			var area2 = new LArea(); //地址
+			area2.init({
+				'trigger': '#demo2',
+				'valueTo': '#value2',
+				'keys': {
+					id: 'value',
+					name: 'text'
+				},
+				'type': 2,
+				'data': [provs_data, citys_data, dists_data]
+			});
+			var calendar = new LCalendar();
+			calendar.init({
+				'trigger': '#das', //标签id
+				'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+				'minDate': '1900-1-1', //最小日期
+				'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() //最大日期
+			});
+			var calendartime = new LCalendar();
+			calendartime.init({
+				'trigger': '#satrtmie',
+				'type': 'time'
+			});
+			var calendartime = new LCalendar();
+			calendartime.init({
+				'trigger': '#endtmie',
+				'type': 'time'
+			});
+			
+			$(".con-tabska span").click(function(){   //维修方式切换
+				$(".con-tabska span").removeClass("con-xz");
+				$(this).addClass("con-xz");
+				$(".con-tabska-box").hide();
+				$(".con-tabska-box").eq($(this).index()).show();
+			});
+			$(".maintain").click(function(){   //选择维修中心
+				$(".maintain-box").css("height","3rem");
+			});
+			$(".con-rowweixiu").click(function(){
+				$(".con-rowweixiu").removeClass("con-rowweixiu-on");
+				$(this).addClass("con-rowweixiu-on");
+			})
+		</script>
+	</body>
+
+</html>

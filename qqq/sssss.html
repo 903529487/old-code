@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		img {
+			width: 500px;
+			height: auto;
+		}
+	</style>
+
+	<body>
+		<div>
+			<img src="img/lefjt.png" data-original="img/1.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/2.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/3.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/4.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/5.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/6.jpg" />
+		</div>
+		<div>
+			<img src="img/lefjt.png" data-original="img/7.jpg" />
+		</div>
+		<div>
+			<img src="" data-original="img/8.jpg" />
+		</div>
+		<div>
+			<img src="img/1.jpg" data-original="img/9.jpg" />
+		</div>
+		<div>
+			<img src="img/1.jpg" data-original="img/10.jpg" />
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+		<script>
+			$(function() {
+				$("img").lazyload({
+					event: "click",     //click和mouseover自定义事件,只有当用户点击它们才加载图片
+					effect: "fadeIn", //淡入效果
+					threshold: 200, //图片在距离屏幕 200 像素时提前加载
+					skip_invisible: false //. 如果你想要加载隐藏图片, 请将 skip_invisible 设为 false
+
+				});
+			});
+		</script>
+	</body>
+
+</html>

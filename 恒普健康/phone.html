@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png"/></a>
+			修改手机
+		</header>
+		<!--输入框-->
+		<section class="login-text">
+			<table border="0" cellspacing="0" cellpadding="0" class="login-text-tab">
+				<tr>
+					<td class="login-text-td-1"><img src="images/phone.png" /></td>
+					<td class="login-text-td-2"><input type="text" class="sr-text" name="" id="phone" value="" placeholder="请输入您的手机号码" /></td>
+				</tr>
+				<tr>
+					<td class="login-text-td-1"><img src="images/phonexs.png" /></td>
+					<td class="login-text-td-2">
+						<input type="text" class="sr-text" name="" id="" value="" placeholder="请输入短信验证码" style="width: 3.5rem;" />
+						<input type="button" name="" id="" value="获取验证码" class="yzm" />
+					</td>
+				</tr>
+			</table>
+
+			<button class="subbmit" style="margin-top: 5rem;">修 改</button>
+		</section>
+		
+		<!--弹窗stra-->
+		<div class="capacity">
+			<div class="capacity-text">
+				<span class="boxs-texts">
+				
+				</span>
+			</div>
+		</div>
+		<div class="capacity2" style="display: block;">
+			
+			<h3 >
+				您已使用<span style="color: red;">13934299124</span>，<br>如需修改请
+重新验证手机号，下次登录使用新手机号
+			</h3>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<button class="idea-capacity-sub phone-check">修 改</button>
+				<button class="idea-capacity-sub2 " onclick="history.go(-1);">否</button>
+			</div>
+		</div>
+		<div class="bas" style="display: block;"></div>
+		<!--弹窗end-->
+		<script>
+		
+		$(".phone-check").click(function(){
+			$(".capacity2").hide();
+			$(".bas").hide();
+		})
+			
+			securityCode();
+			
+			
+			function  securityCode(){  //验证码
+				var yzm=$(".yzm");
+				var dt=true;
+				var i=10;
+				yzm.click(function(){	
+					if(dt){		
+						dt=false;
+						yzm.val(i)
+						Codedi();
+					}
+				});
+				function Codedi(){
+					var setin=setInterval(function(){
+					if(i>0){
+						--i;
+						yzm.val(i)
+					}else{
+						clearInterval(setin);
+						yzm.val("重新获取");
+						dt=true;
+						i=10;
+					}
+					
+					},1000)
+				}
+				
+			}
+			
+			verify();
+
+			function verify() {  //验证手机号
+				var phone = $("#phone"),					
+					capacity = $(".capacity"),
+					bas = $(".bas"),
+					boxsTexts = $(".boxs-texts");
+
+				
+
+				phone.blur(function() {
+										 //手机号
+						bas.show();
+						capacity.addClass("animation").show();
+						boxsTexts.html("该手机未注册恒普健康账号，<br>请前往设置密码创建恒普账号。");
+						userInset();
+					
+				});
+				
+				function userInset() { //2秒后关闭
+					setTimeout(function() {
+						bas.hide();
+						capacity.removeClass("animation").hide();
+					}, 2000)
+				}
+			}
+		</script>
+	</body>
+
+</html>

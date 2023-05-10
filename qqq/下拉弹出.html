@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.nav {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			height: 50px;
+			line-height: 50px;
+			list-style: none;
+			width: 100%;
+			border-top: 1px solid #000000;
+		}
+		
+		.nav li {
+			float: left;
+			width: 33.3%;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+		}
+		
+		.sub-box {
+			position: absolute;
+			width: 100%;
+			background: red;
+			bottom: 50px;
+			-webkit-transition: all 0.5s;
+			transition: all 0.5s;
+			-webkit-transform: translateY(200px);
+			transform: translateY(200px);
+			opacity: 0;
+		}
+		
+		.sub-box a {
+			display: block;
+			line-height: 30px;
+		}
+	</style>
+
+	<body>
+		<ul class="nav">
+			<li>
+				llls
+			</li>
+			<li>
+				llls
+			</li>
+			<li>
+				llls
+				<div class="sub-box">
+					<a href="">ssss</a>
+					<a href="">ssss</a>
+					<a href="">ssss</a>
+					<a href="">ssss</a>
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script>
+			submate(".nav")
+
+			function submate(obj) {
+				$(obj).find("li").click(function() {
+					if($(this).find(".sub-box").css("opacity") == 1) {
+						$(this).find(".sub-box").css({
+							transform: "transform: translateY(200px)",
+							webkitTransform: " translateY(200px)",
+							opacity: 0
+						})
+					} else {
+						$(this).find(".sub-box").css({
+							transform: "transform: translateY(0px)",
+							webkitTransform: " translateY(0px)",
+							opacity: 1
+						})
+					}
+
+				});
+
+				$(document).bind("click", function(e) { 
+					var target = $(e.target);
+					if(target.closest(".sub-box," + obj).length == 0) { 
+						$(".sub-box").css({
+							transform: "transform: translateY(200px)",
+							webkitTransform: " translateY(200px)",
+							opacity: 0
+						})
+					};
+					e.stopPropagation();
+				})
+			}
+		</script>
+	</body>
+
+</html>

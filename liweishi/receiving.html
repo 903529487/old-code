@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>力维士</title>
+		<link rel="SHORTCUT ICON" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<!--[if IE]>
+		<script src="js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header">
+			<div class="header-con">
+				<a href="index.html"><img src="images/logo.png" id="logo" /></a>
+				<!--搜索框-->
+				<div class="search_box">
+					<input type="text" name="" id="search_text" value="" placeholder="请输入您要搜索的关键字" />
+					<input type="submit" name="search_sub" id="search_sub" value="" />
+				</div>
+
+				<div class="head-right clearfix" style="vertical-align: middle;top: 15px;">
+					<a href="" style="color: #26b3d4;">用户名</a> <img src="images/banner.jpg" alt="" style="width: 60px;height: 60px;border-radius: 50%;vertical-align: middle;" />
+
+				</div>
+			</div>
+		</header>
+		<!--导航-->
+			<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="service_1.html">维修预约</a>
+				</li>
+				<li class="nav-on">
+					<a href="query.html">查询/支付</a>
+				</li>
+				<li>
+					<a href="colorfocus.html">热门活动</a>
+					<div class="nav-hidde">
+						<a href="colorfocus.html">炫彩换壳</a>
+						<a href="ram_upgrade.html">内存升级</a>
+					</div>
+				</li>
+				<li>
+					<a href="welfare.html">企业福利</a>
+				</li>
+				<li>
+					<a href="service_process.html">服务流程</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="main">
+			<div class="search-box">
+				<div class="search-title-dwon">
+					<span>维修订单</span>
+					<ul class="search-hidee">
+						<li>sss</li>
+						<li>sss</li>
+						<li>sss</li>
+					</ul>
+					<i></i>
+				</div>
+				<input type="text" name="" id="searchs-2" value="" />
+				<button id="searchs-sub">查询</button>
+			</div>
+
+			<div class="que-nav">
+				<ul class="clearfix">
+					<li>
+						<a href="query.html">所有订单</a>
+					</li>
+					<li>
+						<a href="mailsend.html">待邮寄（0）</a>
+					</li>
+					<li>
+						<a href="pay.html">待支付（0）</a>
+					</li>
+					<li class="que-nav-on">
+						<a href="receiving.html">待收货（0）</a>
+					</li>
+					<li >
+						<a href="evaluate.html">待评价（0） </a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">已评价（0） </a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">优惠劵</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sub-minhei">
+				<div class="que-tab-box">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>单号</th>
+							<th>下单时间</th>
+							<th>方案/服务/配件 </th>
+							<th>费用（元）</th>
+							<th>状态</th>
+						</tr>
+						<tr>
+							<td>S123456789</td>
+							<td>2016-8-2 16:46</td>
+
+							<td>更换屏幕（半年质保）（￥1500元）</td>
+							<td><span>￥1500元   </span></td>
+							<td>订单收货中<br>
+								<a href="#">确定收货</a>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+				<div id="paging">
+					<ul>
+						<li id="pading-on">
+							<a href="">1</a>
+						</li>
+						<li>
+							<a href="">2</a>
+						</li>
+						<li>
+							<a href="">3</a>
+						</li>
+						<li>
+							<a href="">4</a>
+						</li>
+						<li>
+							<a href="">5</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<br><br><br>
+		<footer id="footer">
+			<div class="footer-con">
+				<div>
+					<ul class="footer-meta clearfix">
+						<li>
+							<h3>服务指南</h3>
+							<a href="">服务流程</a>
+							<a href="">服务网点</a>
+							<a href="">售后政策</a>
+						</li>
+						<li>
+							<h3>帮助中心</h3>
+							<a href="">常见问题</a>
+							<a href="javascript:void(0)" class="suggest-but">投诉建议</a>
+							<a href="">维修流程</a>
+							<a href="">寄送地址</a>
+						</li>
+						<li>
+							<h3>力维士</h3>
+							<a href="">关于我们</a>
+							<a href="">用户协议</a>
+							<a href="">联系我们</a>
+							<a href="">意见反馈</a>
+						</li>
+						<li>
+							<h3>友情链接</h3>
+							<a href="">商城</a>
+						</li>
+						<li>
+							<h3>查询助手</h3>
+							<a href="javascript:void(0)" onclick="showIphine()" class="iphone-but">鉴别山寨苹果</a>
+							<a href="">查苹果序列号</a>
+						</li>
+					</ul>
+					<!--苹果验证弹窗start-->
+					<div class="iphone-box">
+						<i></i>
+						<p>扫一扫鉴别是不是山寨苹果<br> 1.微信扫码关注“果粉达人”公众号
+							<br> 2.点击果粉达人微信菜单“山寨苹果”
+						</p>
+						<div>
+							<img src="images/ewm2.jpg" />
+						</div>
+						
+					</div>
+					<!--苹果验证弹窗end-->
+				</div>
+				<div class="foot-erm">
+					<img src="images/wem.jpg" /><br>
+					<h3>在线客服：<br>
+400-000-0000</h3>
+				</div>
+				<div class="foot-bott">
+					联系电话：18129831303&nbsp;&nbsp;&nbsp;&nbsp; 地 址：深圳市龙华新区羊台45栋801&nbsp;&nbsp;&nbsp;&nbsp; 联系人：郑智勇 &nbsp;&nbsp;&nbsp;&nbsp;邮 箱：liweishikeji@163.com
+				</div>
+			</div>
+			<div class="foot-last">
+				<div>
+					<a href="">首页</a>|
+					<a href="">预约维修</a>|
+					<a href="">查询支付</a>|
+					<a href="">热门活动</a>|
+					<a href="">联系客服</a>|
+					<a href="">服务流程</a>
+				</div>
+				<div style="font-size: 12px;">
+					Copyright 2016 力维士科技有限公司. 备案ICP：粤ICP备10040994号 技术支持：时代万网
+				</div>
+			</div>
+		</footer>
+		<!--投诉建议-->
+		<section class="suggest-box">
+			<img src="images/close.jpg" class="close"/>
+			<div class="sugge-maxs">
+			<h3>投诉反馈</h3>
+			<div class="sugg-tab-page">
+				<span><i class="sugg-tab-page-on"></i>服务投诉</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i></i>意见反馈</span>                  
+			</div>			
+			<section class="sugg-sbox" style="display: block;">
+				<input type="text" name="" class="sugg-text" id="" value="" placeholder="所要投诉工程师的姓名或电话"/><br><br>
+				<input type="text" name="" class="sugg-text"  id="" value="" placeholder="请留下您的手机号"/><br><br>
+				<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+				<div class="sugg">
+					<button class="sugg-n">取消</button>
+					<button class="sugg-y">确定</button>
+				</div>
+			</section>
+			<section class="sugg-sbox">				
+				<input type="text" name="" class="sugg-text"  id="" value="" placeholder="请留下您的手机号"/><br><br>
+				<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+				<div class="sugg">
+					<button class="sugg-n">取消</button>
+					<button class="sugg-y">确定</button>
+				</div>
+			</section>
+			</div>
+		</section>		
+		<!--投诉建议end-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</body>
+
+</html>

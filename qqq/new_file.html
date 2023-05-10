@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan</title>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+    <script src="js/hammer.min.js"></script>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+          
+            
+        }
+		
+        .test {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #ffd800;
+           	float: left;
+        }     
+        .text2{
+        	height: 50px;background: red;width: 100px;float: left;
+        }
+        .textbox{
+        	height: 50px;
+            line-height: 50px;    	
+        	-webkit-transform: translateX(0px);
+        	-webkit-transition: all 0.25s ease-in;
+        	
+        }
+        .sw{
+        	position: relative;
+        	overflow: hidden;
+        	width: 100%;
+        }
+    </style>
+</head>
+<body>
+	<div class="sw">
+		<div class="textbox">
+		 <div  class="test">事件区域</div>
+		 <div class="text2"><a href="">删除</a></div>
+		</div>
+	</div>
+	<div class="sw">
+		<div class="textbox">
+		 <div  class="test">事件区域</div>
+		 <div class="text2"><a href="">删除</a></div>
+		</div>
+	</div>
+	
+   
+    
+    <div id="result" class="result">事件结果<br /></div>
+    <script type="text/javascript">
+    
+       var mou=document.querySelectorAll(".test");
+       var textbox=document.querySelectorAll(".textbox");
+       
+     
+       
+       for(var i=0;i<mou.length;i++){
+       	 	mou[i].style.width=document.body.offsetWidth+"px";
+       	 	textbox[i].style.width=document.body.offsetWidth+100+"px";
+       
+         var hammertime = new Hammer(textbox[i]);
+         hammertime.on("pan", function (e) {
+        
+
+         document.getElementById("result").innerHTML = "X偏移量：【" + e.deltaX + "】，Y偏移量：【" + e.deltaY + "】<br />";
+            if(e.deltaX < -50){
+            	for(var j=0;j<textbox.length;j++){
+    				
+    					textbox[j].style.webkitTransform= "translateX(-100px)";
+    				
+        			
+            	}
+        	
+
+            }else if(e.deltaX > 50){
+            	for(var j=0;j<textbox.length;j++){
+            		textbox[j].style.webkitTransform= "translateX(0px)";
+            	}
+            	
+            }   
+        });
+       
+       }
+      
+       
+      
+       
+    </script>
+</body>
+</html>

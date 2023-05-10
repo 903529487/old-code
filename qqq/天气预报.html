@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.div {
+			height: 600px;
+		}
+		
+		@media only screen and (min-width: 100px) and (max-width: 640px) {
+			.div {
+				background: red;
+			}
+		}
+		
+		@media only screen and (min-width:500px) and (max-width:800px) {}
+	</style>
+
+	<body>
+		<input type="text" class="text" /><button class="sub">查询</button>
+		<div class="div"></div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+//$.getJSON("ww.json",function(data){
+//	alert(data)
+//var array=JSON.parse(data);
+//array.push({"name":"dd","age":"25"});
+//alert(array.name)
+//})
+	var zt=true;
+			$(".sub").click(function(value) {
+				if(zt){
+					value = $(".text").val();
+					tqajax(value);
+				}				
+			})
+
+			function tqajax(value) {
+				zt=false;
+				var url = "http://v.juhe.cn/weather/index?format=2&cityname=" + value + "&key=fec5308f666516affc3ac66e6a040e59";
+				$.ajax({
+					url: url,
+					dataType: 'jsonp',
+					processData: false,
+					type: 'post',
+					success: function(data) {
+						if (data.reason == "successed!") {
+							$(".div").html("<h1>" + data.result.today.city + "</h1>" +
+								"<div>" + data.result.today.temperature + "</div>"+
+								"<div>" + data.result.today.weather + "</div>"+
+								"<div>" + data.result.today.wind + "</div>"+
+								"<div>" + data.result.today.date_y + "</div>"+
+								"<div>" + data.result.today.dressing_advice + "</div>"
+							)
+						}else{
+							$(".div").html(data.reason);
+						}
+						zt=true;
+					}
+				});
+			}
+		})
+	</script>
+
+</html>

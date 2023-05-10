@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		#box{
+			width: 400px;height: 600px;border: 1px solid #8A2BE2;overflow: hidden;position: relative;z-index: 99;
+		}
+		#box-text{
+			position: absolute;left: 0;
+		
+		
+			
+		}
+		#box-text li{
+			vertical-align: middle;float: left;width: 400px;
+		}
+		#box-text li img{
+			height: 600px;
+		}
+	</style>
+	<body>
+	<div id="box">
+		<ul id="box-text">
+			<li><img src="img/13.jpg" alt="" /></li>
+				<li><img src="img/13.jpg" alt="" /></li>
+					<li><img src="img/13.jpg" alt="" /></li>
+						<li><img src="img/13.jpg" alt="" /></li>
+		</ul>
+	</div>
+	
+	</body>
+	<script>
+		var an=false;
+		var box=document.getElementById("box");
+		var textb=document.getElementById("box-text");
+		var li=textb.getElementsByTagName("li");
+		textb.style.width=li.length*400+"px";
+		var ss=0;
+		var last = {
+			x: 0,
+			y: 0
+		}
+		var next = {
+			x: 0,
+			y: 0
+		}
+		var nu=0;
+		
+		textb.onmousedown = function(e) {
+			e.preventDefault();
+			an = true;
+			
+			
+			last=windowTOcanvas(e.clientX,e.clientY);
+			nu=0;
+			
+		}
+		
+		textb.onmouseout = function(e) {
+			e.preventDefault();
+			an = false;
+		}
+		textb.onmousemove = function(e) {
+			e.preventDefault();
+			if (an) {
+				
+				next=windowTOcanvas(e.clientX,e.clientY);
+				nu=next.x-last.x;
+				
+				textb.style.left=ss+nu+"px"
+				
+			}
+		}
+		textb.onmouseup = function(e) {
+			e.preventDefault();
+			an = false;
+			ss=this.offsetLeft;
+			if(ss>=0){
+				textb.style.left="0px";
+				ss=0;
+			}else if(ss <= -(li.length-1)*400){
+				textb.style.left= -(li.length-1)*400+"px"
+				ss=-(li.length-1)*400;
+			}
+			console.log(ss)
+			
+		}
+		function windowTOcanvas(x,y){
+			var bbox=box.getBoundingClientRect();
+			return {x:Math.round(x-bbox.left),y:Math.round(y-bbox.top)}
+		}
+	</script>
+</html>

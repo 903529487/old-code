@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="adt/common.css" />
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png"/></a>
+			日期
+		</header>
+		<div class="data-box">
+			出生日期：<input type="text" id="beginTime" class="date-kbtn" value="" />
+		</div>
+		<div id="datePlugin"></div>
+		<button class="subbmit" style="margin-top: 2rem;">完 成</button>
+		<script type="text/javascript" src="adt/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="adt/date.js"></script>
+		<script type="text/javascript" src="adt/iscroll.js"></script>
+		<script>
+			$(function() {
+				$('#beginTime').date();
+				
+			});
+		</script>
+	</body>
+
+</html>

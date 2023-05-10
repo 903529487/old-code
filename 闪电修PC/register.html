@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+	</head>
+
+	<link rel="stylesheet" href="css/style.css" />
+
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<img src="img/logo.png" alt="" id="logo" />
+				<div class="header-right">
+					<a href="index.html">闪电修首页</a>
+					<a href="">服务流程</a>
+					<img src="img/user.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div id="in-main">
+			<div style="width: 943px;margin: auto;">
+				<div class="reg-title">
+					<h1>注册成为闪电修会员！</h1>
+					<div style="float: right;"><a href="">用手机号码注册</a></div>
+				</div>
+				<div class="reg-main">
+					<div class="reg-row">
+						<input type="text" name="" id="" class="kon" value="" placeholder="请输入邮箱" />
+						<input type="text" name="" id=""  value="" style="width: 165px;" placeholder="请输入验证码" />
+						<button class="reg-bun">发送验证吗</button>
+						<span>邮箱不能为空</span>
+					</div>
+					<div class="reg-row">
+						<input type="text" name="" id="" class="kon" value="" style="width: 160px;" placeholder="请输入姓" />
+						<input type="text" name="" id="" class="kon" value="" style="width: 200px;" placeholder="请输入名" />
+
+						<span>密码不能为空</span>
+					</div>
+					<div class="reg-row">
+						<input type="password" name="" class="kon" id="" value="" placeholder="请输入密码" />
+						<span>密码不能为空</span>
+					</div>
+					<div class="reg-row">
+						<input type="password" name="" class="kon" id="" value="" placeholder="请确认密码" />
+						<span>密码不能为空</span>
+					</div>
+					<div class="reg-row">
+						<button class="reg-bun" style="width:300px;margin-top: 50px;">创建新的用户</button>
+					</div>
+					<div style="height: 100px;">
+
+					</div>
+					<img src="img/cat.png" alt="" id="cat" />
+				</div>
+			</div>
+			<footer id="footer" style="position: relative;top: 100px;">
+				<ul class="clearfix">
+					<a href="">
+						<li>
+
+							<img src="img/foot1.png" alt="" />
+							<p>关于我们</p>
+
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot2.png" alt="" />
+							<p>联系我们</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot3.gif" alt="" />
+							<p>服务流程</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="img/foot4.png" alt="" />
+							<p>疑问解答</p>
+						</li>
+					</a>
+				</ul>
+				<div class="footer-box">
+					<div><img src="img/wem.png" alt="" /></div>
+					<p>官方微信</p>
+				</div>
+			</footer>
+
+		</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+<script>
+	$(".kon").blur(function(){
+		if($(this).val()==""){
+			$(this).siblings("span").show();
+		}else{
+			$(this).siblings("span").hide();
+		}
+	})
+</script>
+	</body>
+
+</html>

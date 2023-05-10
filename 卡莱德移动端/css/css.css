@@ -1,0 +1,373 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p,
+section,
+header,
+footer,
+ul,
+li,
+table,
+ol {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0.4em;
+  font-family: Helvetica;
+  color: #333333;
+  max-width: 10rem;
+  margin: auto;
+  position: relative;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+}
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+.clearfix {
+  zoom: 1;
+  *zoom: 1;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#sidebar {
+  position: fixed;
+  width: 5rem;
+  height: 100%;
+  background: #393a3f;
+  left: -5rem;
+  top: 0;
+  z-index: 110;
+  transform: translateX(0rem);
+  -webkit-transform: translateX(0rem);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.bas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  display: none;
+}
+#main {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#nav ul li {
+  line-height: 1.38rem;
+}
+#nav ul li a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+#nav ul li a img {
+  width: 0.8rem;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1rem;
+  margin-right: 0.2rem;
+}
+#nav ul li .nav-on:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%;
+  height: 1.38rem;
+  line-height: 1.38rem;
+  background: #0084c6;
+  z-index: -1;
+  border-radius: 1.38rem 0 0 1.38rem;
+}
+#header {
+  position: fixed;
+  top: 0;
+  line-height: 1.4rem;
+  text-align: center;
+  width: 10rem;
+  background: #f4f4f4;
+  z-index: 99;
+  font-size: 0.5rem;
+  border-bottom: 1px solid #afaeae;
+}
+#header #logo {
+  width: 6.45rem;
+  position: relative;
+  top: 0.2rem;
+}
+#header .nav-but {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.3rem;
+  width: 0.8rem;
+}
+.focus {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.focus .hd {
+  width: 100%;
+  height: 11px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0.5rem;
+  text-align: center;
+}
+.focus .hd ul {
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 0;
+  vertical-align: top;
+}
+.focus .hd ul li {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.2rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #a0a0a0;
+  margin: 0 5px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.focus .hd ul .on {
+  background: #fff;
+}
+.focus .bd {
+  position: relative;
+  z-index: 0;
+}
+.focus .bd li img {
+  width: 100%;
+  height: 5rem;
+  background: url(../images/loading.gif) center center no-repeat;
+}
+.focus .bd li a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+/* 取消链接高亮 */ }
+.in-con {
+  width: 90%;
+  margin: auto;
+}
+.in-nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  line-height: 0.7rem;
+  margin-top: 0.3rem;
+}
+.in-nav ul li img {
+  width: 1.47rem;
+  height: 1.47rem;
+}
+.foottab {
+  margin-top: 0.5rem;
+  border: 1px solid #dddddd;
+}
+.foottab table {
+  width: 95%;
+  margin: auto;
+}
+.foottab table td {
+  font-size: 0.35rem;
+  line-height: 0.6rem;
+  padding: 0.2rem;
+}
+.foottab table td img {
+  width: 2.5rem;
+}
+.footer {
+  text-align: center;
+  font-size: 0.35rem;
+  padding: 0.2rem 0;
+  line-height: 0.6rem;
+}
+.pro-nav {
+  text-align: center;
+}
+.pro-nav span {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-top: 0.2rem;
+  float: left;
+}
+.pro-nav span button {
+  height: 1rem;
+  background: #dddddd;
+  width: 90%;
+  border: none;
+  font-size: 0.4rem;
+}
+.pro-nav .pro-nav-on button {
+  background: #26b3d4;
+  color: #fff;
+}
+.pro-nav-box {
+  border: 1px solid #26b3d4;
+  padding-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  position: relative;
+  display: none;
+}
+.pro-nav-box ul li {
+  text-align: center;
+  margin-top: 0.2rem;
+}
+.pro-nav-box ul li a {
+  height: 1rem;
+  background: #999999;
+  width: 90%;
+  border: none;
+  font-size: 0.4rem;
+  display: block;
+  margin: auto;
+  line-height: 1rem;
+}
+.pro-nav-box ul li a:active {
+  background: #26b3d4;
+  color: #fff;
+}
+.pro-nav-box ul .pro-nav-box-on a {
+  background: #26b3d4;
+  color: #fff;
+}
+.pro-list {
+  margin-top: 0.3rem;
+}
+.pro-list li {
+  width: 50%;
+  text-align: center;
+  margin-top: 0.2rem;
+  float: left;
+  line-height: 0.7rem;
+}
+.pro-list li img {
+  padding: 0.1rem;
+  border: 1px solid #dddddd;
+  width: 3.8rem;
+  height: 2rem;
+}
+.honour-list {
+  margin-top: 0.3rem;
+}
+.honour-list li {
+  width: 50%;
+  text-align: center;
+  margin-top: 0.2rem;
+  float: left;
+  line-height: 0.7rem;
+}
+.honour-list li img {
+  width: 3.8rem;
+  height: 5rem;
+}
+.paging {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.paging a {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #e0e0e0;
+  font-size: 0.35rem;
+}
+.son-nav {
+  height: 1.3rem;
+  line-height: 1.3rem;
+  background: #dddddd;
+}
+.son-nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.son-nav ul li a {
+  font-size: 0.45rem;
+  display: block;
+}
+.son-nav ul .son-nav-on {
+  background: #26b3d4;
+}
+.son-nav ul .son-nav-on a {
+  color: #fff;
+}
+.intr-box {
+  line-height: 0.7rem;
+  margin: 0.3rem 0;
+}
+.intr-box img {
+  max-width: 100%;
+}
+.intr-box div {
+  font-size: 0.45rem;
+}
+.intr-box p {
+  text-indent: 2em;
+}
+.news-list {
+  margin: 0.2rem 0;
+}
+.news-list a {
+  display: block;
+  line-height: 1.2rem;
+  height: 1.2rem;
+  border-bottom: 1px solid #DDDDDD;
+}
+.news-list a span {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.2rem;
+  display: block;
+  float: left;
+}
+.news-list a b {
+  float: right;
+}
+.news-list a samp {
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=css.css.map */

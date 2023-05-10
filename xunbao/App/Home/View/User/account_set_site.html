@@ -1,0 +1,54 @@
+<include file='Public/header' />
+<!--选择地址-->
+<section>
+    <volist name="site" id="vo">
+        <div class="site-box">
+            <div class="site-box-text">
+                <h3><b id="userName">{$vo['consignee']}</b><span id="userPhone">{$vo['mobile']}</span></h3>
+                <p id="userSite">{$vo['address']}</p>
+            </div>
+            <div class="site-box-bottom">
+                <i class="site-check site-check-on"></i>默认
+                <div class="set-site-anjiu">
+                    <a href="{:U('add_set_site')}?aid={$vo['address_id']}"><span class="set-site-bj"><img src="__PUBLIC__/Home/img/bj.png" alt="" />编辑</span></a>
+                    <a href="{:U('add_del_site')}?aid={$vo['address_id']}"><span class="set-site-delete"><img src="__PUBLIC__/Home/img/sc.png"/>删除</span></a>
+                </div>
+            </div>
+        </div>
+    </volist>
+<div style="height: 1.6rem;"></div>
+<div class="sec-but" style="">
+    <a href="add_set_site.html">
+        <button type="submit" class="login-sub">新增地址</button>
+    </a>
+</div>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+var clickEvent = {
+    electSite: function() {
+        //选择地址
+        $(".site-check").click(function() {
+            $(".site-check").removeClass("site-check-on");
+            $(this).addClass("site-check-on");
+
+        });
+
+    },
+    setdelete: function() {
+        //删除
+        $(".set-site-delete").click(function() {
+            if (confirm("是否删除？")) {
+                $(this).parent().parent().parent().remove();
+            }
+        });
+    }
+
+}
+
+clickEvent.electSite()
+clickEvent.setdelete();
+</script>
+</body>
+
+</html>

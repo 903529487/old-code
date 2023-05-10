@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="w">w2w</div>
+		<script>
+			function kk(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			kk.prototype.sed=function(){
+				alert(this.name+this.age)
+			}
+			var diaou=new kk("小米",200);
+			diaou.sed();
+			var diaou2=new kk("ss米",200);
+			diaou2.sed();
+			
+			document.ontouchstart=function(){
+				alert("s")
+			}
+			
+			
+			 //轮播图
+	function mainnav() {
+		var time=2000;
+		var num;
+		$(".mainnav").width($(".mainnav li").length * $(".mainnav li").width() + "px");
+		$(".mainnav-title li").eq(5).css("borderRight", "none");
+		starmover();
+
+		function starmover() {
+			$(".mainnav-title li").click(function() {
+				$(".mainnav").animate({
+					left: -$(".mainnav li").width() * $(this).index() + "px"
+				});
+				$(".mainnav-title li").removeClass("mainnav-title-on");
+				$(this).addClass("mainnav-title-on");
+				num = $(this).index();
+
+			})
+		}
+
+		var setH = setInterval(function() {
+			if (num < $(".mainnav li").length - 1) {
+				num++;
+				$(".mainnav").animate({
+					left: -$(".mainnav li").width() * num + "px"
+				});
+				$(".mainnav-title li").removeClass("mainnav-title-on");
+				$(".mainnav-title li").eq(num).addClass("mainnav-title-on");
+			} else {
+				num = 0;
+				$(".mainnav").animate({
+					left: -$(".mainnav li").width() * num + "px"
+				});
+				$(".mainnav-title li").removeClass("mainnav-title-on");
+				$(".mainnav-title li").eq(num).addClass("mainnav-title-on");
+			}
+		}, time);
+
+		$("#baer").hover(function() {
+			clearInterval(setH);
+		}, function() {
+			setH = setInterval(function() {
+				if (num < $(".mainnav li").length - 1) {
+					num++;
+					$(".mainnav").animate({
+						left: -$(".mainnav li").width() * num + "px"
+					});
+					$(".mainnav-title li").removeClass("mainnav-title-on");
+					$(".mainnav-title li").eq(num).addClass("mainnav-title-on");
+				} else {
+					num = 0;
+					$(".mainnav").animate({
+						left: -$(".mainnav li").width() * num + "px"
+					});
+					$(".mainnav-title li").removeClass("mainnav-title-on");
+					$(".mainnav-title li").eq(num).addClass("mainnav-title-on");
+				}
+			}, time);
+		})
+
+	}
+		</script>
+	</body>
+</html>

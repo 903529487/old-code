@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+	</head>
+
+	<link rel="stylesheet" href="../css/shopping.css" />
+
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<img src="../img/logo.png" alt="" id="logo" />
+				<div class="header-right">
+					<a href="index.html">闪电修首页</a>
+					<a href="">服务流程</a>
+					<img src="../img/user.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div id="in-main">
+			<div class="pay-main">
+				<div class="pay-title">
+					确认订单信息 <span>&nbsp;&nbsp;＞&nbsp;&nbsp;选择付款方式</span>
+					<span>&nbsp;&nbsp;＞&nbsp;&nbsp;支付成功</span>
+				</div>
+				<div class="ordr-box">
+					<table border="0" cellspacing="0" cellpadding="0" class="order-table">
+						<tr>
+							<td>店铺：xxxxxxx</td>
+							<td>商品信息</td>
+							<td>单价</td>
+							<td>数量</td>
+							<td>总价</td>
+							<td>配送方式</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="img-ba">
+									<span><img src="../img/gtx.png" alt="" /></span>
+								</div>
+							</td>
+							<td>IronMan U盘<br>Dataata<br>Data</td>
+							<td>￥300.00</td>
+							<td>1</td>
+							<td>￥300.00</td>
+							<td><span>快递费：10.00</span></td>
+						</tr>
+					</table>
+					<div class="ord-tab-foot clearfix">
+						<div class="ord-tab-foot-left">
+							卖家留言
+						</div>
+						<div class="ord-tab-foot-right">
+							店铺合计（含运费）：<span>￥310.00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="margin-top: 50px;" class="clearfix">
+				<div class="user-site">
+					<div class="user-site-title user-site-on">
+						选择收货地址
+						<i></i>
+					</div>
+					<div class="user-site-box">
+						<p>姓名</p>
+						<p>13123122364</p>
+						<br><br>
+						<div>
+							<p style="width: 50px;">广东</p>
+							<p style="width: 50px;">深圳</p>
+							<p style="width: 50px;">罗湖</p>
+						</div>
+						<div class="div-img">
+							<p>xxxxxxxxxxx</p>
+							<img src="../img/gps.png" alt="" />
+						</div>
+						<p style="width: 50px;">邮编</p>
+					</div>
+				</div>
+				<div class="user-site">
+					<div class="user-site-title">
+						选择收货地址
+						<i></i>
+					</div>
+					<div class="user-site-box">
+						<p>姓名</p>
+						<p>13123122364</p>
+						<br><br>
+						<div>
+							<p style="width: 50px;">广东</p>
+							<p style="width: 50px;">深圳</p>
+							<p style="width: 50px;">罗湖</p>
+						</div>
+						<div class="div-img">
+							<p>xxxxxxxxxxx</p>
+							<img src="../img/gps.png" alt="" />
+						</div>
+						<p style="width: 50px;">邮编</p>
+						<div>
+							<button>删除</button>
+						</div>
+					</div>
+				</div>
+				<div class="user-site">
+					<div class="user-site-title">
+						选择收货地址
+						<i></i>
+					</div>
+					<div class="user-site-box">
+						<p>姓名</p>
+						<p>13123122364</p>
+						<br><br>
+						<div>
+							<p style="width: 50px;">广东</p>
+							<p style="width: 50px;">深圳</p>
+							<p style="width: 50px;">罗湖</p>
+						</div>
+						<div class="div-img">
+							<p>xxxxxxxxxxx</p>
+							<img src="../img/gps.png" alt="" />
+						</div>
+						<p style="width: 50px;">邮编</p>
+					</div>
+				</div>
+				<div class="user-site" style="box-shadow: none;border: 1px solid #00C8E0;">
+					<a href="" class="add-site">
+						<span>
+							<img src="../img/shizi.png" alt="" />
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<footer id="footer" style="position: relative;top: 100px;">
+				<ul class="clearfix">
+					<a href="">
+						<li>
+
+							<img src="../img/foot1.png" alt="" />
+							<p>关于我们</p>
+
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot2.png" alt="" />
+							<p>联系我们</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot3.gif" alt="" />
+							<p>服务流程</p>
+						</li>
+					</a>
+					<a href="">
+						<li>
+							<img src="../img/foot4.png" alt="" />
+							<p>疑问解答</p>
+						</li>
+					</a>
+				</ul>
+				<div class="footer-box">
+					<div><img src="../img/wem.png" alt="" /></div>
+					<p>官方微信</p>
+				</div>
+			</footer>
+
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script>
+			$(function() { 
+				mun();
+				function mun() {//数量加减
+					$(".pay-minus").click(function() {
+						var num = $(".pay-num-text").val();
+						if (num <= 0) {
+							num = 0;
+						} else {
+							$(".pay-num-text").val(parseInt(--num));
+						}
+					});
+					$(".pay-add").click(function() {
+						var num = $(".pay-num-text").val();
+						$(".pay-num-text").val(parseInt(++num));
+					});
+				}
+				site();
+				function site(){//选择地址
+					$(".user-site-title i").click(function(){
+						$(".user-site-title").removeClass("user-site-on");
+						$(this).parent().addClass("user-site-on");
+					})
+				}
+				
+			})
+		</script>
+	</body>
+
+</html>

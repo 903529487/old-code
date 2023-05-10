@@ -1,0 +1,118 @@
+<include file='Public/header' />
+
+		<section class="hi-topimg">
+			<div class="hi-topimg-box">
+				<span class="clearfix">
+					<div class="hi-topimg-box-row">
+						<img src="__PUBLIC__/Home/img/useryoyx.png"/>
+					</div>
+					<div class="hi-topimg-box-row">
+						<h3>林小七</h3>
+						<p>2关注/123粉丝</p>
+					</div>
+					<div style="float: right;">
+						<button class="guanzu">+关注</button>
+						<button class="cloes-guanzu" style="display: none;">取消关注</button>
+					</div>
+				</span>
+			</div>
+			<div class="hi-topimg-bottom">
+				这个家伙很懒，什么都没有留下...
+			</div>
+		</section>
+		<section>
+			<nav class="hi-nav">
+				<ul class="clearfix">
+					<li class="hi-nav-on"><a>TA的藏品(6)</a></li>
+					<li><a>TA的斗宝(3)</a></li>
+				</ul>
+			</nav>
+			<div class="hi-goods">
+				<ul class="clearfix">
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><span>¥60000.00</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hi-goods" style="display: none;">
+				<ul class="clearfix">
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="__PUBLIC__/Home/img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="__PUBLIC__/Home/img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div>
+								<img src="__PUBLIC__/Home/img/goos.jpg" class="hi-goods-img"/>
+							</div>
+							<h3>新疆和田籽料一级白双面工</h3>
+							<p><img src="__PUBLIC__/Home/img/shan.png"/>当前票数：<span>122555</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+<include file="Public/footer"/>
+
+		<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+		<script>
+				//关注
+			$(".guanzu").click(function(){
+				$(".cloes-guanzu").show();
+				$(this).hide();
+			});
+			$(".cloes-guanzu").click(function(){
+				$(".guanzu").show();
+				$(this).hide();
+			});
+
+			//藏品tab切换
+			$(".hi-nav li").click(function(){
+				$(".hi-nav li").removeClass("hi-nav-on");
+				$(this).addClass("hi-nav-on");
+				$(".hi-goods").hide();
+				$(".hi-goods").eq($(this).index()).show();
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>恒普健康</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="retreat2"><img src="images/ht.png"/></a>
+			意见反馈
+		</header>
+		<section>
+			<table border="0" cellspacing="0" cellpadding="0" class="idea-tab">				
+				<tr>
+					<td  class="mess-tab-td-1">意见反馈：</td>
+					<td class="mess-tab-td-2">
+						<textarea class="idea-text" id="teareas" placeholder="请简要描述您的意见和建议"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td  class="mess-tab-td-1">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+					<td class="mess-tab-td-2">
+						<input type="text" name="" class="idea-text2" id="" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td  class="mess-tab-td-1">联系邮箱：</td>
+					<td class="mess-tab-td-2">
+						<input type="text" name="" class="idea-text2" id="email" value="" placeholder="请留下您的联系方式便于我们和您联系" />
+					</td>
+				</tr>
+				<tr>
+					<td  class="mess-tab-td-1">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</td>
+					<td class="mess-tab-td-2">
+						<input type="text" name="" class="idea-text2" id="" value="" />
+					</td>
+				</tr>
+			</table>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<button class="idea-sub">提 交</button>
+				<button class="idea-sub2">取 消</button>
+			</div>
+		</section>
+		<!--弹窗stra-->
+		<div class="capacity">
+			<div class="capacity-text">
+				<span class="boxs-texts">
+				
+				</span>
+			</div>
+		</div>
+		<div class="bas"></div>
+		<!--弹窗end-->
+		
+		<div class="capacity2">
+			<h3 class="">
+				您确定要放弃本次编辑？
+			</h3>
+			<div style="text-align: center;margin-top: 0.8rem;">
+				<button class="idea-capacity-sub">放 弃</button>
+				<button class="idea-capacity-sub2">取 消</button>
+			</div>
+		</div>
+		<script>
+			verify();
+
+			function verify() {
+				
+				var  teareas = $("#teareas"),
+					email=$("#email"),
+					capacity = $(".capacity"),
+					bas = $(".bas"),
+					boxsTexts = $(".boxs-texts");
+
+				teareas.blur(function() { //姓名不能为空
+				
+					if($(this).text() == "" || $(this).text() == null) {
+						bas.show();
+						capacity.addClass("animation").show();
+						boxsTexts.html("意见和建议不能为空");
+						userInset();
+					}
+				});
+				email.blur(function() { //姓名不能为空
+					
+					if($(this).val() == "" || $(this).val() == null) {
+						bas.show();
+						capacity.addClass("animation").show();
+						boxsTexts.html("邮箱不能为空");
+						userInset();
+					}
+				});
+				
+
+				function userInset() { //2秒后关闭
+					setTimeout(function() {
+						bas.hide();
+						capacity.removeClass("animation").hide();
+					}, 2000)
+				}
+			}
+			giveUp();
+			function giveUp(){
+				var qx=$(".idea-sub2"),
+					capacity2 = $(".capacity2"),
+					icsub=$(".idea-capacity-sub2"),
+					bas = $(".bas");
+					
+					qx.click(function(){
+						bas.show();
+						capacity2.addClass("animation").show();
+					});
+					icsub.click(function(){
+						bas.hide();
+						capacity2.removeClass("animation").hide();
+					});
+				
+			}
+		</script>
+	</body>
+
+</html>

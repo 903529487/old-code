@@ -1,0 +1,58 @@
+<include file='Public/header' />
+<section>
+    <nav class="fig-nav">
+        <ul class="clearfix">
+            <li><a href="fight_bao_list.html">斗宝专区</a></li>
+            <li class="fig-nav-on"><a href="treasure_ranking.html">宝物排行</a></li>
+            <li><a href="user_ranking.html">宝主排行</a></li>
+        </ul>
+    </nav>
+    <div>
+        <table border="0" cellspacing="0" cellpadding="0" class="ran-tab">
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" /></td>
+                <td class="ran-tab-td-2">
+                    <h3><a href=""><span>1.</span>新疆和田籽料一级的点点滴滴的点点滴滴白双面工</a></h3>
+                    <p><img src="__PUBLIC__/Home/img/shan.png" />当前票数：<span>122555</span></p>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote">我要投票</button>
+                    <button class="vote2" style="display: none;">已投票</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" /></td>
+                <td class="ran-tab-td-2">
+                    <h3><a href=""><span>1.</span>新疆和田籽料一级的点点滴滴的点点滴滴白双面工</a></h3>
+                    <p><img src="__PUBLIC__/Home/img/shan.png" />当前票数：<span>122555</span></p>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote">我要投票</button>
+                    <button class="vote2" style="display: none;">已投票</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" /></td>
+                <td class="ran-tab-td-2">
+                    <h3><a href=""><span>1.</span>新疆和田籽料一级的点点滴滴的点点滴滴白双面工</a></h3>
+                    <p><img src="__PUBLIC__/Home/img/shan.png" />当前票数：<span>122555</span></p>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote">我要投票</button>
+                    <button class="vote2" style="display: none;">已投票</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+$(".vote").click(function() {
+    $(this).hide();
+    $(this).parent().find(".vote2").show();
+});
+</script>
+</body>
+
+</html>

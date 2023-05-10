@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/LArea.min.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png" /></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+		<form action="account_set.html">
+			<section style="margin-top: 0.2rem;">
+				<div class="data-touxiang">
+					头像：<img src="img/detgoods.png" alt="" class="data-img-tx" />
+					<img src="img/leftjt.png" class="data-img-jt" />
+
+				</div>
+				<div class="add-db-row">
+					用户名：<input type="text" class="add-db-row-text" value="xinss" placeholder="输入收件人" />
+				</div>
+				<div class="add-db-row">
+					性别：<span class="sex sex-on"><i></i>男</span><span class="sex"><i></i>女</span>
+				</div>
+				<div class="add-db-row">
+					所在地区:
+					<input id="site-1" type="text" readonly="" class="add-db-row-text" placeholder="选择地址" />
+					<input id="siteval-1" type="hidden" value="" />
+				</div>
+				<div class="add-db-row">
+					手机号码：<input type="text" class="add-db-row-text" value="1336***888" placeholder="输入手机" />
+				</div>
+				<div class="add-db-row" style="height: 2.5rem;">
+					个人说明：<textarea class="add-db-row-text" style="height: 1.5rem;resize: none;" placeholder="请输入您的个人说明，不超过100字"></textarea>
+				</div>
+
+			</section>
+			<div style="padding: 0 0.3rem;margin: 0.5rem 0;">
+				<a href=""><button type="submit" class="login-sub">保存</button></a>
+			</div>
+		</form>
+
+		<!--弹出-->
+		<section class="txportrait-pop">
+			<div style="width: 90%;margin:3rem auto;">
+
+				<div class="addfile-img2">
+					<img src="img/addbut.png" class="addbut" />
+					<input type="file" name="" id="" value="" onchange='PreviewImage(this,0)' />
+					<div class="imgPreview"></div>
+				</div>
+				<br><br><br>
+				<button class="login-sub up-da-confirm">确定</button><br>
+				<button class="login-sub up-da-fh" style="background: #fff;border: 1px solid #690D09;color: #690D09;">返回</button>
+			</div>
+		</section>
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html">
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/site/LAreaData1.js"></script>
+		<script type="text/javascript" src="js/site/LArea.min.js"></script>
+		<script type="text/javascript" src="js/uploadPictures.js"></script>
+		<script>
+			//地址
+			var area1 = new LArea();
+			area1.init({
+				'trigger': '#site-1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+				'valueTo': '#siteval-1', //选择完毕后id属性输出到该位置
+				'keys': {
+					id: 'name', //
+					name: 'name'
+				},
+				'type': 1, //数据源类型
+				'data': LAreaData //数据源
+			});
+			var clickEvent = {
+				electSex: function() {
+					//选择性别				
+					$(".sex").click(function() {
+						$(".sex").removeClass("sex-on");
+						$(this).addClass("sex-on");
+					})
+
+				},
+				//上传头像
+				txpPop: function() {
+					var txportraitPop = $(".txportrait-pop");
+					var datetou=$(".data-touxiang");
+					var upFh=$(".up-da-fh");
+					var confirm=$(".up-da-confirm");
+					//弹出窗口
+					datetou.click(function() {
+						txportraitPop.addClass("txportrait-pop-on");
+						init();
+					});
+					//点击返回
+					upFh.click(function(){
+						getBack();
+					});
+					//确定点击事件
+					confirm.click(function(){
+						var urls=0;
+						urls=$(".imgPreview").find("img").attr("src");
+						if(urls!=undefined){
+							$(".data-img-tx").attr("src",urls);
+							getBack();
+						}else{
+							alert("请选择图片，或者返回！")
+						}
+						
+						
+					});
+					init();
+					//初始化
+					function init(){
+						$(".imgPreview").hide();
+						$(".addbut").show();
+						$(".imgPreview").find("img").remove();
+					}
+					//返回
+					function getBack(){
+						txportraitPop.removeClass("txportrait-pop-on");
+					}
+				}
+
+			}
+			clickEvent.electSex();
+			clickEvent.txpPop();
+		</script>
+	</body>
+
+</html>

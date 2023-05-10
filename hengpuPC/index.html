@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="SHORTCUT ICON" href="images/logo.png">
+		<link rel="stylesheet" href="css/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<!--[if IE]>
+		<script src="js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/publicjs.js"></script>
+	</head>
+	<style>
+
+	</style>
+
+	<body>
+		<!--头部start-->
+		<header id="header">
+			<div class="header-top">
+				<div class="header-top-con">
+					欢迎来到恒普健康！
+					<div class="header-top-con-box">
+						<ul class="clearfix">
+							<li class="app ">
+								<span>APP下载</span>
+								<div class="header-ewm">
+									<a href="">
+										<img src="images/ewm.png" />
+										<p>扫描二维码下载</p>
+									</a>
+								</div>
+							</li>
+							<li>
+								<a href="">
+									<span>加入收藏</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="header-bottom-con">
+					<a href="index.html" id="logo"><img src="images/logo.png" /></a>
+					<nav id="nav">
+						<ul class="clearfix">
+							<li class="nav-on">
+								<a href="">首页</a>
+							</li>
+							<li>
+								<a href="">报告查询</a>
+							</li>
+							<li>
+								<a href="">产品与服务</a>
+							</li>
+							<li>
+								<a href="">关于恒普</a>
+							</li>
+							<li>
+								<a href="">案例中心</a>
+							</li>
+							<li>
+								<a href="">联系我们</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header-but">
+						<a href="javascrpit:void(0);" class="login-but">登录</a>
+						<a href="register.html" class="reg-but">注册</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--头部end-->
+
+		<div id="fullpage">
+
+			<!--第一个页面-->
+			<section class="section">
+
+				<div class="flexslider">
+					<ul class="slides clearfix">
+						<li style="background: url(images/section1.jpg) no-repeat center;background-size: auto 100%;"></li>
+						<li style="background: url(images/section1.jpg) no-repeat center;background-size: auto 100%;"></li>
+						<li style="background: url(images/section2.jpg) no-repeat center;background-size: auto 100%;"></li>
+					</ul>
+				</div>
+				<div class="max-wk">
+					<aside class="in-selc-box">
+						<div class="in-selc-box-nav">
+							<ul class="clearfix">
+								<li class="in-selc-box-nav-on">条码查询</li>
+								<li>我的报告</li>
+							</ul>
+						</div>
+						<!--条码查询-->
+						<div class="query-hidee-box2" style="background: none;border: none;width: 400px;">
+							<div class="query-vertical">
+								<span>
+							<table border="0" cellspacing="0" cellpadding="0">	
+								<tr>
+							<td class="query-td-1">地  域：</td>
+							<td>	<select  name="province2" class="query-text" style="width: 60px;padding: 0;"></select>&nbsp;&nbsp;
+    <select  name="city2" class="query-text" style="width: 60px;padding: 0;" ></select>&nbsp;&nbsp;
+    <select  name="area2" class="query-text" style="width:60px;padding: 0;"></select></td>
+						</tr>
+						<tr>
+							<td class="query-td-1">医  院：</td>
+							<td><select class="query-text" style="width: 200px;">
+									<option>项目</option>
+									<option>项目</option>
+									<option>项目</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td class="query-td-1">条码号：</td>
+							<td><input type="text" name="" class="query-text" id="" value="" /></td>
+						</tr>
+						
+						<tr>
+							<td  class="query-td-1">验  证：</td>
+							<td>请拖动滑块到指定位置</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								
+								<div class="strmo-box">
+									请拖动滑块到指定位置完成验证
+								<span class="strmo-wz"></span>
+								<div class="min-strmo-box"></div>
+								<span id="str-slider">»</span>
+							</div>
+
+							</td>
+
+							</tr>
+							</table>
+							<button type="submit" class="query-select">查询</button>
+
+							</span>
+						</div>
+				</div>
+				<!--我的报告-->
+				<div class="query-hidee-box2" style="background: none;border: none;width: 400px;padding-top: 20px;display: none;">
+					<div class="query-vertical">
+						<span>
+							<table border="0" cellspacing="0" cellpadding="0">	
+								<tr>
+							<td class="query-td-1">起始时间：</td>
+							<td><input type="text" name="" class="query-text" onclick="laydate()" id="" value="" /></td>
+						</tr>
+						<tr>
+							<td class="query-td-1">结束时间：</td>
+							<td><input type="text" name="" class="query-text" onclick="laydate()" id="" value="" /></td>
+						</tr>
+						<tr>
+							<td class="query-td-1">地   域：</td>
+							<td>
+								<select  name="province" class="query-text" style="width: 60px;padding: 0;"></select>&nbsp;&nbsp;
+    <select  name="city" class="query-text" style="width: 60px;padding: 0;" ></select>&nbsp;&nbsp;
+    <select  name="area" class="query-text" style="width: 60px;padding: 0;"></select>
+							</td>
+						</tr>
+						<tr>
+							<td class="query-td-1">医  院：</td>
+							<td>
+								<select class="query-text" style="width: 200px;">
+									<option>项目</option>
+									<option>项目</option>
+									<option>项目</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td  class="query-td-1">条形码：</td>
+							<td><input type="text" name="" id="" class="query-text" value="" /></td>
+						</tr>
+						<tr>
+							<td  class="query-td-1">检验医嘱：</td>
+							<td>
+								<select class="query-text" style="width: 200px;">
+									<option>项目</option>
+									<option>项目</option>
+									<option>项目</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<button type="submit" class="query-select">查询</button>
+
+						</span>
+					</div>
+				</div>
+				</aside>
+		</div>
+
+		</section>
+		<!--第二个页面-->
+		<section class="section" style="background: url(images/section2.jpg) no-repeat center;background-size: auto 100%; "></section>
+		<!--第三个页面-->
+		<section class="section" style="background: url(images/section1.jpg) no-repeat center;background-size: auto 100%; ">
+
+		</section>
+		<!--第四个页面-->
+		<section class="section ">
+			<div style="height: 120px;"></div>
+			<h2 class="ind-tit"><span >关于恒普</span></h2>
+			<div class="in-sec-4">
+				<div class="in-sec-4-box">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<div class="minimg">
+									<img src="images/section3.jpg" />
+									<a href="">了解更多</a>
+								</div>
+								<div class="min-text">
+									<h3>恒普简介</h3>
+									<p>请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置</p>
+									<p>请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置</p>
+								</div>
+							</td>
+							<td>
+								<div class="minimg">
+									<img src="images/section3.jpg" />
+									<a href="">了解更多</a>
+								</div>
+								<div class="min-text">
+									<h3>恒普简介</h3>
+									<p>简介简介简介简介简介简介简介简介简介</p>
+									<p>请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置请拖动滑块到指定位置</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>
+			<div class="hezuo-box">
+				<h2 class="ind-tit"><span >合作伙伴</span></h2>
+				<br>
+				<div class="hezuo">
+					<img src="images/hez.png" /><img src="images/hez.png" /><img src="images/hez.png" /><img src="images/hez.png" />
+				</div>
+			</div>
+			<footer id="footer" style="position: absolute;bottom: 0;width: 100%;">
+				<div class="footer-top">
+					<div class="footer-top-con">
+						<ul class="footer-top-ul clearfix">
+							<li>
+								<div class="footer-top-box">
+									<img src="images/foot-1.png" />
+									<div class="footer-top-box-text">
+										<h3>我们在：</h3>
+										<p>深圳:深圳南山智慧广场A栋1单元 </p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="footer-top-box">
+									<img src="images/foot-2.png" />
+									<div class="footer-top-box-text">
+										<h3>请发邮件至：</h3>
+										<p>123@Hope.com </p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="footer-top-box">
+									<img src="images/foot-3.png" />
+									<div class="footer-top-box-text">
+										<h3>请拔打电话：</h3>
+										<p>400-1234567</p>
+									</div>
+								</div>
+							</li>
+
+						</ul>
+						<div class="footer-top-box2">
+							<img src="images/foot-4.png" style="float: left;position: relative;top: 20px;padding-right: 10px;" />
+							<div class="footer-top-box2-text">
+								<img src="images/ewm.png" style="width: 100px;height: 100px;" />
+								<p>扫一扫关注我们</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="footer-bottom">
+					版权所有：恒普健康 官网地址：www.hengpujk.com
+				</div>
+			</footer>
+		</section>
+
+		</div>
+
+		<!--登录弹窗start-->
+		<div class="bas"></div>
+		<section class="log-box">
+			<span class="close">×</span>
+			<h3>登录恒普健康</h3>
+			<div class="log-row">
+				<img src="images/user.png" alt="" />
+				<input type="text" name="" id="" value="" placeholder="输入手机号码" />
+			</div>
+			<div class="log-row">
+				<img src="images/pass.png" alt="" />
+				<input type="password" name="" id="login-pass" value="" placeholder="输入密码" />
+			</div>
+			<div class="log-row2">
+				<input type="checkbox" name="" id="zifu" value="" class="showzifu" />
+				<label for="zifu" class="showzifu">显示字符</label>
+				<a href="">忘记登录密码？</a>
+			</div>
+			<button type="submit" class="login-sub2">登录</button>
+			<div class="ros">
+				还没有账号？去免费
+				<a href="register.html">注册！</a>
+			</div>
+		</section>
+		<!--登录弹窗end-->
+
+		<!--地址-->
+		<script type="text/javascript" src="adt/PCASClass.js"></script>
+		<!--验证码js-->
+		<script type="text/javascript" src="js/slider_verify.js"></script>
+		<script type="text/javascript" src="adt/jquery.fullPage.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script>
+			new PCAS("province", "city", "area");
+			new PCAS("province2", "city2", "area2");
+			$(".flexslider").flexslider({
+				slideshowSpeed: 6000, //展示时间间隔ms
+				animationSpeed: 400, //滚动时间ms
+				touch: false,
+			});
+			$(".in-selc-box-nav li").click(function() { //in tabe切换
+				$(".in-selc-box-nav li").removeClass("in-selc-box-nav-on");
+				$(this).addClass("in-selc-box-nav-on");
+				$(".query-hidee-box2").hide();
+				$(".query-hidee-box2").eq($(this).index()).show();
+			})
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					controlArrow: true, //是否隐藏左右滑块的箭头(默认为true)
+
+					verticalCentered: false, //内容是否垂直居中(默认为true)
+
+					css3: true, //是否使用 CSS3 transforms 滚动(默认为false)
+
+					resize: false, //字体是否随着窗口缩放而缩放(默认为false)
+
+					scrolllingSpeed: 1000, //滚动速度，单位为毫秒(默认为700)
+
+					lockAnchors: false, //是否锁定锚链接，默认为false。设置weitrue时，锚链接anchors属性也没有效果。
+
+					loopBottom: false, //滚动到最底部后是否滚回顶部(默认为false)
+
+					loopTop: false, //滚动到最顶部后是否滚底部
+
+					loopHorizontal: false, //左右滑块是否循环滑动
+
+					autoScrolling: true, // 是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条
+
+					scrollBar: false, //是否显示滚动条，为true是一滚动就是一整屏
+
+					fixedElements: ".logo", //固定元素
+
+					menu: ".menu",
+
+					keyboardScrolling: true, //是否使用键盘方向键导航(默认为true)
+
+					keyboardScrolling: true, //页面是否循环滚动（默认为false）
+
+					navigation: true, //是否显示项目导航（默认为false）
+
+					navigationColor: '#fff', //项目导航的颜色
+
+					slidesNavigation: true,
+
+				});
+
+			});
+			setHeightSec1(); //设置轮播图高度
+			function setHeightSec1() {
+				var section = $(document).height();
+				$(".flexslider").height(section)
+				$(".slides li").height(section)
+			}
+			$(window).resize(function() {
+				setHeightSec1();
+			})
+
+			$(".us-text img").css("width", "100%")
+		</script>
+
+	</body>
+
+</html>

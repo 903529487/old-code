@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=Development;
+Comment[zh_CN]=
+Comment=
+Exec=/usr/local/Firefox  #Exec=软件执行文件的路径
+GenericName[zh_CN]=IDE
+GenericName=IDE
+Icon=/usr/local/Firefox/icon.xpm  #Icon=快捷方式图标
+MimeType=
+Name[zh_CN]=eclipse
+Name=火狐浏览器   #Name=快捷方式名称
+Path=
+StartupNotify=true
+Terminal=false
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=owen

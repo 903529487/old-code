@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>收款</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<section>
+			<div class="jiebox">
+				<table border="0" cellspacing="0" cellpadding="0" class="jies">
+					<tr>
+						<td style="text-align: left;">开启时间</td>
+						<td>
+
+							<span style="font-size: 0.6rem;color: #000000;">
+								<!--15:22-->
+							</span>
+						</td>
+						<td>
+							<div class="cken-box chen-box-on">
+								<!--  有 chen-box-on 就是开启  无就是关闭-->
+								<samp class="cken--min-box">|</samp>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+			<!--<div class="jiebox">
+				<table border="0" cellspacing="0" cellpadding="0" class="jies">
+					<tr>
+						<td style="text-align: left;">关闭时间</td>
+						<td>
+
+							<span style="font-size: 0.6rem;color: #000000;">
+								15:22
+							</span>
+						</td>
+						<td>
+							<div class="cken-box">
+								
+								<samp class="cken--min-box">|</samp>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>-->
+			<div class="jis-text">
+				<h3>使用方法：</h3>
+				<p>1.关注公众号，注册成为会员；</p>
+				<p>2.智能计时、计费；</p>
+				<p>3.出场后当着工作人员的面，点击结束，计费并支付，五分钟内离场；</p>
+
+			</div>
+			<br><br>
+			<div class="lo-sub" style="width: 9rem;margin: auto;">
+				<input type="submit" name="" id="" value="我 要 进 场" style="height: 1.2rem;line-height: 1.2rem;" />
+			</div>
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script>
+			$(".cken-box").click(function() {
+				if($(this).hasClass("chen-box-on")) {
+					$(this).removeClass("chen-box-on");
+				} else {
+					$(this).addClass("chen-box-on");
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

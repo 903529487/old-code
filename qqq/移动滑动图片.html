@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		#box {
+		
+			overflow: hidden;
+			position: relative;
+			
+		}
+		
+		#box-text {
+			-webkit-transform: translate(0, 0);
+			position: absolute;
+		}
+		
+		#box-text li {			
+			float: left;
+			list-style: none;		
+			display: -webkit-box;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+		}
+		
+		#box-text li img {
+			
+			max-height: 100%;max-width: 100%;
+		}
+	</style>
+
+	<body>
+		<div id="box">
+			<ul id="box-text">
+				<li><span><img src="img/11.jpg" alt="" /></span></li>
+				<li><span><img src="img/13.jpg" alt="" /></span></li>
+				<li><span><img src="img/14.jpg" alt="" /></span></li>
+				<li><span><img src="img/15.jpg" alt="" /></span></li>
+			</ul>
+		</div>
+
+	</body>
+	<script>
+		(function() {
+			var dom = document.getElementById("box");
+			new slider({
+				dom: dom,
+				ep:document.getElementById("box-text")
+				
+			})
+			function slider(opts) {
+				var an = false;
+				var box = opts.dom;
+				var textb = opts.ep;
+				var li = textb.getElementsByTagName("li");
+				var last = {//按下时的位置
+					x: 0,
+					y: 0
+				}
+				var next = {//移动时的位置
+					x: 0,
+					y: 0
+				}
+				var poor = 0;
+				var index = 0;
+				function init(){//初始化 设置高宽度
+					var bodyW=window.screen.width;
+					var bodyH=window.screen.height;
+					textb.style.width = li.length * bodyW + "px";
+					box.style.width=bodyW+"px";
+					box.style.height=bodyH+"px";
+					for(var i=0;i<li.length;i++){
+						li[i].style.width=bodyW+"px";
+						li[i].style.height=bodyH+"px";
+					}
+					
+				}
+				init();
+				var liW = li[0].offsetWidth; //每页宽度
+				//手指按下的处理事件
+				var startHandler = function(e) {
+					//			e.preventDefault();
+					an = true;
+					last = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+					poor = 0;
+				};
+				//手指移动的处理事件
+				var moveHandler = function(e) {
+					e.preventDefault();
+					textb.style.webkitTransition = "none";
+					if (an) {
+						next = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+						poor = next.x - last.x;
+						var dis = -index * liW + poor;
+						textb.style.webkitTransform = "translate(" + dis + "px,0)";
+					
+					}
+				};
+				//手指抬起的处理事件
+				var nextBorder = (li.length - 1) * liW;
+				var endHandler = function(e) {
+					//		e.preventDefault();
+					an = false;
+					textb.style.webkitTransition = "all 0.2s";
+					if (poor > 100) {
+						if (index <= 0) {
+							index = 0;
+							textb.style.webkitTransform = "translate(0px,0)";
+						} else {
+							textb.style.webkitTransform = "translate(" + liW * (index - 1) + "px,0)";
+							index--;
+						}
+					}
+					if (poor < -100) {
+						if (index >= li.length - 1) {
+							index = li.length - 1;
+							textb.style.webkitTransform = "translate(" + -liW * index + "px,0)";
+						} else {
+							textb.style.webkitTransform = "translate(" + -liW * (index + 1) + "px,0)";
+							index++;
+						}
+					} else {
+						textb.style.webkitTransform = "translate(" + -liW * index + "px,0)";
+					}
+				};
+				//绑定事件
+				textb.addEventListener('touchstart', startHandler);
+				textb.addEventListener('touchmove', moveHandler);
+				textb.addEventListener('touchend', endHandler);
+			}
+
+			function windowTOcanvas(x, y) {
+				var bbox = dom.getBoundingClientRect();
+				return {
+					x: Math.round(x - bbox.left),
+					y: Math.round(y - bbox.top)
+				}
+			}
+		})()
+		
+	</script>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="adt/LArea.min.css" />
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png"/></a>
+				<img src="images/nav-but.png" class="nav-but" /> 服务流程
+			</header>
+			<div style="height: 1.4rem;"></div>
+
+			<section class="sever-box">
+				<h3>招聘要求：</h3>
+				<div>
+					1、遵守并且认同公司的营业模式。<br>
+2、18-30岁，性别不限，对手机维修感兴趣，致力于互联网维修行业。<br>
+3、能接受工作挑战，承受工作压力，工作认真负责，有积极向上的工作态度。<br>
+4、对手机维修感兴趣，有一定的电子知识基础；并愿意在这个行业长期发展。<br>
+5、有良好的用户服务意识，形象端正，无不良嗜好，沟通及应变能力良好。<br>
+6、具有团队意识和良好的沟通技巧、反应能力、学习能力和理解能力。
+				</div>
+				<h3>关于薪酬：</h3>
+				<div>
+					根据个人能力定，我公司收到求职信后会尽快和您取得联系，请保持电话畅通！
+				</div>
+				
+				<div style="text-align: center;padding: 10px 0;">
+					<button class="join-but join-button-on">加盟商</button>
+					<button class="join-but">实体店</button>
+				</div>
+				<div>
+					<table border="0" cellspacing="0" cellpadding="0" class="join-tab">
+						<tr>
+							<td>姓 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</td>
+							<td><input type="text" name="" class="join-text2" id="" value="" placeholder="请输入姓名" /></td>
+						</tr>
+						<tr>
+							<td>联系方式：</td>
+							<td><input type="text" name="" class="join-text2" id="" value="" placeholder="请输入联系方式" /></td>
+						</tr>
+						<tr>
+							<td>
+								QQ/微信：</td>
+							<td><input type="text" name="" class="join-text2" id="" value="" placeholder="请输入QQ/微信号"/></td>
+						</tr>
+					</table>
+					<div style="text-align: center;">
+						<button class="join-but2" >确定</button>
+					</div>
+				</div>
+				
+				
+				
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/sidebar.js"></script>
+<script>
+			$(".join-but").click(function(){
+				$(".join-but").removeClass("join-button-on");
+				$(this).addClass("join-button-on");
+			})
+		</script>
+	</body>
+
+</html>

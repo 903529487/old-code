@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>力维士</title>
+		<link rel="SHORTCUT ICON" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<!--[if IE]>
+		<script src="js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header">
+			<div class="header-con">
+				<a href="index.html"><img src="images/logo.png" id="logo" /></a>
+				<!--搜索框-->
+				<div class="search_box">
+					<input type="text" name="" id="search_text" value="" placeholder="请输入您要搜索的关键字" />
+					<input type="submit" name="search_sub" id="search_sub" value="" />
+				</div>
+
+				<div class="head-right clearfix">
+					<div class="head-right-row">
+						<a href="" class="login">登录</a>
+						<a href="">注册</a>
+					</div>
+					<div class="head-right-row">
+						<p>服务热线：<br> 18129831303</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--导航-->
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="service_1.html">维修预约</a>
+				</li>
+				<li class="nav-on">
+					<a href="query.html">查询/支付</a>
+				</li>
+				<li>
+					<a href="colorfocus.html">热门活动</a>
+					<div class="nav-hidde">
+						<a href="colorfocus.html">炫彩换壳</a>
+						<a href="ram_upgrade.html">内存升级</a>
+					</div>
+				</li>
+				<li>
+					<a href="welfare.html">企业福利</a>
+				</li>
+				<li>
+					<a href="service_process.html">服务流程</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="main">
+			<br><br><br><br><br>
+			<table border="0" cellspacing="0" cellpadding="0" class="user-tab">
+
+				<tr>
+					<td>头 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 像：</td>
+					<td>
+
+						<div class="touxiang" id="imgPreview">
+							<img src="" alt="" id="img1" />
+						</div>
+						<div class="file-but">
+							<input type="file" id="" value="" onchange='PreviewImage(this)' />
+							<button class="user-text" style="width: 100px;cursor: pointer;color: #999;">选择图片﹥</button>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>昵&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;称：</td>
+					<td><input type="text" class="user-text" name="" id="" value="" placeholder="请输入昵称" /></td>
+				</tr>
+				<tr>
+					<td>常 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 住：</td>
+					<td><input type="text" class="user-text" name="" id="" value="" placeholder="请输入常住地址" /></td>
+				</tr>
+				<tr>
+					<td>收货地址：</td>
+					<td><input type="text" class="user-text" name="" id="" value="" placeholder="请输入收货地址" /></td>
+				</tr>
+			</table>
+			<button class="reg-sub">确 认</button>
+		</section>
+		<br><br><br>
+		<footer id="footer">
+			<div class="footer-con">
+				<div>
+					<ul class="footer-meta clearfix">
+						<li>
+							<h3>服务指南</h3>
+							<a href="">服务流程</a>
+							<a href="">服务网点</a>
+							<a href="">售后政策</a>
+						</li>
+						<li>
+							<h3>帮助中心</h3>
+							<a href="">常见问题</a>
+							<a href="javascript:void(0)" class="suggest-but">投诉建议</a>
+							<a href="">维修流程</a>
+							<a href="">寄送地址</a>
+						</li>
+						<li>
+							<h3>力维士</h3>
+							<a href="">关于我们</a>
+							<a href="">用户协议</a>
+							<a href="">联系我们</a>
+							<a href="">意见反馈</a>
+						</li>
+						<li>
+							<h3>友情链接</h3>
+							<a href="">商城</a>
+						</li>
+						<li>
+							<h3>查询助手</h3>
+							<a href="javascript:void(0)" onclick="showIphine()" class="iphone-but">鉴别山寨苹果</a>
+							<a href="">查苹果序列号</a>
+						</li>
+					</ul>
+					<!--苹果验证弹窗start-->
+					<div class="iphone-box">
+						<i></i>
+						<p>扫一扫鉴别是不是山寨苹果<br> 1.微信扫码关注“果粉达人”公众号
+							<br> 2.点击果粉达人微信菜单“山寨苹果”
+						</p>
+						<div>
+							<img src="images/ewm2.jpg" />
+						</div>
+
+					</div>
+					<!--苹果验证弹窗end-->
+				</div>
+				<div class="foot-erm">
+					<img src="images/wem.jpg" /><br>
+					<h3>在线客服：<br>
+400-000-0000</h3>
+				</div>
+				<div class="foot-bott">
+					联系电话：18129831303&nbsp;&nbsp;&nbsp;&nbsp; 地 址：深圳市龙华新区羊台45栋801&nbsp;&nbsp;&nbsp;&nbsp; 联系人：郑智勇 &nbsp;&nbsp;&nbsp;&nbsp;邮 箱：liweishikeji@163.com
+				</div>
+			</div>
+			<div class="foot-last">
+				<div>
+					<a href="">首页</a>|
+					<a href="">预约维修</a>|
+					<a href="">查询支付</a>|
+					<a href="">热门活动</a>|
+					<a href="">联系客服</a>|
+					<a href="">服务流程</a>
+				</div>
+				<div style="font-size: 12px;">
+					Copyright 2016 力维士科技有限公司. 备案ICP：粤ICP备10040994号 技术支持：时代万网
+				</div>
+			</div>
+		</footer>
+		<!--投诉建议-->
+		<section class="suggest-box">
+			<img src="images/close.jpg" class="close" />
+			<div class="sugge-maxs">
+				<h3>投诉反馈</h3>
+				<div class="sugg-tab-page">
+					<span><i class="sugg-tab-page-on"></i>服务投诉</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i></i>意见反馈</span>
+				</div>
+				<section class="sugg-sbox" style="display: block;">
+					<input type="text" name="" class="sugg-text" id="" value="" placeholder="所要投诉工程师的姓名或电话" /><br><br>
+					<input type="text" name="" class="sugg-text" id="" value="" placeholder="请留下您的手机号" /><br><br>
+					<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+					<div class="sugg">
+						<button class="sugg-n">取消</button>
+						<button class="sugg-y">确定</button>
+					</div>
+				</section>
+				<section class="sugg-sbox">
+					<input type="text" name="" class="sugg-text" id="" value="" placeholder="请留下您的手机号" /><br><br>
+					<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+					<div class="sugg">
+						<button class="sugg-n">取消</button>
+						<button class="sugg-y">确定</button>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!--投诉建议end-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+		<script>
+			//上传头像
+			function PreviewImage(imgFile) {
+				var filextension = imgFile.value.substring(imgFile.value.lastIndexOf("."), imgFile.value.length);
+				filextension = filextension.toLowerCase();
+				if((filextension != '.jpg') && (filextension != '.gif') && (filextension != '.jpeg') && (filextension != '.png') && (filextension != '.bmp')) {
+					alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+					imgFile.focus();
+				} else {
+					var path;
+					if(document.all) //IE  
+					{
+						imgFile.select();
+						path = document.selection.createRange().text;
+						document.getElementById("imgPreview").innerHTML = "";
+						document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")"; //使用滤镜效果        
+					} else //FF  
+					{
+						path = window.URL.createObjectURL(imgFile.files[0]); // FF 7.0以上  
+						//path = imgFile.files[0].getAsDataURL();// FF 3.0  
+						document.getElementById("imgPreview").innerHTML = "<img id='img1' width='120px' height='100px' src='" + path + "'/>";
+						//document.getElementById("img1").src = path;  
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

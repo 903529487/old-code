@@ -1,0 +1,201 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+small {
+    font-size: 12px;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+legend {
+    color: #000;
+}
+fieldset,
+img {
+    border: 0;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@initColor: #2c2c2c;
+body {
+    font-size: 0.4em;
+    font-family: Helvetica;
+    color: @initColor;
+    max-width: 10rem;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+ul,
+ol {
+    list-style: none;
+}
+img {
+    border-style: none;
+}
+a {
+    text-decoration: none;
+    color: @initColor;
+    cursor: pointer;
+}
+a,
+button,
+input,
+textarea {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+}
+.clearfix {
+    zoom: 1;
+    *zoom: 1;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.borderRadius (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+.opacity(@op:1, @fop:100) {
+    filter:alpha(opacity=@fop);
+    -moz-opacity: @op;
+    -khtml-opacity: @op;
+    opacity: @op;
+}
+.shadow(@top:1px, @bottom:1px;@ksuan:1px, @wks:0px;@color:#ccc) {
+    -webkit-box-shadow: @top @bottom @ksuan @wks @color;
+    -moz-box-shadow: @top @bottom @ksuan @wks @color;
+    box-shadow: @top @bottom @ksuan @wks @color;
+}
+.transition(@zt:all, @time:0.5s) {
+    -webkit-transition: @zt @time;
+    -moz-transition: @zt @time;
+    -ms-transition: @zt @time;
+    -o-transition: @zt @time;
+    transition: @zt @time;
+}
+.animation(@name:sss, @time:0.5s, @timing:ease, @delay:0s, @count:1, @direction:normal) {
+    //名称   动画时间   运动速度  几时开始   运动次数  下一周期逆向地播放
+    -webkit-animation: @name @time @timing @delay @count @direction;
+    -moz-animation: @name @time @timing @delay @count @direction;
+    -o-animation: @name @time @timing @delay @count @direction;
+    animation: @name @time @timing @delay @count @direction;
+}
+.ba {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -2.5rem;
+    z-index: -1;
+}
+.logo {
+    text-align: center;
+    margin-top: 2.5rem;
+    img {
+        width: 6.94rem;
+    }
+}
+.butt {
+    text-align: center;
+    margin-top: 0.8rem;
+}
+.and {
+    width: 3.888rem;
+    display: inline-block;
+    height: 1.1rem;
+    border: none;
+    img {
+        width: 3.888rem;
+        height: 1.1rem;
+    }
+}
+.iphone {
+    width: 3.888rem;
+    display: inline-block;
+    height: 1.1rem;
+    border: none;
+    img {
+        width: 3.888rem;
+        height: 1.1rem;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body>
+		<aside id="sidebar">
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="query.html">
+							我的订单(1)
+						</a>
+					</li>
+					<li>
+						<a href="mailsend.html">
+							待邮寄(0)
+						</a>
+					</li>
+					<li>
+						<a href="pay.html">
+							待支付(0)
+						</a>
+					</li>
+					<li>
+						<a href="receiving.html">
+							待收货(0)
+						</a>
+					</li>
+					<li>
+						<a href="evaluate.html">
+							待评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="yi_evaluate.html">
+							已评价(0)
+						</a>
+					</li>
+					<li>
+						<a href="discount_coupon.html">
+							优惠劵(0)
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<div class="bas"></div>
+		<!--背景-->
+		<section id="main">
+			<header id="header">
+				<a href="javascript:history.go(-1);" class="head-ht"><img src="images/head-ht.png" /></a>
+				<img src="images/nav-but.png" class="nav-but" /> 选择设备型号
+			</header>
+			<div style="height: 1.4rem;"></div>
+			<section ng-controller="mode">
+				<div class="mode-row">
+					选择品牌 <span>请选择＞</span>
+				</div>
+				<div class="modata">
+					<!--品牌-->
+					<ul class="brand clearfix">
+						<li ng-repeat="d in de"><button>{{d.name}}</button></li>
+					</ul>
+				</div>
+				<div class="mode-row">
+					选择型号 <span>请选择＞</span>
+				</div>
+				<div class="modata">
+					<!--型号-->
+					<ul class="brand clearfix">
+						<li ng-repeat="ty in de[ind].type" ng-model="ind2"><button  ng-class="type[$index]" ng-click="isCurrent($index)" data-id="{{ ty.typeid }}">{{ty.typename}}</button></li>
+					</ul>
+					{{ind2}}
+				</div>
+				<div class="mode-row">
+					选择颜色 <span>请选择＞</span>
+				</div>
+				<div class="modata">
+					<!--品牌-->
+					<ul class="brand clearfix">
+					
+						<li ng-repeat="col in de[ind].type[ind2].colors" ><button>{{ col.color }}</button></li>
+					</ul>
+				</div>
+			</section>
+
+		</section>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>		
+		<script type="text/javascript" src="js/sidebar.js"></script>
+		<script>
+			var dates = [{
+					"name": "iPhone",
+					"type": [{
+						"typeid":0,
+						"typename": "iPhone6",
+						"colors": [{
+							"color": "白色",
+
+						},{
+							"color": "白色",
+
+						},{
+							"color": "白色",
+
+						}, {
+							"color": "黑色"
+						}]
+					}]
+				},
+				{
+					"name": "华为",
+					"type": [{
+						"typeid":0,
+						"typename": "iPhone6",
+						"colors": [{
+							"color": "白色",
+
+						},{
+							"color": "红色",
+
+						}, {
+							"color": "黑色"
+						}]
+					},
+					{
+						"typeid":0,
+						"typename": "华为P7",
+						"colors": [{
+							"color": "白色",
+
+						},{
+							"color": "白色",
+
+						},{
+							"color": "白色",
+
+						}, {
+							"color": "黑色"
+						}]
+					}
+					]
+				}
+			
+			
+			]
+
+//		var dates = [{
+//					"name": "iPhone",
+//					"type": [{
+//						"typename": "iPhone6",
+//						"colors": ["白色", "黑色"]
+//					}]
+//				}]
+		
+			
+			
+			var ang = angular.module("myapp", []);
+			ang.controller("mode", function($scope) {
+				$scope.de = dates;  //数据
+				$scope.ind = 1;  //品牌索引
+				$scope.ind2 = 0;	//颜色索引
+				
+				$scope.gongz = false;
+				
+		
+		
+     
+		         $scope.isCurrent = function(index){
+			        $scope.type = [];
+			        $scope.type[index] = 'type-on';
+			        ind2=index;
+			        alert(ind2)
+		   		 }
+				
+			});
+			
+			
+		</script>
+	</body>
+
+</html>

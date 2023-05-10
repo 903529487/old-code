@@ -1,0 +1,29 @@
+/* CSS Document */
+
+
+.boxuigm{width:310px;}
+.left-pro{width:310px; border:1px solid #ccc;t}
+.left-pro .t1{position: relative;}
+.left-pro .t2{width:280px;text-indent:0;}
+.left-pro .t2 img{text-indent:0;}
+#showArea img{cursor:pointer;display:block;margin-bottom:5px;width:50px;padding:1px;border:1px solid #ccc;height:50px;float:left;border: 2px solid #fff;}
+#main_img{cursor:pointer;display:block}
+#gotop{cursor:pointer;display:block;margin-left:9px}
+#gobottom{cursor:pointer;display:block;margin-left:9px}
+#showArea{margin:10px;overflow:hidden;height:55px;width: 280px;position: relative;left: 3px;}
+.showsul{
+	position: absolute;
+}
+.area-left{
+	width: 10px;height: 55px;background: url(../images/leftjt.png);
+	display: block;position: absolute;
+	cursor: pointer;
+	left: 0;background-size: 10px 55px;
+}
+.area-right{
+	width: 10px;height: 55px;background: url(../images/rightjt.png);
+	background-size: 10px 55px;
+	display: block;position: absolute;
+	cursor: pointer;
+	right: 0;top: 0;
+}

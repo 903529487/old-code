@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--/*第一种方法最好的方法*/-->
+	<script type="text/javascript">
+
+			var html = window.document.documentElement;
+			var w = document.documentElement.clientWidth / 10;
+			html.style.fontSize = w + 'px';
+		
+	</script>
+	</head>
+	
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		html {
+			/*第二种方法*/
+			/*	font-size: 10vw;*/
+		}
+		/*第三种方法*/
+		/*@media only screen and (min-width: 320px) {  
+			html {
+				font-size: 32px !important;
+			}
+		}
+		@media only screen and (min-width: 401px) {
+			html {
+				font-size: 40px !important;
+			}
+		}
+		
+		@media only screen and (min-width: 428px) {
+			html {
+				font-size: 43px !important;
+			}
+		}
+		
+		@media only screen and (min-width: 481px) {
+			html {
+				font-size: 48px !important;
+			}
+		}
+		
+		@media only screen and (min-width: 569px) {
+			html {
+				font-size: 56px !important;
+			}
+		}
+		
+		@media only screen and (min-width: 641px) {
+			html {
+				font-size: 65px !important;
+			}
+		}*/
+		body{
+			font-size: 0.43em;
+		}
+		#head {
+			text-align: center;
+			background: red;
+			height: 1.2rem;
+			line-height: 1.2rem;
+			font-size: 0.8rem;
+			position: relative;
+		}
+		
+		#head img {
+			position: absolute;
+			left: 0.1rem;
+			top: 0.1rem;
+			width: 1rem;
+			height: auto;
+		}
+		
+		#main {}
+		
+		#main ul {
+			margin: auto;
+			width: 9.31rem;
+		}
+		
+		#main ul li {
+			width: 3rem;
+			height: 3.3rem;
+			float: left;
+			font-size: 0.7rem;
+			text-align: center;
+			list-style: none;
+			vertical-align: middle;
+			background: blueviolet;
+		}
+		
+		#main ul li+li {
+			margin-left: 0.15rem;
+		}
+	</style>
+
+	<body>
+		<header id="head">
+			<img src="img/lefjt.png" alt="" /> ddd
+		</header>
+		<section id="main">
+			<ul>
+				<li>ssw</li>
+				<li>ssw</li>
+				<li>ssw</li>
+
+			</ul>
+		</section>
+		我在 <time datetime="2008-02-14">情人节</time> 有个约会。
+
+	</body>
+
+</html>

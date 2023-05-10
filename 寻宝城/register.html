@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png"/></a>
+			<img src="img/minlogo.png" class="min-logo"/>
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+			<div style="height: 1.5rem;"></div>
+		<section class="login-main">
+			
+			<!--登录框start-->
+			<section class="bixs" style="margin-top: 0.2rem;">
+				<ul class="logo-row clearfix">
+					<li class="logo-row-li-1"><img src="img/shouji.png"/></li>
+					<li class="logo-row-li-2"><input type="text" name="" id="" value="" class="login-text" placeholder="请输入手机号码"/></li>
+				</ul>
+				<ul class="logo-row clearfix">
+					<li class="logo-row-li-1"><img src="img/zs.png"/></li>
+					<li class="logo-row-li-2"><input type="text" name="" id="" value="" class="login-text" placeholder="请输入短信验证码" style="width: 4rem;"/>
+					<button class="auth-code">获取验证码</button>
+					</li>
+				</ul>
+				<ul class="logo-row clearfix">
+					<li class="logo-row-li-1"><img src="img/pass.png"/></li>
+					<li class="logo-row-li-2"><input type="text" name="" id="" value="" class="login-text" placeholder="请输入密码"/></li>
+				</ul>
+				
+				<ul class="logo-row clearfix">
+					<li class="logo-row-li-1"><img src="img/pass.png"/></li>
+					<li class="logo-row-li-2"><input type="text" name="" id="" value="" class="login-text" placeholder="再次确认密码"/></li>
+				</ul>
+				<div class="login-box">
+					<div class="login-bottom">
+						<input type="checkbox" name="" id="ty" value="" /><label for="ty">我同意<a href="" style="color: #d82a23;">《达吉隆服务协议》</a></label>
+						<span><a href="login.html" >马上登录</a></span>
+					</div>
+					<button type="submit" class="login-sub">注 册</button>
+				</div>
+			</section>			
+		</section>
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">			
+			<ul class="clearfix">
+				<li>
+					<a href="">
+						<img src="img/foot-1.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-2.png"/>
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png"/>
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png"/>
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script>
+			securityCode();
+			function  securityCode(){  //验证码
+				var yzm=$(".auth-code");
+				var dt=true;
+				var i=10;
+				yzm.click(function(){	
+					
+					if(dt){		
+						dt=false;
+						yzm.text(i).attr("readonly",false)
+						Codedi();
+					}
+				});
+				function Codedi(){
+					var setin=setInterval(function(){
+					if(i>0){
+						--i;
+						yzm.text(i).attr("readonly",false)
+					}else{
+						clearInterval(setin);
+						yzm.text("重新获取").attr("readonly",true);
+						dt=true;
+						i=10;
+					}
+					
+					},1000)
+				}
+				
+			}
+			
+		</script>
+	</body>
+
+</html>

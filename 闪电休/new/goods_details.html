@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="../js/sethtml.js"></script>
+
+		<link rel="stylesheet" href="../css/css.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<img src="../img/logo.png" alt="" id="logo" />
+			<div class="header-right">
+				<div class="select-top">
+					<div class="select-box">
+						<input type="text" name="" id="select-text" value="" placeholder="search" />
+						<input type="button" name="select-sub" id="select-sub" value="" />
+					</div>
+				</div>
+				<img src="../img/shouc.png" alt="" id="sel" />
+				<img src="../img/user.png" alt="" id="nav-tit" />
+				<div class="nav-zi">
+					<a href="DS">用户中心<img src="../img/nav-zi-1.png" alt="" /></a>
+					<a href="">购物车<img src="../img/nav-zi-2.png" alt="" /></a>
+					<a href="">消息<img src="../img/nav-zi-3.png" alt="" /></a>
+					<a href="">收藏夹<img src="../img/nav-zi-4.png" alt="" /></a>
+					<a href="">设置<img src="../img/nav-zi-5.png" alt="" /></a>
+				</div>
+			</div>
+
+		</header>
+
+		<section class="new-main">
+			<a href="javascript:history.go(-1);" class="ht"><img src="../img/ht.png" alt="" /></a>
+			<div class="gooddet-main">
+				<div class="gooddet-main-img">
+					<span>
+						<img src="../img/sjd.png" alt="" class="gooddet-max-img"/>
+					</span>
+				</div>
+				<ul class="gooddet-main-minimg">
+					<li>
+						<div class="gooddet-main-minimg-box">
+							<span>
+								<img src="../img/nav-zi-3.png" alt="" />
+							</span>
+						</div>
+					</li>
+					<li>
+						<div class="gooddet-main-minimg-box">
+							<span>
+								<img src="../img/sjd.png" alt="" />
+							</span>
+						</div>
+					</li>
+
+				</ul>
+				<div class="gooddet-box-text">
+					<h3>MARVEL手机壳  for iPhone6</h3>
+					<div><span>￥300</span></div>
+					<div><i class="i-color" style="background: red;"></i>
+						<i class="i-color" style="background: green;"></i>
+						<i class="i-color" style="background: yellow;"></i></div>
+					<div>
+						<button class="pay-minus">-</button>
+						<input type="text" name="" id="" value="0" class="pay-num-text" />
+						<button class="pay-add">+</button>
+						<button class="pay-fq pay-gm">立即购买</button>
+						<button class="pay-fq pay-gm">加入购物车</button>
+					</div>
+					<div>
+						<i class="i-color2"></i>1个月保险
+						<i class="i-color2"></i>7天无条件
+						<i class="i-color2"></i>分期付款
+					</div>
+				</div>
+			</div>
+
+			<div class="gooddet-con-title">
+				<div class="pay-nav">
+					<ul>
+						<li class="pay-nav-on">商品详情</li>
+						<li>规格参数</li>
+						<li style="border-right: none;">售后服务</li>
+					</ul>
+				</div>
+				<div>
+					<div class="pay-con">
+						页面一
+					</div>
+					<div class="pay-con">
+						页面2
+					</div>
+					<div class="pay-con">
+						页面3
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<ul class="clearfix">
+				<a href="">
+					<li>
+
+						<img src="../img/foot1.png" alt="" />
+						<p>关于我们</p>
+
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot2.png" alt="" />
+						<p>联系我们</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot3.gif" alt="" />
+						<p>服务流程</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot4.png" alt="" />
+						<p>疑问解答</p>
+					</li>
+				</a>
+			</ul>
+			<div class="footer-box">
+				<div></div>
+				<p>官方微信</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/head.js"></script>
+		<script>
+		
+
+			// 商品图片展示			
+			$(".gooddet-main-minimg-box").click(function() {
+				$(".gooddet-main-minimg-box").removeClass("minimg-box-on");
+				$(this).addClass("minimg-box-on");
+				var src = $(this).find("img").attr("src");
+				$(".gooddet-max-img").attr("src", src);
+			})
+
+			$(".pay-minus").click(function() {  //计数
+				var num = $(this).siblings(".pay-num-text").val();
+				if (num <= 0) {
+					num = 0;
+				} else {
+					$(this).siblings(".pay-num-text").val(parseInt(--num));
+				}
+			});
+			$(".pay-add").click(function() {   //选择颜色
+				var num =  $(this).siblings(".pay-num-text").val();
+				$(this).siblings(".pay-num-text").val(parseInt(++num));
+			});
+			
+			
+			$(".i-color").click(function() {
+				$(".i-color").removeClass("i-color-on");
+				$(this).addClass("i-color-on");
+			})
+			
+			
+			qutab();
+			function qutab(){   //商品详情页面切换
+				$(".pay-con").eq(0).show()
+				$(".pay-nav li").click(function(){
+					$(".pay-nav li").removeClass("pay-nav-on");
+					$(this).addClass("pay-nav-on");
+					$(".pay-con").hide()
+					$(".pay-con").eq($(this).index()).show()
+				})
+			}
+		</script>
+	</body>
+
+</html>

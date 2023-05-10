@@ -1,0 +1,108 @@
+<include file='Public/header' />
+<section>
+    <nav class="hi-nav">
+        <ul class="clearfix">
+            <li class="hi-nav-on"><a>我的关注</a></li>
+            <li><a>我的粉丝(5)</a></li>
+        </ul>
+    </nav>
+    <div class="atter-box">
+        <table border="0" cellspacing="0" cellpadding="0" class="ran-tab">
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">新疆和田籽料一</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;display: none;">+关注</button>
+                    <button class="vote2" style="border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">新疆和田籽料一</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;display: none;">+关注</button>
+                    <button class="vote2" style="border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">新疆和田籽料一</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;display: none;">+关注</button>
+                    <button class="vote2" style="border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="atter-box" style="display: none;">
+        <table border="0" cellspacing="0" cellpadding="0" class="ran-tab">
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">廖兴义</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;">+关注</button>
+                    <button class="vote2" style="display: none;border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">廖兴义</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;">+关注</button>
+                    <button class="vote2" style="display: none;border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ran-tab-td-1"><img src="__PUBLIC__/Home/img/goos.jpg" style="border-radius: 50%;" /></td>
+                <td class="ran-tab-td-2">
+                    <h3 style="font-size: 0.4rem;">廖兴义</h3>
+                </td>
+                <td class="ran-tab-td-3">
+                    <button class="vote" style="background: #d82a23;color: #fff;border-radius: 0;">+关注</button>
+                    <button class="vote2" style="display: none;border-radius: 0;">取消关注</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+var clickEvent = {
+    atter: function() {
+        //关注
+        $(".vote").click(function() {
+            $(this).hide();
+            $(this).parent().find(".vote2").show();
+        });
+        $(".vote2").click(function() {
+            $(this).hide();
+            $(this).parent().find(".vote").show();
+        });
+    },
+    tabCut: function() {
+        //tab切换
+        $(".hi-nav li").click(function() {
+            $(".hi-nav li").removeClass("hi-nav-on");
+            $(this).addClass("hi-nav-on");
+            $(".atter-box").hide();
+            $(".atter-box").eq($(this).index()).show();
+        });
+    }
+}
+clickEvent.atter();
+clickEvent.tabCut();
+</script>
+</body>
+
+</html>

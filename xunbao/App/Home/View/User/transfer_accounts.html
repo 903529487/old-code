@@ -1,0 +1,38 @@
+<include file="Public/header" />
+<section>
+    <div class="wit-input-box clearfix">
+        <div class="wit-input-box-left">
+            对方账户
+        </div>
+        <div class="wit-input-box-right">
+            <input type="text" name="" id="" value="" placeholder="用户名/手机号码" />
+        </div>
+    </div>
+    <div class="wit-ktj">
+        可转账金额：<span>200</span>元
+    </div>
+    <div class="wit-input-box clearfix">
+        <div class="wit-input-box-left">
+            金额
+        </div>
+        <div class="wit-input-box-right">
+            <input type="text" name="" id="" value="" placeholder="请输入转账金额" />
+        </div>
+    </div>
+    <div class="wit-ktj" style="font-size: 0.30rem;color: #7B7B7B;">
+        注:转账后金币将转换成绿币(不可提现)
+    </div>
+    <button type="submit" class="login-sub" style="width: 90%;">确认转账</button>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script>
+$(".mode-of-payment-row").click(function() {
+    $(".mode-of-payment-row").find("i").removeClass("pitch-on")
+    $(this).find("i").addClass("pitch-on")
+
+})
+</script>
+</body>
+
+</html>

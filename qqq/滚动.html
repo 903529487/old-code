@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta id="eqMobileViewport" name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script>
+    var g = document.documentElement.clientWidth / 320;
+    document.getElementById('eqMobileViewport').setAttribute("content", "width=320, initial-scale=" + g + ", maximum-scale=" + g + ", user-scalable=no")
+</script>
+	</head>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		#top{
+			margin-top: 200px;
+			height: 400px;background: red;
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-ms-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+		
+		}
+		#top2{
+			height: 1000px;background: goldenrod;
+		}
+		#top3{
+			height: 1000px;background: blue;
+		}
+		#top3 span{
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-ms-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+		}
+	</style>
+	<body>
+		<div id="top">
+			sss
+		</div>
+		<div id="top2">
+			sss
+		</div>s
+		<div id="top3">
+			<span>aaa</span>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				
+				var s=$("#top3").offset().top;
+				var sw=$(window).scrollTop();
+				if(sw>10){
+					$("#top").css("height","200px")
+				}else{
+					$("#top").css("height","400px")
+				}
+				
+				if(sw >= s-200){
+					$("#top3 span").css("marginLeft","200px")
+				}else{
+					$("#top3 span").css("marginLeft","0px")
+				}
+			})
+		});
+	</script>
+</html>

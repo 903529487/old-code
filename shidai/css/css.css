@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #958888;
+  background: #f0f0f0;
+}
+ul {
+  list-style: none;
+}
+img {
+  border-style: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #958888;
+  cursor: pointer;
+}
+#header {
+  background: #f5f5f5;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#header #header-con {
+  width: 1200px;
+  margin: auto;
+  text-align: right;
+  font-size: 12px;
+}
+.head-bottm {
+  background: url("../img/tbottom-ba.png");
+  height: 90px;
+}
+.head-bottm .head-bottm-con {
+  width: 1200px;
+  margin: auto;
+}
+#nav {
+  float: right;
+}
+#nav ul {
+  margin-top: 30px;
+}
+#nav ul li {
+  float: left;
+  font-size: 16px;
+  padding: 0 10px;
+}
+#nav ul a:hover {
+  color: #ff8200;
+}
+.last-ba {
+  height: 450px;
+  background: url("../img/top-ba.jpg") no-repeat;
+  background-position: center center;
+  min-width: 1200px;
+}
+.ind-main {
+  width: 1200px;
+  margin: 50px auto;
+}
+.main-title {
+  width: 181px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: url("../img/main-title.png");
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 35px;
+}
+.main-box li {
+  float: left;
+  width: 390px;
+  margin-left: 5px;
+  margin-top: 35px;
+}
+.main-box li img {
+  width: 200px;
+  height: 250px;
+}
+.main-box li aside {
+  float: right;
+  width: 170px;
+  padding: 10px;
+}
+.main-box li aside h4 {
+  color: #ff7852;
+  font-size: 16px;
+}
+.main-box li aside p {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5PX 0;
+  height: 70px;
+}
+.main-box li aside div {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5PX 0;
+}
+#footer {
+  background: #222429;
+  padding: 40px 0;
+}
+#footer #footer-con {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
+#footer #footer-con p {
+  color: #fff;
+  line-height: 30px;
+}
+#footer #footer-con p a {
+  padding-right: 10px;
+  color: #fff;
+}
+.foot-code {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 220px;
+  text-align: center;
+  border-left: 1px solid #42464e;
+}
+/*# sourceMappingURL=css.css.map */

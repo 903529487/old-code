@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript">
+			(function() {
+				function win() {
+					var html = window.document.documentElement;
+					var w = document.documentElement.clientWidth / 10;
+					html.style.fontSize = w + 'px';
+				}
+				win();
+				window.onresize = function() {
+					win();
+				}
+			})()
+		</script>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			font-size: 14px;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		
+		.clear {
+			clear: both;
+			height: 0;
+			overflow: hidden;
+			display: block;
+			line-height: 0
+		}
+		
+		.clearfix:after {
+			clear: both;
+			font-size: 0;
+			height: 0;
+			display: block;
+			visibility: hidden;
+			content: " ";
+			line-height: 0
+		}
+		
+		.clearfix {
+			zoom: 1
+		}
+		/* for IE6 IE7 */
+		
+		#header {
+			height: 1.17rem;
+			line-height: 1.17rem;
+			text-align: center;
+			background: #fff;
+			border-bottom: 1px solid #999;
+			font-size: 0.45rem;
+		}
+		
+		#nav {
+			height: 1.3rem;
+			background: #1589db;
+		}
+		
+		#nav ul {}
+		
+		#nav ul li {
+			list-style: none;
+			float: left;
+			font-size: 0.4rem;
+			width: 2.45rem;
+			height: 0.8rem;
+			border-right: 1px solid #0a7ec7;
+			line-height: 0.8rem;
+			text-align: center;
+			margin-top: 0.25rem;
+		}
+		
+		#nav ul li:last-child {
+			border-right: none;
+		}
+		
+		#nav ul li a {
+			color: #fff;
+			display: block;
+		}
+		
+		#nav ul li a img {
+			width: 0.44rem;
+			position: relative;
+			top: 0.05rem;
+		}
+		
+		.main {
+			width: 9.26rem;
+			margin: auto;
+			border-bottom: 1px solid #999;
+		}
+		
+		.main-left {
+			width: 7.6rem;
+			float: left;
+			padding-top: 0.38rem;
+			padding-bottom: 0.38rem;
+		}
+		
+		.main-left h3 {
+			font-size: 0.37rem;
+		}
+		
+		@media only screen and (max-width: 321px) {
+			.main-left h3 {
+				font-size: 14px;
+			}
+			#nav ul li {
+				font-size: 14px;
+			}
+		}
+		
+		.main-left p {
+			color: #999;
+			font-size: 12px;
+			margin-top: 0.46rem;
+		}
+		
+		.main-right {
+			width: 1.66rem;
+			height: 1.8rem;
+			float: left;
+			display: table;
+			vertical-align: middle;
+			text-align: center;
+		}
+		
+		.main-right span {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.main-right img {
+			width: 1.24rem;
+			height: 1.33rem;
+			vertical-align: middle;
+		}
+	</style>
+
+	<body>
+		<header id="header">
+			热文推荐
+		</header>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a href=""><img src="img/ww.png" alt="" />热文推荐</a>
+				</li>
+				<li>
+					<a href=""><img src="img/ww.png" alt="" />热文推荐</a>
+				</li>
+				<li>
+					<a href=""><img src="img/ww.png" alt="" />热文推荐</a>
+				</li>
+				<li>
+					<a href=""><img src="img/ww.png" alt="" />热文推荐</a>
+				</li>
+
+			</ul>
+		</nav>
+		<section>
+			<div class="main clearfix">
+				<div class="main-left">
+					<h3>人民建行是是是护手霜</h3>
+					<p>2016.11.11</p>
+				</div>
+				<div class="main-right">
+					<span><img src="img/tx.png" alt="" /></span>
+
+				</div>
+			</div>
+			<div class="main clearfix">
+				<div class="main-left">
+					<h3>人民建行是是是护手霜</h3>
+					<p>2016.11.11</p>
+				</div>
+				<div class="main-right">
+					<span><img src="img/tx.png" alt="" /></span>
+
+				</div>
+			</div>
+			<div class="main clearfix">
+				<div class="main-left">
+					<h3>人民建行是是是护手霜</h3>
+					<p>2016.11.11</p>
+				</div>
+				<div class="main-right">
+					<span><img src="img/tx.png" alt="" /></span>
+
+				</div>
+			</div>
+			<div class="main clearfix">
+				<div class="main-left">
+					<h3>人民建行是是是护手霜</h3>
+					<p>2016.11.11</p>
+				</div>
+				<div class="main-right">
+					<span><img src="img/tx.png" alt="" /></span>
+
+				</div>
+			</div>
+		</section>
+
+		
+	</body>
+	
+	 <script type="text/javascript">  
+        var scrollFunc = function (e) {  
+        e = e || window.event;  
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+            if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+                alert("滑轮向上滚动");  
+            }  
+            if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+                alert("滑轮向下滚动");  
+            }  
+        } else if (e.detail) {  //Firefox滑轮事件  
+            if (e.detail> 0) { //当滑轮向上滚动时  
+                alert("滑轮向上滚动");  
+            }  
+            if (e.detail< 0) { //当滑轮向下滚动时  
+                alert("滑轮向下滚动");  
+            }  
+        }  
+    }  
+    //给页面绑定滑轮滚动事件  
+    if (document.addEventListener) {//firefox  
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+    }  
+    //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+    window.onmousewheel = document.onmousewheel = scrollFunc;   
+    </script>  
+	
+
+</html>

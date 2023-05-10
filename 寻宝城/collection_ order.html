@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body >
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+		
+		<section class="coll-ord-site">
+			<h3><b id="userNameOn">林小七</b> &nbsp; &nbsp; &nbsp; <b id="userPhoneOn">135****2899</b> &nbsp; <span>默认</span></h3>
+			<p id="userSiteOn">广东省 深圳市 龙华新区 民治大道牛栏前大厦B1215</p>
+			<img src="img/leftjt.png" class="coll-ord-jt"/>
+			<img src="img/dibu.png" class="coll-ord-site-bg"/>
+		</section>
+		<section>
+			
+			<div class="coll-ord-tit">
+				藏品信息
+			</div>
+			<div class="coll-box clearfix">
+				<img src="img/goosd.jpg"/>
+				<div class="coll-box-text">
+					<h3>新疆和田籽料一级白双面工艺</h3>
+					<p><span>¥6000.00</span></p>
+					<p>收藏时间：2016-08-25 15:25:48</p>
+				</div>
+			</div>
+			<div class="coll-ord-tit">
+				备注：<input type="text" class="coll-ord-tit-text" placeholder="请输入您想要留言的话"/>
+			</div>
+			<div class="coll-ord-tit">
+				<div>
+					运费：<span>¥20.00</span>
+				</div>
+				<div>
+					应付金额：<span>¥20.00</span>
+				</div>
+			</div>	
+			<div style="padding: 0 0.3rem;margin-top: 0.2rem;">
+				<button type="submit" class="login-sub">确认订单</button>
+			</div>
+			
+		</section>
+			
+		<!--选择地址-->
+		<section class="elect-site">
+			<div class="site-box">
+				<div class="site-box-text">
+					<h3><b id="userName">林小七</b><span id="userPhone">13665*****5555</span></h3>
+					<p id="userSite">广东省 深圳市 龙华新区 民治大道牛栏前大厦B1215</p>
+				</div>
+				
+				<div class="site-box-bottom">
+					<i class="site-check site-check-on"></i>选择
+				</div>
+			</div>
+			<div class="site-box">
+				<div class="site-box-text">
+					<h3><b id="userName">susu</b><span id="userPhone">13665*****5555</span></h3>
+					<p id="userSite">广东省 深圳市 大厦B1215</p>
+				</div>
+				
+				<div class="site-box-bottom">
+					<i class="site-check"></i>选择
+				</div>
+			</div>
+		</section>
+		
+		
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html" >
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html" >
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+	
+		<script>	
+		var clickEvent={
+			sitePop:function(){
+				//弹出选择地址
+				$(".coll-ord-site").click(function(){
+					$(".elect-site").addClass("elect-site-on");
+				});
+			},
+			electSite:function(){
+				//选择地址
+				var userNameOn=$("#userNameOn");
+				var userPhoneOn=$("#userPhoneOn");
+				var userSiteOn=$("#userSiteOn");
+				$(".site-box").click(function(){
+					$(".site-box").find(".site-check").removeClass("site-check-on");
+					$(this).find(".site-check").addClass("site-check-on");
+					getVal($(this));
+				});							
+				function getVal(ind){
+					var uName=ind.find("#userName").text();
+					var uPhone=ind.find("#userPhone").text();
+					var uSite=ind.find("#userSite").text();
+					
+					userNameOn.text(uName);
+					userPhoneOn.text(uPhone);
+					userSiteOn.text(uSite);
+					$(".elect-site").removeClass("elect-site-on");
+				}
+			}
+			
+		}
+			clickEvent.sitePop();
+			clickEvent.electSite()
+			
+		</script>
+	</body>
+
+</html>

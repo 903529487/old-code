@@ -1,0 +1,114 @@
+<include file='Public/header' />
+<!--轮播图start-->
+<div id="focus" class="focus2">
+    <div class="hd">
+        <ul></ul>
+    </div>
+    <div class="bd">
+        <ul>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+            <li>
+                <a href="#"><img _src="__PUBLIC__/Home/img/detgoods.png" src="__PUBLIC__/Home/img/detgoods.png" /></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图end-->
+<section class="obj-det-con">
+    <div class="obj-det-tit clearfix">
+        <h3>清乾隆珐琅彩明黄地云龙纹梅瓶</h3>
+        <span><img src="__PUBLIC__/Home/img/fenxiang.png" class="fxs"/></span>
+    </div>
+    <p class="obj-det-tit-p">通高38.5公分，端庄秀丽，华贵大方，唇口、短颈、溜肩腹部渐下微收，底足外撇。</p>
+</section>
+<h3 class="obj-det-ins">藏品介绍</h3>
+<section class="obj-det-con">
+    <div class="obj-det-con-text">
+        <img src="__PUBLIC__/Home/img/detgoods-2.png" />
+        <p>清珐琅彩明黄地云龙纹梅瓶，通高38.5公分，端庄秀丽，华贵大方，唇口、短颈、溜肩腹部渐下微收，底足外撇。造型饱满，优美大气，颈部饰蕉叶纹，腹部主体龙凤纹，正面一威武霸气十足的云龙，腾空而起，身体矫健，刻画生动，底部为海水纹，画工精致，用以珐琅彩表现，彩色柔和，艳丽明快，以明黄打地，气度非凡，尽显皇家气派，胎体坚致，胎质洁白，底足书以“大清乾隆年制“款识。这件梅瓶，工艺精湛，色彩艳丽，器型优美，保存极佳是传世品中十分少见的，由于珐琅彩瓷器的珍贵，它的价值也远出乎人们的想象，是现今令所有收藏家心驰神往的珍贵藏品。</p>
+    </div>
+</section>
+<div class="obj-det-sub">
+    <button class="login-sub">换取实物</button>
+</div>
+<!--弹出pop-->
+<section class="share-pop">
+    <div class="share-pop-box">
+        <h3 class="share-pop-tit"><span>分享到</span></h3>
+        <ul class="share-pop-list clearfix">
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/wx.png" />
+                    <p>微信好友</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/pyo.png" />
+                    <p>朋友圈</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/qq.png" />
+                    <p>qq好友</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/kj.png" />
+                    <p>qq空间</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/xl.png" />
+                    <p>新浪微博</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="__PUBLIC__/Home/img/fz.png" />
+                    <p>复制链接</p>
+                </a>
+            </li>
+        </ul>
+        <div class="share-pop-last">
+            <button class="share-pop-cloe">取消</button>
+        </div>
+    </div>
+</section>
+<div class="bas2"></div>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script type="text/javascript" src="/Public/Home/js/TouchSlide.1.1.js"></script>
+<script type="text/javascript">
+TouchSlide({
+    slideCell: "#focus",
+    titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+    mainCell: ".bd ul",
+    effect: "left",
+    autoPlay: false, //自动播放
+    autoPage: true, //自动分页
+    switchLoad: "_src" //切换加载，真实图片路径为"_src"
+});
+
+$(".fxs").click(function() {
+    $(".share-pop").addClass("share-pop-on");
+    $(".bas2").show();
+    $("body").css("overflow", "hidden");
+});
+$(".share-pop-cloe").click(function() {
+    $(".share-pop").removeClass("share-pop-on");
+    $(".bas2").hide();
+    $("body").css("overflow", "auto");
+});
+</script>
+</body>
+
+</html>

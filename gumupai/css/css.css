@@ -1,0 +1,1485 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p,
+section,
+header,
+footer,
+ul,
+li,
+table {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #333333;
+}
+ul {
+  list-style: none;
+}
+img {
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+input,
+textarea,
+button,
+select {
+  outline: none;
+}
+.clearfix {
+  zoom: 1;
+  *zoom: 1;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#header {
+  min-width: 1200px;
+  background: #fff;
+}
+#header .header-top {
+  line-height: 30px;
+  border-bottom: 1px solid #a2abaa;
+  height: 30px;
+}
+#header .header-top .header-top-con {
+  width: 1200px;
+  margin: auto;
+}
+#header .header-top .header-top-con .hetc-left a {
+  font-size: 12px;
+  margin-right: 60px;
+}
+#header .header-top .header-top-con .hetc-left a b {
+  color: #ab5844;
+  font-weight: 100;
+}
+#header .header-top .header-top-con .hetc-right {
+  float: right;
+}
+#header .header-top .header-top-con .hetc-right a {
+  font-size: 12px;
+  margin: 0 5px;
+}
+#header .header-top .header-top-con .hetc-right a b {
+  color: #ab5844;
+  font-weight: 100;
+}
+#header .header-con {
+  width: 1200px;
+  margin: auto;
+  height: 120px;
+  position: relative;
+}
+#header .header-con #logo {
+  margin-top: 20px;
+}
+#header .header-con .site {
+  font-size: 18px;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+#header .header-con .site i {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #000;
+  position: relative;
+  top: 20px;
+  margin-left: 10px;
+}
+#header .header-con .search_box {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  border: 3px solid #858a62;
+  margin-left: -122px;
+  width: 245px;
+  height: 32px;
+  background: #fff;
+  border-radius: 10px;
+}
+#header .header-con .search_box #search_text {
+  height: 30px;
+  width: 180px;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 30px;
+  border-radius: 10px;
+}
+#header .header-con .search_box #search_sub {
+  background: url("../images/select-but.jpg") no-repeat;
+  height: 19px;
+  width: 22px;
+  background-position: 0 0;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#header .header-con .head-right {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 280px;
+}
+#header .header-con .head-right .head-right-row img {
+  float: left;
+  margin-right: 10px;
+}
+#header .header-con .head-right .head-right-row .login {
+  background: #fff;
+  color: #000000;
+}
+#header .header-con .head-right .head-right-row p {
+  float: left;
+  font-size: 24px;
+  color: #609f96;
+  margin-top: 5px;
+}
+#nav {
+  height: 45px;
+  line-height: 45px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+#nav ul {
+  width: 1200px;
+  margin: auto;
+}
+#nav ul li {
+  float: left;
+  width: 12.5%;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 2;
+}
+#nav ul li a {
+  display: block;
+  font-size: 16px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#nav ul li a:hover {
+  color: #ab5844;
+  text-decoration: none;
+}
+#nav ul .nav-on a {
+  color: #ab5844;
+}
+#paging {
+  margin: 30px;
+}
+#paging ul {
+  text-align: center;
+}
+#paging ul li {
+  display: inline-block;
+  border: 1px solid #E0E0E0;
+  margin-left: 10px;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 50%;
+  background: #eeeeee;
+}
+#paging ul li a {
+  display: block;
+  color: #9c9c9c;
+  padding: 10px 15px;
+}
+#paging ul #pading-on {
+  border-color: #ab5844;
+  background: #ab5844;
+}
+#paging ul #pading-on a {
+  color: #fff;
+}
+.main {
+  margin: auto;
+  width: 1200px;
+}
+.in-roll-tit {
+  height: 40px;
+  line-height: 40px;
+}
+.in-roll-tit span {
+  color: #ab5844;
+}
+.in-roll-tit span a {
+  color: #ab5844;
+  margin-right: 20px;
+}
+.in-roll-tit span img {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
+.margun {
+  float: right;
+  width: 880px;
+  height: 40px;
+  line-height: 40px;
+}
+.margun a {
+  padding: 0 30px;
+}
+.new-build {
+  width: 290px;
+  height: 340px;
+  overflow: hidden;
+  float: left;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #ab5844;
+}
+.new-build h3 {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+.new-build .new-build-box {
+  width: 80%;
+  margin: auto;
+}
+.new-build .new-build-box a {
+  display: block;
+  line-height: 35px;
+  position: relative;
+}
+.new-build .new-build-box a span {
+  float: left;
+  display: block;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.new-build .new-build-box a time {
+  float: left;
+  display: block;
+  width: 30%;
+  color: #979797;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.new-build .mailbox {
+  width: 90%;
+  margin: 10px auto;
+}
+.new-build .mailbox .mailbox-img {
+  width: 60px;
+  float: left;
+  text-align: center;
+}
+.new-build .mailbox .mailbox-img img {
+  width: 54px;
+  height: 54px;
+}
+.new-build .mailbox .mailbox-text {
+  width: 170px;
+  min-height: 50px;
+  border: 1px solid #d5aba1;
+  float: right;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 20px;
+  color: #979797;
+}
+.new-build .mailbox .mailbox-text i {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #d5aba1;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: -10px;
+  top: 20px;
+}
+.new-build .mailbox .mailbox-text i:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-right: 8px solid #fff;
+  border-bottom: 3px solid transparent;
+  position: absolute;
+  left: 2px;
+  top: -3px;
+  z-index: 33;
+}
+.ranking-list {
+  width: 560px;
+  height: 340px;
+  float: left;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #ab5844;
+  margin-left: 30px;
+}
+.ranking-list h3 {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+.ranking-list .ranking-list-row {
+  float: left;
+  width: 50%;
+}
+.ranking-list .ranking-list-row .ranking-list-box {
+  width: 80%;
+  margin: auto;
+}
+.ranking-list .ranking-list-row .ranking-list-box h4 {
+  line-height: 45px;
+  font-size: 16px;
+  color: #979797;
+}
+.ranking-list .ranking-list-row .ranking-list-box a {
+  display: block;
+  line-height: 35px;
+  position: relative;
+}
+.ranking-list .ranking-list-row .ranking-list-box a i {
+  font-style: normal;
+  font-size: 12px;
+  background: #ab5844;
+  color: #fff;
+  padding: 1px 5px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.ranking-list .ranking-list-row .ranking-list-box a span {
+  float: left;
+  display: block;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ranking-list .ranking-list-row .ranking-list-box a time {
+  float: left;
+  display: block;
+  width: 30%;
+  color: #979797;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.login-box {
+  width: 290px;
+  height: 340px;
+  float: right;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #ab5844;
+}
+.login-box h3 {
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+.login-box .login-box-con {
+  width: 80%;
+  margin: auto;
+}
+.login-box .login-box-con .login-box-text {
+  width: 90%;
+  padding: 0 5%;
+  border: 1px solid #e0e0e0;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px 0;
+}
+.login-box .login-box-con .login-box-sub {
+  height: 40px;
+  line-height: 40px;
+  background: #24a378;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.login-box .login-box-con .login-box-but {
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ffa969;
+  width: 100%;
+  color: #ffa969;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.login-box .login-box-con .login-row {
+  height: 40px;
+  line-height: 40px;
+}
+.login-box .login-box-con .login-row a {
+  color: #a7a7a7;
+}
+.login-box .login-box-con .login-row span {
+  float: right;
+}
+.break {
+  margin: 20px 0;
+}
+.break img {
+  width: 100%;
+}
+.think-back-left {
+  width: 880px;
+  height: 260px;
+  float: left;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #ab5844;
+}
+.think-back-left h3 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  position: relative;
+}
+.think-back-right {
+  width: 290px;
+  height: 260px;
+  float: right;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #ab5844;
+}
+.think-back-right h3 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  position: relative;
+}
+.think-back-right .think-back-right-box {
+  width: 90%;
+  margin: auto;
+}
+.think-back-right .think-back-right-box a {
+  display: block;
+  line-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.think-back-right .think-back-right-box a span {
+  color: #ab5844;
+}
+.think-back-right .think-back-right-box2 {
+  margin-top: 25px;
+}
+.think-back-right .think-back-right-box2 img {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.think-back-right .think-back-right-box2 .boxs-text {
+  font-size: 12px;
+  float: right;
+  width: 160px;
+  line-height: 20px;
+}
+.think-back-right .think-back-right-box2 .boxs-text span {
+  color: #979797;
+}
+.slideBox {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+.slideBox .hd {
+  height: 15px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  z-index: 1;
+  width: 100%;
+}
+.slideBox .hd ul {
+  overflow: hidden;
+  zoom: 1;
+  text-align: center;
+}
+.slideBox .hd ul li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 10px;
+  text-indent: 999em;
+  width: 15px;
+  height: 15px;
+  line-height: 14px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+}
+.slideBox .hd ul li.on {
+  background: #ab5844;
+  color: #fff;
+}
+.slideBox .bd {
+  position: relative;
+  height: 100%;
+  z-index: 0;
+}
+.slideBox .bd li {
+  zoom: 1;
+  vertical-align: middle;
+}
+.slideBox .bd li a {
+  zoom: 1;
+  vertical-align: middle;
+  display: block;
+  height: 450px;
+  width: 100%;
+}
+.picScroll-left {
+  width: 870px;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+.picScroll-left .hd {
+  background: #f4f4f4;
+  padding: 0 10px;
+}
+.picScroll-left .hd .prev {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/rightjt.png") no-repeat;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 60px;
+}
+.picScroll-left .hd .next {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/leftjt.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+}
+.picScroll-left .hd ul {
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  zoom: 1;
+}
+.picScroll-left .hd ul li {
+  float: left;
+  width: 9px;
+  height: 9px;
+  overflow: hidden;
+  margin-right: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url("images/icoCircle.gif") 0 -9px no-repeat;
+}
+.picScroll-left .hd ul li.on {
+  background-position: 0 0;
+}
+.picScroll-left .bd {
+  padding: 10px;
+}
+.picScroll-left .bd ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.picScroll-left .bd ul li {
+  margin: 0 8px;
+  float: left;
+  _display: inline;
+  overflow: hidden;
+  text-align: center;
+}
+.picScroll-left .bd ul li .pic {
+  text-align: center;
+}
+.picScroll-left .bd ul li .pic img {
+  width: 120px;
+  height: 135px;
+  display: block;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+.picScroll-left .bd ul li .pic a:hover img {
+  border-color: #999;
+}
+.picScroll-left .bd ul li .title {
+  line-height: 24px;
+}
+.picScroll-left2 {
+  width: 870px;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+.picScroll-left2 .hd {
+  background: #f4f4f4;
+  padding: 0 10px;
+}
+.picScroll-left2 .hd .prev {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/rightjt.png") no-repeat;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 60px;
+}
+.picScroll-left2 .hd .next {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/leftjt.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+}
+.picScroll-left2 .hd ul {
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  zoom: 1;
+}
+.picScroll-left2 .hd ul li {
+  float: left;
+  width: 9px;
+  height: 9px;
+  overflow: hidden;
+  margin-right: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url("images/icoCircle.gif") 0 -9px no-repeat;
+}
+.picScroll-left2 .hd ul li.on {
+  background-position: 0 0;
+}
+.picScroll-left2 .bd {
+  padding: 10px;
+}
+.picScroll-left2 .bd ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.picScroll-left2 .bd ul li {
+  margin: 0 8px;
+  float: left;
+  _display: inline;
+  overflow: hidden;
+  text-align: center;
+}
+.picScroll-left2 .bd ul li .pic {
+  text-align: center;
+}
+.picScroll-left2 .bd ul li .pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  padding: 2px;
+  border: 1px solid #ccc;
+}
+.picScroll-left2 .bd ul li .pic a:hover img {
+  border-color: #999;
+}
+.picScroll-left2 .bd ul li .title {
+  line-height: 24px;
+}
+.picScroll-left3 {
+  width: 550px;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+.picScroll-left3 .hd {
+  background: #f4f4f4;
+  padding: 0 10px;
+}
+.picScroll-left3 .hd .prev {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/rightjt.png") no-repeat;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 60px;
+}
+.picScroll-left3 .hd .next {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/leftjt.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 100;
+}
+.picScroll-left3 .hd ul {
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  zoom: 1;
+}
+.picScroll-left3 .hd ul li {
+  float: left;
+  width: 9px;
+  height: 9px;
+  overflow: hidden;
+  margin-right: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url("images/icoCircle.gif") 0 -9px no-repeat;
+}
+.picScroll-left3 .hd ul li.on {
+  background-position: 0 0;
+}
+.picScroll-left3 .bd {
+  padding: 10px;
+}
+.picScroll-left3 .bd ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.picScroll-left3 .bd ul li {
+  margin: 0 20px;
+  float: left;
+  _display: inline;
+  overflow: hidden;
+  text-align: center;
+  width: 135px;
+}
+.picScroll-left3 .bd ul li .pic {
+  text-align: center;
+}
+.picScroll-left3 .bd ul li .pic img {
+  width: 135px;
+  height: 135px;
+  display: block;
+}
+.picScroll-left3 .bd ul li .pic a:hover img {
+  border-color: #999;
+}
+.picScroll-left3 .bd ul li .title {
+  line-height: 20px;
+}
+.picScroll-left3 .bd ul li .title p {
+  font-size: 12px;
+  color: #979797;
+  text-align: left;
+  height: 180px;
+  overflow: hidden;
+}
+.wenzhan {
+  width: 80%;
+  margin: auto;
+}
+.wenzhan a {
+  display: block;
+  line-height: 35px;
+}
+.wenzhan a span {
+  display: block;
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ab5844;
+}
+.wenzhan a b {
+  display: block;
+  float: left;
+  width: 50%;
+  font-weight: 100;
+  color: #979797;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.in-tab {
+  line-height: 50px;
+  font-size: 20px;
+}
+.in-tab span {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.in-tab .in-tab-on {
+  color: #ab5844;
+}
+.tab-box {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.xusn {
+  width: 50%;
+  float: left;
+}
+.footer {
+  background: #465856;
+  margin-top: 20px;
+}
+.footer .footer-con {
+  padding: 20px 0;
+  margin: auto;
+  width: 1200px;
+  position: relative;
+}
+.footer .footer-con .ewm {
+  width: 170px;
+  height: 170px;
+}
+.footer .footer-con .foot-list {
+  position: absolute;
+  left: 200px;
+  top: 30px;
+}
+.footer .footer-con .foot-list li {
+  float: left;
+  width: 120px;
+  text-align: center;
+  line-height: 25px;
+}
+.footer .footer-con .foot-list li h4 {
+  padding-bottom: 5px;
+}
+.footer .footer-con .foot-list li h4 a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+}
+.footer .footer-con .foot-list li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 100;
+}
+.footer .footer-con .foot-right {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  text-align: right;
+  color: #fff;
+}
+.footer .footer-con .foot-right h3 {
+  font-size: 25px;
+  border-bottom: 1px solid #6b7978;
+  padding: 10px;
+}
+.footer .footer-con .foot-right .foot-right-box {
+  margin-top: 10px;
+}
+.footer .footer-con .foot-right .foot-right-box a {
+  padding: 0 5px;
+}
+.footer .foot-botton {
+  line-height: 40px;
+  background: #161f1e;
+  color: #fff;
+  text-align: center;
+}
+.footer .foot-botton a {
+  color: #fff;
+}
+.gene_search {
+  position: relative;
+  height: 32px;
+  margin: 20px 0;
+}
+.gene_search .search_box2 {
+  position: absolute;
+  right: 0;
+  border: 1px solid #d2d2d2;
+  width: 300px;
+  height: 32px;
+  background: #fff;
+  border-radius: 5px;
+}
+.gene_search .search_box2 #search_text2 {
+  height: 30px;
+  width: 250px;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 30px;
+  border-radius: 10px;
+}
+.gene_search .search_box2 #search_sub2 {
+  background: url("../images/select-but.jpg") no-repeat;
+  height: 19px;
+  width: 22px;
+  background-position: 0 0;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.gen-con {
+  width: 1110px;
+  min-height: 896px;
+  float: left;
+}
+.gen-con .genmin li {
+  width: 33.3333%;
+  float: left;
+  margin-top: 20px;
+}
+.gen-con .genmin li a {
+  display: block;
+  width: 310px;
+  margin: auto;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+}
+.gen-con .genmin li a .gen-list-img {
+  float: left;
+  width: 140px;
+}
+.gen-con .genmin li a .gen-list-img img {
+  width: 140px;
+  height: 158px;
+}
+.gen-con .genmin li a .gen-list-text {
+  float: left;
+  width: 135px;
+  margin-left: 20px;
+  line-height: 30px;
+}
+.gen-con .genmin li a .gen-list-text h3 {
+  font-weight: 100;
+  text-align: center;
+  color: #ab5844;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.gen-con .genmin li a .gen-list-text p span {
+  color: #A7A7A7;
+}
+.gen-asid {
+  float: right;
+  width: 90px;
+  text-align: center;
+  min-height: 896px;
+  display: table;
+}
+.gen-asid .gen-asid-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pax {
+  width: 25px;
+  border: 2px solid #465856;
+  text-align: center;
+  margin: auto;
+}
+.pax a {
+  padding: 20px 0;
+  display: block;
+  border-bottom: 2px solid #465856;
+  color: #ab5844;
+}
+.pax a:last-child {
+  border-bottom: none;
+}
+.pax a:hover {
+  text-decoration: none;
+}
+.me-tit {
+  border-bottom: 1px solid #d5d5d5;
+  position: relative;
+  height: 40px;
+  width: 800px;
+  margin: auto;
+}
+.me-tit span {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  background: #fff;
+  top: 18px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 24px;
+}
+.picScroll-left4 {
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative;
+}
+.picScroll-left4 .hd {
+  background: #f4f4f4;
+  padding: 0 10px;
+}
+.picScroll-left4 .hd .prev {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/rightjt.png") no-repeat;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 200px;
+}
+.picScroll-left4 .hd .next {
+  display: block;
+  width: 18px;
+  height: 48px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/leftjt.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 200px;
+  z-index: 100;
+}
+.picScroll-left4 .hd ul {
+  float: right;
+  overflow: hidden;
+  margin-top: 10px;
+  zoom: 1;
+}
+.picScroll-left4 .bd {
+  padding: 10px;
+}
+.picScroll-left4 .bd ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.picScroll-left4 .bd ul li {
+  margin: 0 10px;
+  float: left;
+  _display: inline;
+  overflow: hidden;
+  text-align: center;
+  width: 373px;
+}
+.picScroll-left4 .bd ul li .pic {
+  text-align: center;
+}
+.picScroll-left4 .bd ul li .pic img {
+  width: 385px;
+  height: 385px;
+  display: block;
+}
+.picScroll-left4 .bd ul li .pic a:hover img {
+  border-color: #999;
+}
+.picScroll-left4 .bd ul li .title {
+  border: 1px solid #E0E0E0;
+  padding: 0 20px;
+  line-height: 40px;
+}
+.picScroll-left4 .bd ul li .title h3 {
+  font-weight: 100;
+  font-size: 30px;
+  padding: 10px 0;
+  text-align: left;
+}
+.picScroll-left4 .bd ul li .title .suytext {
+  height: 120px;
+  overflow: hidden;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 30px;
+}
+.picScroll-left4 .bd ul li .title p {
+  font-size: 16px;
+  color: #979797;
+  text-align: left;
+  overflow: hidden;
+}
+.picScroll-left4 .bd ul li .title .price {
+  position: relative;
+  text-align: left;
+}
+.picScroll-left4 .bd ul li .title .price span {
+  color: #f46952;
+}
+.picScroll-left4 .bd ul li .title .price img {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+.mem-log {
+  border: 1px solid #E0E0E0;
+  padding: 20px;
+}
+.mem-log .mem-log-img {
+  float: left;
+  width: 335px;
+  height: 260px;
+  display: block;
+  margin: auto;
+}
+.mem-log .mem-log-text {
+  float: right;
+  width: 800px;
+  height: 260px;
+  margin-left: 20px;
+  line-height: 25px;
+  position: relative;
+}
+.mem-log .mem-log-text .mem-time {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.mem-log .mem-text-p {
+  color: #A7A7A7;
+  height: 200px;
+  overflow: hidden;
+}
+.mem-log .mem-text-p p {
+  text-indent: 2em;
+}
+#allmap {
+  height: 600px;
+}
+.buil-box-top {
+  border: 1px solid #E0E0E0;
+  padding: 20px;
+}
+.buil-box-top h3 {
+  font-weight: 100;
+  font-size: 22px;
+  color: #A7A7A7;
+  padding-bottom: 20px;
+}
+.buil-box-top .buil-list {
+  width: 95%;
+  margin: auto;
+}
+.buil-box-top .buil-list li {
+  float: left;
+  width: 50%;
+  font-size: 18px;
+}
+.buil-box-top .buil-list li table td {
+  padding: 10px;
+}
+.buil-box-top .buil-list li table td span {
+  color: #A7A7A7;
+}
+.buil-tit {
+  text-align: center;
+  line-height: 100px;
+  font-size: 22px;
+}
+.buil-text {
+  border: 1px solid #cbcbcb;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  width: 250px;
+  font-size: 18px;
+}
+.buil-sub {
+  background: #ab5844;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 120px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mailbox-row {
+  margin-top: 30px;
+}
+.mailbox-row-top {
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+}
+.mailbox-row-top img {
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+.mailbox-row-top .mailbox-row-top-text {
+  width: 890px;
+  float: left;
+  margin-left: 20px;
+  line-height: 25px;
+}
+.mailbox-row-top .mailbox-row-top-text h3 {
+  font-weight: 100;
+  color: #ab5844;
+  font-size: 18px;
+}
+.mailbox-row-top .mailbox-row-top-text p {
+  color: #A7A7A7;
+}
+.mailbox-row-bottom {
+  padding: 10px 20px;
+  border: 1px solid #E0E0E0;
+  border-top: none;
+}
+.mailbox-row-bottom .mailbox-row-bottom-left {
+  line-height: 50px;
+  float: left;
+}
+.mailbox-row-bottom .mailbox-row-bottom-left img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -2px;
+  margin-right: 10px;
+}
+.mailbox-row-bottom .mailbox-row-bottom-left b {
+  color: #ab5844;
+  font-weight: 100;
+  font-size: 16px;
+}
+.mailbox-row-bottom .mailbox-row-bottom-right {
+  float: right;
+  line-height: 50px;
+}
+.mailbox-row-bottom .mailbox-row-bottom-right img {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: -2px;
+  margin-right: 10px;
+}
+.mailbox-row-bottom .mailbox-row-bottom-right span {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.mailbox-row-bottom .mailbox-row-bottom-right span b {
+  color: #ab5844;
+  font-weight: 100;
+}
+.mailbox-row-bottom .mailbox-row-bottom-right span a {
+  color: #ab5844;
+}
+.ser-wt {
+  margin: 20px 0;
+  border: 1px solid #E0E0E0;
+  padding: 20px 0;
+}
+.ser-wt ul li {
+  float: left;
+  width: 16.65%;
+  text-align: center;
+  line-height: 30px;
+}
+.ser-wt ul li img {
+  width: 60px;
+  height: 60px;
+}
+.ser-wt ul li h3 {
+  font-weight: 100;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.ser-wt ul li p {
+  color: #A7A7A7;
+  font-size: 12px;
+}
+.ser-tit {
+  line-height: 50px;
+  border: 1px solid #E0E0E0;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 100;
+  position: relative;
+  border-bottom: 1px solid #009944;
+  margin-top: 20px;
+}
+.ser-tit span {
+  font-size: 16px;
+  color: #A7A7A7;
+}
+.ser-tit img {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.mailbox-row-top2 {
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+  border-top: none;
+}
+.mailbox-row-top2 img {
+  float: left;
+  width: 150px;
+  height: 180px;
+}
+.mailbox-row-top2 .mailbox-row-top2-text {
+  width: 980px;
+  float: left;
+  margin-left: 20px;
+  line-height: 25px;
+}
+.mailbox-row-top2 .mailbox-row-top2-text h3 {
+  font-weight: 100;
+  color: #ab5844;
+  font-size: 18px;
+}
+.mailbox-row-top2 .mailbox-row-top2-text p {
+  color: #A7A7A7;
+  text-indent: 2em;
+}
+.mailbox-row-top2 .mailbox-row-top2-text .mailbox-row-top2-text-p {
+  height: 150px;
+  overflow: hidden;
+}
+.leave {
+  margin-top: 20px;
+  border: 1px solid #E0E0E0;
+  padding: 0 20px;
+}
+.leave h3 {
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 100;
+  position: relative;
+}
+.leave .leave-text {
+  border: 1px solid #E0E0E0;
+  resize: none;
+  height: 150px;
+  width: 98%;
+  padding: 1%;
+  font-size: 16px;
+  line-height: 25px;
+}
+.leave .ser-sub {
+  background: #ab5844;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.en-user-box {
+  background: url(../images/txinba.png) no-repeat;
+  width: 410px;
+  height: 510px;
+  margin: 10px auto;
+  position: relative;
+}
+.en-user-box .en-user-box-img {
+  width: 210px;
+  position: absolute;
+  left: 107px;
+  top: 100px;
+}
+.en-user-box .en-user-box-img img {
+  width: 210px;
+  height: 240px;
+}
+.en-user-box .en-user-box-img h3 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 26px;
+}
+.en-date {
+  width: 410px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  margin: auto;
+}
+.en-meta {
+  text-align: center;
+  margin: 20px 0;
+}
+.en-meta a {
+  padding: 5px 30px;
+  background: #dee5eb;
+  font-size: 18px;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+.en-meta a:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=css.css.map */

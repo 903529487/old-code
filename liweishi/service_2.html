@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>力维士</title>
+		<link rel="SHORTCUT ICON" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<!--[if IE]>
+		<script src="js/html5.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header">
+			<div class="header-con">
+				<a href="index.html"><img src="images/logo.png" id="logo" /></a>
+				<!--搜索框-->
+				<div class="search_box">
+					<input type="text" name="" id="search_text" value="" placeholder="请输入您要搜索的关键字" />
+					<input type="submit" name="search_sub" id="search_sub" value="" />
+				</div>
+
+				<div class="head-right clearfix">
+					<div class="head-right-row">
+						<a href="" class="login">登录</a>
+						<a href="">注册</a>
+					</div>
+					<div class="head-right-row">
+						<p>服务热线：<br> 18129831303</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--导航-->
+			<nav id="nav">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li class="nav-on">
+					<a href="service_1.html">维修预约</a>
+				</li>
+				<li >
+					<a href="query.html">查询/支付</a>
+				</li>
+				<li>
+					<a href="colorfocus.html">热门活动</a>
+					<div class="nav-hidde">
+						<a href="colorfocus.html">炫彩换壳</a>
+						<a href="ram_upgrade.html">内存升级</a>
+					</div>
+				</li>
+				<li>
+					<a href="welfare.html">企业福利</a>
+				</li>
+				<li>
+					<a href="service_process.html">服务流程</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="main" style="min-height: 500px;">
+			<div class="ser-meta" style="background-position: 0 -160px;">
+
+			</div>
+			<div>
+				<ul class="ser-sub-min clearfix">
+
+				</ul>
+			</div>
+
+			<div class="color-box" style="margin-top: 10px;">
+				<div class="ser-sub-min-color">
+
+				</div>
+
+			</div>
+			<div class="ser-xuanz-text clearfix">
+				<div class="clearfix">
+					<span>已选故障：<b class="elect-num">0</b></span><span >维修方案：</span>
+				</div>
+
+				<ol class="xuanzhibox">
+
+				</ol>
+
+			</div>
+			<div class="ser-xuanz-sub" style="text-align: center;">
+				<p>根据您设备的问题，给出以下参考价：<span  id="jiage">￥0</span></p>
+				<button class="ser-next2">确认故障</button>
+			</div>
+		</section>
+		<br><br><br>
+		<footer id="footer">
+			<div class="footer-con">
+				<div>
+					<ul class="footer-meta clearfix">
+						<li>
+							<h3>服务指南</h3>
+							<a href="">服务流程</a>
+							<a href="">服务网点</a>
+							<a href="">售后政策</a>
+						</li>
+							<li>
+							<h3>帮助中心</h3>
+							<a href="">常见问题</a>
+							<a href="javascript:void(0)" class="suggest-but">投诉建议</a>
+							<a href="">维修流程</a>
+							<a href="">寄送地址</a>
+						</li>
+						<li>
+							<h3>力维士</h3>
+							<a href="">关于我们</a>
+							<a href="">用户协议</a>
+							<a href="">联系我们</a>
+							<a href="">意见反馈</a>
+						</li>
+						<li>
+							<h3>友情链接</h3>
+							<a href="">商城</a>
+						</li>
+						<li>
+							<h3>查询助手</h3>
+							<a href="javascript:void(0)" onclick="showIphine()" class="iphone-but">鉴别山寨苹果</a>
+							<a href="">查苹果序列号</a>
+						</li>
+					</ul>
+					<!--苹果验证弹窗start-->
+					<div class="iphone-box">
+						<i></i>
+						<p>扫一扫鉴别是不是山寨苹果<br> 1.微信扫码关注“果粉达人”公众号
+							<br> 2.点击果粉达人微信菜单“山寨苹果”
+						</p>
+						<div>
+							<img src="images/ewm2.jpg" />
+						</div>
+						
+					</div>
+					<!--苹果验证弹窗end-->
+				</div>
+				<div class="foot-erm">
+					<img src="images/wem.jpg" /><br>
+					<h3>在线客服：<br>
+400-000-0000</h3>
+				</div>
+				<div class="foot-bott">
+					联系电话：18129831303&nbsp;&nbsp;&nbsp;&nbsp; 地 址：深圳市龙华新区羊台45栋801&nbsp;&nbsp;&nbsp;&nbsp; 联系人：郑智勇 &nbsp;&nbsp;&nbsp;&nbsp;邮 箱：liweishikeji@163.com
+				</div>
+			</div>
+			<div class="foot-last">
+				<div>
+					<a href="">首页</a>|
+					<a href="">预约维修</a>|
+					<a href="">查询支付</a>|
+					<a href="">热门活动</a>|
+					<a href="">联系客服</a>|
+					<a href="">服务流程</a>
+				</div>
+				<div style="font-size: 12px;">
+					Copyright 2016 力维士科技有限公司. 备案ICP：粤ICP备10040994号 技术支持：时代万网
+				</div>
+			</div>
+		</footer>
+<!--投诉建议-->
+		<section class="suggest-box">
+			<img src="images/close.jpg" class="close"/>
+			<div class="sugge-maxs">
+			<h3>投诉反馈</h3>
+			<div class="sugg-tab-page">
+				<span><i class="sugg-tab-page-on"></i>服务投诉</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i></i>意见反馈</span>                  
+			</div>			
+			<section class="sugg-sbox" style="display: block;">
+				<input type="text" name="" class="sugg-text" id="" value="" placeholder="所要投诉工程师的姓名或电话"/><br><br>
+				<input type="text" name="" class="sugg-text"  id="" value="" placeholder="请留下您的手机号"/><br><br>
+				<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+				<div class="sugg">
+					<button class="sugg-n">取消</button>
+					<button class="sugg-y">确定</button>
+				</div>
+			</section>
+			<section class="sugg-sbox">				
+				<input type="text" name="" class="sugg-text"  id="" value="" placeholder="请留下您的手机号"/><br><br>
+				<textarea class="sugg-text" style="resize: none;height: 80px;" placeholder="请填写您的投诉内容，提交后力维士会与取得联系…"></textarea>
+				<div class="sugg">
+					<button class="sugg-n">取消</button>
+					<button class="sugg-y">确定</button>
+				</div>
+			</section>
+			</div>
+		</section>		
+		<!--投诉建议end-->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+		<script>
+			var d = [{
+				"name": "按键问题",
+				"type": [{
+						"id": "11",
+						"gzName": "按键失灵",
+						"price": 100.21,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "12",
+						"gzName": "按键3",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "13",
+						"gzName": "按键4",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, {
+				"name": "声音问题",
+				"type": [{
+						"id": "21",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "22",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "23",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, 
+			{
+				"name": "声音问题",
+				"type": [{
+						"id": "31",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "32",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "33",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, 
+			{
+				"name": "声音问题",
+				"type": [{
+						"id": "41",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "42",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "43",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}, 
+			{
+				"name": "声音问题",
+				"type": [{
+						"id": "51",
+						"gzName": "声音失灵了",
+						"price": 100.00,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "52",
+						"gzName": "按键1",
+						"price": 100.02,
+						"maintain": "更换屏幕（半年质保）"
+					}, {
+						"id": "53",
+						"gzName": "按键2",
+						"price": 100.30,
+						"maintain": "更换屏幕（半年质保）"
+					}
+
+				]
+			}
+			];
+
+			controlSurface();
+
+			function controlSurface() {
+				var subMin = $(".ser-sub-min"),
+					subMinColor = $(".ser-sub-min-color");
+
+				var xuanzhibox = $(".xuanzhibox");
+				var mCount = 0;
+				var cCount = 0;
+				var unb = [];  //已选择添加的数组
+				var toPrice=0.00;
+				init();
+
+				function init() {
+					for(var j = 0; j < d.length; j++) {
+						subMin.append('<li><span class="ser-sub-2">' + d[j].name + '</span></li>');
+					}
+
+				}
+				subMinClick();
+
+				function subMinClick() { //大问题	
+					subMin.find("span").click(function() {
+						mCount = $(this).parent().index();
+						cut2();
+						subMin.find("span").removeClass("ser-sub-min-on");
+						$(this).addClass("ser-sub-min-on");
+
+					});
+
+				}
+				subMinColorClick();
+
+				function subMinColorClick() { //小问题	
+					subMinColor.find("span").click(function() {
+						cCount = $(this).parent().index();
+
+						if($(this).hasClass("ser-sub-min-color-on")) {
+
+						} else {
+							$(this).addClass("ser-sub-min-color-on");
+
+							addWent();
+						}
+
+					});
+				}
+
+				function addWent() {   //添加选择
+					xuanzhibox.append('<li class="clearfix" data-price="'+d[mCount].type[cCount].price+'" id="' + d[mCount].type[cCount].id + '">' +
+						'<span>' + d[mCount].type[cCount].gzName + '</span><span>' + d[mCount].type[cCount].maintain + '</span><span class="lideles"><img src="images/dele.png"/></span>' +
+						'</li>');
+					
+						showNum();
+						totalPrice()
+					close();
+					
+				}
+			
+				function close() {  //删除
+					
+					$(".lideles img").click(function() {
+						var ids = $(this).parent().parent().attr("id");
+						$(this).parent().parent().remove();
+						$("#" + ids).removeClass("ser-sub-min-color-on");
+						showNum();
+						
+						totalPrice()
+//						if($(".xuanzhibox li").length>=0){
+//							var jianp=$(this).parent().parent().attr("data-price");
+//							toPrice=toPrice-jianp;
+//							console.log(toPrice)
+//						}
+//						
+						
+					});
+
+				}
+				
+				var ds=0.00;
+				function totalPrice(){   //价格
+					var price=0.00;
+					toPrice=[];
+					toPrice=0;
+					for(var i=0;i<$(".xuanzhibox li").length;i++){						
+						 price= parseFloat($(".xuanzhibox li").eq(i).attr("data-price"));
+						toPrice=price+toPrice;
+					}
+					$("#jiage").text("￥"+toPrice);
+					
+				
+					
+				}
+				
+				function showNum(){  //显示选择的条数
+					$(".elect-num").text($(".xuanzhibox li").length)
+				}
+
+				function cut2() { //小问题切换	
+					$(".pans-2").remove();
+					var pan2 = $('<ul class="pans-2 clearfix"></ul>');
+					subMinColor.append(pan2);
+					unb = [];
+					for(var u = 0; u < $(".xuanzhibox li").length; u++) {
+						var xid = $(".xuanzhibox li").eq(u).attr("id");
+						if($.inArray(xid, unb) != -1) {
+
+						} else {
+							unb.push(xid)
+						}
+					}
+
+					for(var k = 0; k < d[mCount].type.length; k++) {
+						if($.inArray(d[mCount].type[k].id, unb) != -1) {
+							$(".pans-2").append('<li><span class="ser-sub-min-color-on" id="' + d[mCount].type[k].id + '" >' + d[mCount].type[k].gzName + '</span></li>');
+						} else {
+							$(".pans-2").append('<li><span id="' + d[mCount].type[k].id + '">' + d[mCount].type[k].gzName + '</span></li>');
+						}
+
+					}
+					subMinColorClick();
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		#box {
+			width: 400px;
+			height: 600px;
+			border: 1px solid #8A2BE2;
+			overflow: hidden;
+			position: relative;
+			z-index: 99;
+		}
+		
+		#box-text {
+			position: absolute;
+			left: 0;
+			-webkit-transform: translate(0, 0);
+		}
+		
+		#box-text li {
+			vertical-align: middle;
+			float: left;
+			width: 400px;
+			list-style: none;
+		}
+		
+		#box-text li img {
+			height: 600px;
+		}
+	</style>
+
+	<body>
+		<div id="box">
+			<ul id="box-text">
+				<li>
+					<a href="sww.html"><img src="img/16.jpg" alt="" /></a>
+					<a href="s">sss</a>
+				</li>
+				<li><img src="img/13.jpg" alt="" /></li>
+				<li><img src="img/14.jpg" alt="" /></li>
+				<li><img src="img/15.jpg" alt="" /></li>
+			</ul>
+		</div>
+
+	</body>
+	<script>
+		var an = false;
+		var box = document.getElementById("box");
+		var textb = document.getElementById("box-text");
+		var li = textb.getElementsByTagName("li");
+		var liW = li[0].offsetWidth; //每页宽度
+		textb.style.width = li.length * liW + "px";
+		var logDis = 0;
+		var last = {
+			x: 0,
+			y: 0
+		}
+		var next = {
+			x: 0,
+			y: 0
+		}
+		var nu = 0;
+		//手指按下的处理事件
+		var startHandler = function(e) {
+			//			e.preventDefault();
+			an = true;
+			last = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+			nu = 0;
+		};
+		//手指移动的处理事件
+		var moveHandler = function(e) {
+			e.preventDefault();
+			textb.style.webkitTransition = "none";
+			if (an) {
+				next = windowTOcanvas(e.touches[0].pageX, e.touches[0].pageY);
+				poor = next.x - last.x;
+				var dis = logDis + poor;
+				textb.style.webkitTransform = "translate(" + dis + "px,0)";
+			}
+		};
+		var index = 1;
+		//手指抬起的处理事件
+		var nextBorder = (li.length - 1) * liW;
+		var endHandler = function(e) {
+			//		e.preventDefault();
+			an = false;
+			logDis = poor + logDis;
+			textb.style.webkitTransition = "all 0.2s";
+			//			if(poor>100){
+			//				textb.style.webkitTransform ="translate("+liW*index+"px,0)" ;
+			//				logDis=poor+liW;
+			//				index--;
+			//			}else{
+			//				textb.style.webkitTransform ="translate("+liW*(index-1)+"px,0)" ;
+			//			}
+			//			if(poor<-100){
+			//				textb.style.webkitTransform ="translate("+-liW*index+"px,0)" ;
+			//				index++;
+			//			}
+			console.log(poor)
+			if (logDis >= 0) {
+				textb.style.webkitTransform = "translate(0px,0px)";
+				logDis = 0;
+			} else if (logDis <= -nextBorder) {
+				textb.style.webkitTransform = "translate(" + -nextBorder + "px,0)";
+				logDis = -nextBorder;
+			}
+		};
+		//绑定事件
+		textb.addEventListener('touchstart', startHandler);
+		textb.addEventListener('touchmove', moveHandler);
+		textb.addEventListener('touchend', endHandler);
+
+		function windowTOcanvas(x, y) {
+			var bbox = box.getBoundingClientRect();
+			return {
+				x: Math.round(x - bbox.left),
+				y: Math.round(y - bbox.top)
+			}
+		}
+	</script>
+
+</html>

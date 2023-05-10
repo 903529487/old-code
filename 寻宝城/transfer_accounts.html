@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+
+		<section>
+			<div class="wit-input-box clearfix">
+					<div class="wit-input-box-left">
+						对方账户
+					</div>
+					<div class="wit-input-box-right">
+						<input type="text" name="" id="" value="" placeholder="用户名/手机号码" />
+					</div>
+				</div>
+			<div class="wit-ktj">
+					可转账金额：<span>200</span>元
+				</div>
+				<div class="wit-input-box clearfix">
+					<div class="wit-input-box-left">
+						金额
+					</div>
+					<div class="wit-input-box-right">
+						<input type="text" name="" id="" value="" placeholder="请输入转账金额" />
+					</div>
+				</div>
+			<div class="wit-ktj" style="font-size: 0.30rem;color: #7B7B7B;">
+					注:转账后金币将转换成绿币(不可提现)
+			</div>
+				
+			<button type="submit" class="login-sub" style="width: 90%;">确认转账</button>
+		</section>
+
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html">
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script>
+			$(".mode-of-payment-row").click(function() {
+				$(".mode-of-payment-row").find("i").removeClass("pitch-on")
+				$(this).find("i").addClass("pitch-on")
+
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>闪电修</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="../js/sethtml.js"></script>
+
+		<link rel="stylesheet" href="../css/css.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<img src="../img/logo.png" alt="" id="logo" />
+			<div class="header-right">
+				<div class="select-top">
+					<div class="select-box">
+						<input type="text" name="" id="select-text" value="" placeholder="search" />
+						<input type="button" name="select-sub" id="select-sub" value="" />
+					</div>
+				</div>
+				<img src="../img/shouc.png" alt="" id="sel" />
+				<img src="../img/user.png" alt="" id="nav-tit" />
+				<div class="nav-zi">
+					<a href="DS">用户中心<img src="../img/nav-zi-1.png" alt="" /></a>
+					<a href="">购物车<img src="../img/nav-zi-2.png" alt="" /></a>
+					<a href="">消息<img src="../img/nav-zi-3.png" alt="" /></a>
+					<a href="">收藏夹<img src="../img/nav-zi-4.png" alt="" /></a>
+					<a href="">设置<img src="../img/nav-zi-5.png" alt="" /></a>
+				</div>
+			</div>
+
+		</header>
+
+		<section class="new-main">
+			<a href="javascript:history.go(-1);" class="ht" style="top: 0.3rem;"><img src="../img/ht.png" alt="" /></a>
+			<div class="car-main">
+
+				<div class="car-tab ">
+					<div class="car-tab-box sitexuanz clearfix">
+						<h3 style="border-bottom: 1px solid #00C8E0;padding: 0.2rem 0;"><i class="cle-yd-z cle-yd-on"></i></h3>
+						<div class="site-text">
+							<p>姓名：是是是</p>
+							<p>电话：13322555</p>
+							<p>地址：广告水果水果工商工伤工商广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤工伤</p>
+						</div>
+						<button class="shanc">删除</button>
+					</div>
+					<div class="car-tab-box  clearfix">
+						<h3 style="border-bottom: 1px solid #00C8E0;padding: 0.2rem 0;"><i class="cle-yd-z"></i></h3>
+						<div class="site-text">
+							<p>姓名：是是是</p>
+							<p>电话：13322555</p>
+							<p>地址：广告水果水果工商工伤工商广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤广告水果水果工商工伤工商工伤工伤</p>
+						</div>
+						<button class="shanc">删除</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<button class="sitimesub">新增</button>
+		</section>
+		<footer id="footer">
+			<ul class="clearfix">
+				<a href="">
+					<li>
+
+						<img src="../img/foot1.png" alt="" />
+						<p>关于我们</p>
+
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot2.png" alt="" />
+						<p>联系我们</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot3.gif" alt="" />
+						<p>服务流程</p>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<img src="../img/foot4.png" alt="" />
+						<p>疑问解答</p>
+					</li>
+				</a>
+			</ul>
+			<div class="footer-box">
+				<div></div>
+				<p>官方微信</p>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/head.js"></script>
+		<script>
+			siteXZ();
+
+			function siteXZ() { //选择地址  选中加sitexuanz；
+				$(".cle-yd-z").click(function() {
+					$(".cle-yd-z").removeClass("cle-yd-on");
+					$(".car-tab-box").removeClass("sitexuanz");
+					$(this).addClass("cle-yd-on").parent().parent().addClass("sitexuanz");
+				});
+			}
+		</script>
+	</body>
+
+</html>

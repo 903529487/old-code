@@ -1,0 +1,92 @@
+<include file="Public/header" />
+<section class="user-main">
+    <div class="user-head clearfix">
+        <div class="user-head-left">
+            <p>账户总额</p>
+            <h3>{$user['user_money']}</h3>
+        </div>
+        <div class="user-head-right">
+            <a href="">等级规则</a>
+        </div>
+    </div>
+    <div class="user-jb">
+        <ul class="clearfix">
+            <li>
+                <p>可用金币(元)</p>
+                <h4>{$user['gold']}</h4>
+            </li>
+            <li>
+                <p>可用银币</p>
+                <h4>{$user['silver']}</h4>
+            </li>
+            <li>
+                <p>收益分红(元)</p>
+                <h4>{$user['income']}</h4>
+            </li>
+        </ul>
+    </div>
+    <div class="user-tab">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <img src="__PUBLIC__/Home/img/touzi-1.png" />
+                    <div>
+                        <h4>投资收益</h4>
+                        <p>充值即可参与分红</p>
+                    </div>
+                </td>
+                <td style="text-align: right;">
+                    累计充值<span>{$user['recharge']}</span>元
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="user-list-nav">
+        <ul class="clearfix">
+            <li>
+                <a href="{:U('recharge')}">
+                    <img src="__PUBLIC__/Home/img/touzi-2.png" />
+                    <div>
+                        <h4>充值</h4>
+                        <p>立即充值</p>
+                    </div>
+                    <span>›</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('withdraw_deposit')}">
+                    <img src="__PUBLIC__/Home/img/touzi-3.png" />
+                    <div>
+                        <h4>兑换</h4>
+                        <p>即刻兑换</p>
+                    </div>
+                    <span>›</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('transfer_accounts')}">
+                    <img src="__PUBLIC__/Home/img/touzi-4.png" />
+                    <div>
+                        <h4>转账</h4>
+                        <p>立即充值</p>
+                    </div>
+                    <span>›</span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('account_data')}">
+                    <img src="__PUBLIC__/Home/img/touzi-5.png" />
+                    <div>
+                        <h4>交易记录</h4>
+                        <p>查看交易明细</p>
+                    </div>
+                    <span>›</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<include file="Public/footer" />
+</body>
+
+</html>

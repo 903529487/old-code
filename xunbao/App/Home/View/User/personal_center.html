@@ -1,0 +1,70 @@
+<include file='Public/header' />
+<section class="per-topimg">
+    <div class="per-topimg-box">
+        <span class="clearfix">
+					<div class="per-topimg-box-row">
+						<img src="__PUBLIC__/Home/img/banner.jpg"/>
+					</div>
+					<div class="per-topimg-box-row">
+						<h3>林小七</h3>
+
+					</div>
+					<div style="float: right;">
+						<button class="guanzu">签到</button>
+						<button class="cloes-guanzu" style="display: none;">已签到</button>
+					</div>
+				</span>
+        <div class="per-topimg-bottom">
+            金币：<b>300</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绿币：<b>600</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="">
+                <button class="top-up">充值</button>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="per-menu">
+    <a href="account_set.html">
+        <img src="__PUBLIC__/Home/img/per-1.png" class="per-menu-img" />账户设置
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="user.html">
+        <img src="__PUBLIC__/Home/img/per-2.png" class="per-menu-img" />我的金币
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="my_collection.html">
+        <img src="__PUBLIC__/Home/img/per-3.png" class="per-menu-img" />我的藏品 <span class="per-num">4</span>
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="my_message.html">
+        <img src="__PUBLIC__/Home/img/per-4.png" class="per-menu-img" />我的消息
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="attention.html">
+        <img src="__PUBLIC__/Home/img/per-5.png" class="per-menu-img" />关注/粉丝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="my_dou_bao.html">
+        <img src="__PUBLIC__/Home/img/per-6.png" class="per-menu-img" />我的斗宝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="i_has_bury.html">
+        <img src="__PUBLIC__/Home/img/per-7.png" class="per-menu-img" />我要埋宝
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+    <a href="">
+        <img src="__PUBLIC__/Home/img/per-8.png" class="per-menu-img" />邀请好友注册<span class="per-menu-text">邀请成功获赠500绿币</span>
+        <img src="__PUBLIC__/Home/img/leftjt.png" class="per-menu-jt" />
+    </a>
+</section>
+<include file="Public/footer" />
+<script type="text/javascript" src="/Public/Home/js/zepto.min.js"></script>
+<script>
+//签到
+$(".guanzu").click(function() {
+    $(".cloes-guanzu").show();
+    $(this).hide();
+});
+</script>
+</body>
+
+</html>

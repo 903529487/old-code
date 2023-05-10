@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body >
+		<header id="header">
+			<a href="javascript:history.go(-1);" class="back-up"><img src="img/last.png" /></a>
+			<img src="img/minlogo.png" class="min-logo" />
+			<a href="user.html" class="user"><img src="img/user.png"/></a>
+		</header>
+		<div style="height: 1.5rem;"></div>	
+		<!--选择地址-->
+		<section>
+			<div class="site-box">
+				<div class="site-box-text">
+					<h3><b id="userName">林小七</b><span id="userPhone">13665*****5555</span></h3>
+					<p id="userSite">广东省 深圳市 龙华新区 民治大道牛栏前大厦B1215</p>
+				</div>
+				
+				<div class="site-box-bottom">
+					<i class="site-check site-check-on"></i>默认
+					<div class="set-site-anjiu">
+						<a href="add_set_site.html"><span class="set-site-bj"><img src="img/bj.png" alt="" />编辑</span></a>
+						<span class="set-site-delete"><img src="img/sc.png"/>删除</span>
+					</div>
+				</div>
+			</div>
+			<div class="site-box">
+				<div class="site-box-text">
+					<h3><b id="userName">susu</b><span id="userPhone">13665*****5555</span></h3>
+					<p id="userSite">广东省 深圳市 大厦B1215</p>
+				</div>
+				
+				<div class="site-box-bottom">
+					<i class="site-check "></i>默认
+					<div class="set-site-anjiu">
+						<a href="add_set_site.html"><span class="set-site-bj"><img src="img/bj.png" alt="" />编辑</span></a>
+						<span class="set-site-delete"><img src="img/sc.png"/>删除</span>
+					</div>
+				</div>
+			</div>
+		
+		</section>
+		<div style="height: 1.6rem;"></div>
+		<div class="sec-but" style="">
+				<a href="add_set_site.html"><button type="submit" class="login-sub">新增地址</button></a>
+		</div>
+		
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html" >
+						<img src="img/foot-1.png" />
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="treasure_hunt_list.html" >
+						<img src="img/foot-2.png" />
+						<p>寻宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-3.png" />
+						<p>斗宝</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/foot-4.png" />
+						<p>藏品</p>
+					</a>
+				</li>
+				<li>
+					<a href="user.html" class="footer-on">
+						<img src="img/footer-h-5.png" />
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+	
+		<script>	
+		var clickEvent={
+			electSite:function(){
+				//选择地址				
+				$(".site-check").click(function(){
+					$(".site-check").removeClass("site-check-on");
+					$(this).addClass("site-check-on");
+			
+				});							
+			
+			},
+			setdelete:function(){
+				//删除
+				$(".set-site-delete").click(function(){
+					if(confirm("是否删除？")){
+						$(this).parent().parent().parent().remove();
+					}
+				});
+			}
+			
+		}
+	
+			clickEvent.electSite()
+			clickEvent.setdelete();
+		</script>
+	</body>
+
+</html>

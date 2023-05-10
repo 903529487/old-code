@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="js/sethtml.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body>
+		<header id="goods-header">
+			<span>￥718</span><strike>￥718</strike><b>3.4折</b>
+			<a href="" class="BuyItNow">立即购买</a>
+		</header>
+		<div style="height: 1.5rem;"></div>
+		<section>
+			<h3 class="goods-title"><img src="img/peix.png"/>大闸蟹深圳内包送</h3>
+			<div class="goods-tab-box">
+				<h3>商品参数</h3>
+				<table border="0" cellspacing="0" cellpadding="0" class="goods-tab">
+					
+					<tr>
+						<td class="goods-tab-td-1">名 称：</td>
+						<td class="goods-tab-td-2">
+							大闸蟹
+						</td>
+					</tr>
+					<tr>
+						<td class="goods-tab-td-1">产 地：</td>
+						<td class="goods-tab-td-2">
+							中国
+						</td>
+					</tr>
+					<tr>
+						<td class="goods-tab-td-1">配 套：</td>
+						<td class="goods-tab-td-2">
+							蟹醋、姜茶、紫苏包、蓄冷袋等
+						</td>
+					</tr>
+					<tr>
+						<td class="goods-tab-td-1">电话订购：</td>
+						<td class="goods-tab-td-2">
+							<span>4008-887-197</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="goods-tab-td-1">在线订购：</td>
+						<td class="goods-tab-td-2">
+							<a href=""class="BuyItNow2">立即订购</a>
+						</td>
+					</tr>
+				</table>
+				<nav class="godpage">
+					<span class="godpage-on">产品详情</span>
+					<span>售后服务</span>
+					<span>常见问题</span>
+				</nav>
+				<section style="margin-top: 0.3rem;">
+					<div class="godpage-con godpage-con-det">
+						<img src="img/posn.jpg"/>
+					</div>
+					<div class="godpage-con godpage-con-ser">
+						<img src="img/posn.jpg"/>
+					</div>
+					<div class="godpage-con godpage-con-issue">
+						<img src="img/posn.jpg"/>
+					</div>
+				</section>
+			</div>	
+			
+		</section>
+		
+		<div style="height: 1.5rem;"></div>
+		<footer id="footer">
+			<ul>
+				<li class="footer-on">
+					<a href="">
+					<img src="img/xixn.png" alt="" />
+					<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/zixun.png" alt="" />
+					<p>在线咨询</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/cart.png" alt="" />
+					<p>购物车</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+					<img src="img/yonghu.png" alt="" />
+					<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</footer>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script>
+			$(".godpage span").click(function(){
+				$(".godpage span").removeClass("godpage-on");
+				$(this).addClass("godpage-on");
+				$(".godpage-con").hide();
+				$(".godpage-con").eq($(this).index()).show();
+			})
+		</script>
+	</body>
+
+</html>
